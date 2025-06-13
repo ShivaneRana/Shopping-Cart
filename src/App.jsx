@@ -1,10 +1,11 @@
 import style from "./App.module.css";
 import { Link } from "react-router-dom";
+import Navbar from "./component/Navbar.jsx";
 
 function App() {
     return(
         <div className={style.main}>
-            <h1>This is the home page</h1>
+            <Navbar></Navbar>
         </div>
     );
 }
