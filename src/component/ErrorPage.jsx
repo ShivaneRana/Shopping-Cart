@@ -3,13 +3,8 @@ import style from "../style/ErrorPage.module.css"
 
 function ErrorPage(){
     return(
-        <div>
+        <div className={style.main}>
             <h1>Oh no! an error has occurred.</h1>
-            <Link to="/">
-                <button>
-                    Go back to the home page.
-                </button>
-            </Link>
         </div>
     )
 }
