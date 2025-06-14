@@ -46,24 +46,39 @@ function SearchField() {
     return (
         <>
             <label htmlFor="searchFruit"></label>
-            <input title="Search" type="text" name="searchFruit" placeholder="Search"></input>
+            <input
+                title="Search"
+                type="text"
+                name="searchFruit"
+                placeholder="Search"
+            ></input>
         </>
     );
 }
 
 function FavouriteButton() {
-    const [displayFav,setDisplayFav] = useState(false);
+    const [displayFav, setDisplayFav] = useState(false);
 
-    function toggleFav(){
-        setDisplayFav(prev => !prev);
+    function toggleFav() {
+        setDisplayFav((prev) => !prev);
         console.log(!displayFav);
     }
 
     return (
-        <button onClick={() => {
-            toggleFav();
-        }}>
-            <img title={displayFav ? "Hide favourite icon" : "Display favourite icon"} alt="favourite icon" src={displayFav ? favIconClicked : favIconNotClicked}></img>
+        <button
+            onClick={() => {
+                toggleFav();
+            }}
+        >
+            <img
+                title={
+                    displayFav
+                        ? "Hide favourite icon"
+                        : "Display favourite icon"
+                }
+                alt="favourite icon"
+                src={displayFav ? favIconClicked : favIconNotClicked}
+            ></img>
         </button>
     );
 }
