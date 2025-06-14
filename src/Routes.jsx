@@ -5,19 +5,18 @@ import ErrorPage from "./component/ErrorPage.jsx";
 
 const Routes = [
     {
-        path:"/",
-        element:<App></App>,
-        errorElement:<ErrorPage></ErrorPage>,
+        path: "/",
+        element: <App></App>,
+        errorElement: <ErrorPage></ErrorPage>,
     },
     {
-        path:"checkout",
-        element:<Checkout></Checkout>
+        path: "checkout",
+        element: <Checkout></Checkout>,
     },
     {
-        path:"item",
-        element:<ItemPage></ItemPage>,
-    }
+        path: "item",
+        element: <ItemPage></ItemPage>,
+    },
 ];
-
 
 export default Routes;

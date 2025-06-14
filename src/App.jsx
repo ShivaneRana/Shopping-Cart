@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./component/Navbar.jsx";
 
 function App() {
-    return(
+    return (
         <div className={style.main}>
             <Navbar></Navbar>
         </div>
