@@ -1,0 +1,14 @@
+.main{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    background-color: rebeccapurple;
+}
+
+.leftside{
+    width: clamp(50%,50%,50%);
+}
+
+.rightside{
+    width: clamp(50%,50%,50%);
+}
