@@ -3,10 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     --font-family: "helvetica",Helvetica,Arial, sans-serif;
+    --font-size: 16px;
+    --color-white:#FFFFFF;
+    --color-gray:#F5F5F5;
+    --color-red:#FF4646;
+    --color-black:#000000;
 }
 
 body {
     font-family: var(--font-family);
-    font-size: 16px;
+    font-size: var(--font-size);
     background-color: #ffffff;
 }
