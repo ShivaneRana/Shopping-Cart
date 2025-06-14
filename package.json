@@ -1,5 +1,6 @@
 {
     "name": "reacttemplate",
+    "homepage": "https://shivanerana.github.io/Shopping-Cart/",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -11,9 +12,12 @@
         "pwrite": "prettier -w .",
         "pcheck": "prettier -c .",
         "ppush": "git add --all && git commit -m 'prettier used'",
-        "test": "vitest"
+        "test": "vitest",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
+        "gh-pages": "^6.3.0",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
         "react-router-dom": "^7.6.2",
