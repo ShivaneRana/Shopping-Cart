@@ -25,54 +25,45 @@ function Navbar() {
     );
 }
 
-function HomeButton(){
-    return(
+function HomeButton() {
+    return (
         <button>
-            <Link>
-                Home
-            </Link>
+            <Link>Home</Link>
         </button>
-    )
+    );
 }
 
-function StoreButton(){
-    return(
+function StoreButton() {
+    return (
         <button>
-            <Link>
-                Store
-            </Link>
+            <Link>Store</Link>
         </button>
-    )
+    );
 }
 
-function SearchField(){
-    return(
+function SearchField() {
+    return (
         <>
-        <label htmlFor="searchFruit"></label>
-        <input
-            type="text"
-            name="searchFruit"
-            placeholder="Search"
-        >
-        </input>
+            <label htmlFor="searchFruit"></label>
+            <input type="text" name="searchFruit" placeholder="Search"></input>
         </>
-    )
+    );
 }
 
-function FavouriteButton(){
-    return(
+function FavouriteButton() {
+    return (
         <button>
             <img src={favIconNotClicked}></img>
         </button>
-    )
+    );
 }
 
-function CartButton(){
-    return(
+function CartButton() {
+    return (
         <button>
             <img src={cartIcon}></img>
         </button>
-    )
+    );
 }
 
 export default Navbar;
