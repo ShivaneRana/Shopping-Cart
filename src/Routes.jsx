@@ -5,7 +5,7 @@ import ErrorPage from "./component/ErrorPage.jsx";
 
 const Routes = [
     {
-        path: "/",
+        path: "/Shopping-Cart",
         element: <App></App>,
         errorElement: <ErrorPage></ErrorPage>,
     },
