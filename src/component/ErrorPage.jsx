@@ -8,7 +8,7 @@ function ErrorPage() {
 
     return (
         <div className={style.main}>
-            <img src={errorIcon}></img>
+            <img alt = "errorIcon" src={errorIcon}></img>
             <h2>Whoops... An error has occurred</h2>
             <i>{error.statusText || error.message}</i>
             <GoHomeButton></GoHomeButton>
@@ -19,7 +19,9 @@ function ErrorPage() {
 function GoHomeButton() {
     return (
         <Link to="/Shopping-Cart">
-            <button>Go to home page</button>
+            <button onClick={() => {
+                console.log("go home")
+            }}>Go to home page</button>
         </Link>
     );
 }
