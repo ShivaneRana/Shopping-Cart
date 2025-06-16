@@ -1,0 +1,34 @@
+.main{
+    min-width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main > img{
+    width: 200px;
+    height: 200px;
+}
+
+.main > a > button{
+    background-color: var(--color-black);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--color-white);
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.main > a > button:active{
+    box-shadow: none;
+}
+
+
+
+
