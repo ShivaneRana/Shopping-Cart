@@ -7,16 +7,13 @@ const Routes = [
     {
         path: "/Shopping-Cart",
         element: <App></App>,
-        errorElement: <ErrorPage></ErrorPage>,
+        errorElement:<ErrorPage></ErrorPage>,
     },
     {
-        path: "checkout",
-        element: <Checkout></Checkout>,
-    },
-    {
-        path: "item",
-        element: <ItemPage></ItemPage>,
-    },
+        path:"*",
+        element:<ErrorPage></ErrorPage>,
+        errorElement:<ErrorPage></ErrorPage>,
+    }
 ];
 
 export default Routes;
