@@ -8,7 +8,7 @@ function ErrorPage() {
 
     return (
         <div className={style.main}>
-            <img alt = "errorIcon" src={errorIcon}></img>
+            <img alt="errorIcon" src={errorIcon}></img>
             <h2>Whoops... An error has occurred</h2>
             <i>{error?.statusText || "Not Found"}</i>
             <GoHomeButton></GoHomeButton>
