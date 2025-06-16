@@ -1,11 +1,11 @@
 import { Link, useRouteError } from "react-router-dom";
-import errorIcon from "../assets/images/error.png"
+import errorIcon from "../assets/images/error.png";
 import style from "../style/ErrorPage.module.css";
 
 function ErrorPage() {
     const error = useRouteError();
     console.error(error.statusText);
-    
+
     return (
         <div className={style.main}>
             <img src={errorIcon}></img>
@@ -16,14 +16,12 @@ function ErrorPage() {
     );
 }
 
-function GoHomeButton(){
-    return(
+function GoHomeButton() {
+    return (
         <Link to="/Shopping-Cart">
-            <button>
-                Go to home page
-            </button>
+            <button>Go to home page</button>
         </Link>
-    )
+    );
 }
 
 export default ErrorPage;

@@ -1,7 +1,7 @@
-.main{
+.main {
     min-width: 100vw;
     height: 100vh;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,12 +9,12 @@
     gap: 20px;
 }
 
-.main > img{
+.main > img {
     width: 200px;
     height: 200px;
 }
 
-.main > a > button{
+.main > a > button {
     background-color: var(--color-black);
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -22,13 +22,11 @@
     cursor: pointer;
     border: none;
     padding: 15px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.main > a > button:active{
+.main > a > button:active {
     box-shadow: none;
 }
-
-
-
-
