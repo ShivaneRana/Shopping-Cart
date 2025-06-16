@@ -4,13 +4,13 @@ import style from "../style/ErrorPage.module.css";
 
 function ErrorPage() {
     const error = useRouteError();
-    console.error(error.statusText);
+    console.error(error?.statusText || "No error");
 
     return (
         <div className={style.main}>
             <img alt = "errorIcon" src={errorIcon}></img>
             <h2>Whoops... An error has occurred</h2>
-            <i>{error.statusText || error.message}</i>
+            <i>{error?.statusText || "Not Found"}</i>
             <GoHomeButton></GoHomeButton>
         </div>
     );
@@ -19,9 +19,7 @@ function ErrorPage() {
 function GoHomeButton() {
     return (
         <Link to="/Shopping-Cart">
-            <button onClick={() => {
-                console.log("go home")
-            }}>Go to home page</button>
+            <button>Go to home page</button>
         </Link>
     );
 }
