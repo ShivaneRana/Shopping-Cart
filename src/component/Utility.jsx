@@ -9,6 +9,6 @@ export function useFavoriteState(){
 
     return{
         favourite,
-        toggleFavouritek,
+        toggleFavourite,
     }
 }
