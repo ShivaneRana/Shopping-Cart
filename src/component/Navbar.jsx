@@ -37,9 +37,7 @@ function Logo() {
 function HomeButton() {
     return (
         <button title="Go to home">
-            <Link to="/Shopping-Cart">
-                Home
-            </Link>
+            <Link to="/Shopping-Cart">Home</Link>
         </button>
     );
 }
@@ -95,7 +93,7 @@ function FavouriteButton() {
 
 function CartButton() {
     return (
-        <Link to= "Checkout">
+        <Link to="Checkout">
             <button>
                 <img title="Display Cart" alt="cart icon" src={cartIcon}></img>
             </button>
