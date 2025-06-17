@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <div className={style.main}>
             <div className={style.leftside}>
-                <h1>EdenCrate.</h1>
+                <Logo></Logo>
                 <div>
                     <HomeButton></HomeButton>
                     <StoreButton></StoreButton>
@@ -24,6 +24,16 @@ function Navbar() {
             </div>
         </div>
     );
+}
+
+function Logo(){
+    return(
+        <Link>
+            <h1>
+                EdenCrate.
+            </h1>
+        </Link>
+    )
 }
 
 function HomeButton() {
