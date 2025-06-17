@@ -6,13 +6,22 @@ import {
 } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import Navbar from "../component/Navbar.jsx";
+import { context } from "../App.jsx";
+import { vitest } from "vitest";
 
 describe("Navbar component", () => {
+    const mockContextValue = {
+        favourite:true,
+        toggleFavourite: vitest.fn(),
+    }
+
     beforeEach(() => {
         render(
+            <context.Provider value={mockContextValue}>
             <MemoryRouter>
                 <Navbar />
             </MemoryRouter>,
+            </context.Provider>
         );
     });
 
