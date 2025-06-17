@@ -16,6 +16,12 @@
     margin-left: 30px;
 }
 
+/* company name */
+.leftside > a{
+    color: var(--color-black);
+    text-decoration: none;
+}
+
 /* hold home and store button */
 .leftside > div {
     display: flex;
