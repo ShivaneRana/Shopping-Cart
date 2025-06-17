@@ -1,12 +1,57 @@
 .main {
     min-width: 100vw;
     min-height: 90vh;
-    background-color: lightskyblue;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.main > h1 {
-    text-decoration: underline;
+.welcomeText {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px 20px 20px 20px;
+}
+
+.welcomeText > h1{
+    font-size: 40px;
+}
+
+.welcomeText > p{
+    font-size: 18px;
+    line-height: 1.4;
+    word-spacing: 0.1rem;
+    text-align: center;
+}
+
+.shopButton {
+    margin: 20px 0px 20px 0px;
+}
+
+.shopButton > button{
+    font-size: 13px;
+    font-weight: bolder;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid grey;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.carousel {
+    width: 800px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: red;
 }
