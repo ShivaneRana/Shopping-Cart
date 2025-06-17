@@ -40,10 +40,10 @@ describe("Navbar component", () => {
         expect(inputField).toBeInTheDocument();
     });
 
-    it("favouriteButton is rendered",() => {
+    it("favouriteButton is rendered", () => {
         const favButton = screen.getByAltText("favourite icon");
         expect(favButton).toBeInTheDocument();
-    })
+    });
 
     it("cartButton is rendered", () => {
         const cartButton = screen.getByAltText("cart icon");

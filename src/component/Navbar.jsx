@@ -26,14 +26,12 @@ function Navbar() {
     );
 }
 
-function Logo(){
-    return(
+function Logo() {
+    return (
         <Link>
-            <h1>
-                EdenCrate.
-            </h1>
+            <h1>EdenCrate.</h1>
         </Link>
-    )
+    );
 }
 
 function HomeButton() {
