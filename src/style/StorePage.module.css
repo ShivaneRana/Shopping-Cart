@@ -1,2 +1,12 @@
 .main {
+    min-width: 100vw;
+    min-height: 90vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main > h1{
+    text-decoration: underline;
 }
