@@ -7,14 +7,16 @@ import { useFavoriteState } from "./component/Utility.jsx";
 export let context = createContext();
 
 function App() {
-    const {favourite,toggleFavourite} = useFavoriteState();
+    const { favourite, toggleFavourite } = useFavoriteState();
 
     return (
         <div className={style.main}>
-            <context.Provider value={{
-                favourite,
-                toggleFavourite
-            }}>
+            <context.Provider
+                value={{
+                    favourite,
+                    toggleFavourite,
+                }}
+            >
                 <Navbar></Navbar>
                 <Outlet></Outlet>
             </context.Provider>

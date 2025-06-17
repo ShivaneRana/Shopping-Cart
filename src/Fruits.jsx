@@ -1,207 +1,207 @@
 const fruits = [
-  {
-    name: "apple",
-    price: 2.85,
-    family: "Rosaceae",
-    vitamin: ["Vitamin B", "Vitamin K"],
-    color: ["red"]
-  },
-  {
-    name: "apricot",
-    price: 4.16,
-    family: "Rosaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["orange", "red"]
-  },
-  {
-    name: "avocado",
-    price: 4.02,
-    family: "Lauraceae",
-    vitamin: ["Vitamin B", "Vitamin C"],
-    color: ["yellow"]
-  },
-  {
-    name: "banana",
-    price: 3.51,
-    family: "Musaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["red"]
-  },
-  {
-    name: "blackberry",
-    price: 3.12,
-    family: "Rosaceae",
-    vitamin: ["Vitamin D", "Vitamin A"],
-    color: ["yellow"]
-  },
-  {
-    name: "blueberry",
-    price: 1.19,
-    family: "Ericaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["green"]
-  },
-  {
-    name: "cherry",
-    price: 3.81,
-    family: "Rosaceae",
-    vitamin: ["Vitamin B", "Vitamin C"],
-    color: ["orange", "red"]
-  },
-  {
-    name: "dragon-fruit",
-    price: 4.36,
-    family: "Cactaceae",
-    vitamin: ["Vitamin D", "Vitamin A"],
-    color: ["red", "green"]
-  },
-  {
-    name: "fig",
-    price: 3.21,
-    family: "Moraceae",
-    vitamin: ["Vitamin B", "Vitamin K"],
-    color: ["red", "green"]
-  },
-  {
-    name: "grape",
-    price: 3.36,
-    family: "Vitaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["green"]
-  },
-  {
-    name: "grapefruit",
-    price: 1.32,
-    family: "Rutaceae",
-    vitamin: ["Vitamin D", "Vitamin A"],
-    color: ["yellow", "green"]
-  },
-  {
-    name: "kiwi",
-    price: 3.35,
-    family: "Actinidiaceae",
-    vitamin: ["Vitamin B", "Vitamin K"],
-    color: ["orange", "red"]
-  },
-  {
-    name: "lemon",
-    price: 1.59,
-    family: "Rutaceae",
-    vitamin: ["Vitamin C", "Vitamin E"],
-    color: ["yellow"]
-  },
-  {
-    name: "lime",
-    price: 4.33,
-    family: "Rutaceae",
-    vitamin: ["Vitamin D", "Vitamin A"],
-    color: ["yellow", "green"]
-  },
-  {
-    name: "mango",
-    price: 4.09,
-    family: "Anacardiaceae",
-    vitamin: ["Vitamin B", "Vitamin C"],
-    color: ["yellow", "green"]
-  },
-  {
-    name: "mangosteen",
-    price: 3.9,
-    family: "Clusiaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["purple"]
-  },
-  {
-    name: "melon",
-    price: 4.81,
-    family: "Cucurbitaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["red"]
-  },
-  {
-    name: "nectarine",
-    price: 2.44,
-    family: "Rosaceae",
-    vitamin: ["Vitamin B", "Vitamin C"],
-    color: ["yellow", "green"]
-  },
-  {
-    name: "orange",
-    price: 4.98,
-    family: "Rutaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["purple"]
-  },
-  {
-    name: "papaya",
-    price: 1.8,
-    family: "Caricaceae",
-    vitamin: ["Vitamin D", "Vitamin A"],
-    color: ["red"]
-  },
-  {
-    name: "passion-fruit",
-    price: 4.84,
-    family: "Passifloraceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["pink"]
-  },
-  {
-    name: "pear",
-    price: 4.19,
-    family: "Rosaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["purple"]
-  },
-  {
-    name: "persimmon",
-    price: 4.24,
-    family: "Ebenaceae",
-    vitamin: ["Vitamin C", "Vitamin E"],
-    color: ["green"]
-  },
-  {
-    name: "pineapple",
-    price: 4.43,
-    family: "Bromeliaceae",
-    vitamin: ["Vitamin B", "Vitamin K"],
-    color: ["yellow"]
-  },
-  {
-    name: "plum",
-    price: 4.4,
-    family: "Rosaceae",
-    vitamin: ["Vitamin C", "Vitamin E"],
-    color: ["pink"]
-  },
-  {
-    name: "raspberry",
-    price: 3.97,
-    family: "Rosaceae",
-    vitamin: ["Vitamin A", "Vitamin C"],
-    color: ["orange", "red"]
-  },
-  {
-    name: "rose-apple",
-    price: 3.82,
-    family: "Myrtaceae",
-    vitamin: ["Vitamin D", "Vitamin A"],
-    color: ["yellow", "green"]
-  },
-  {
-    name: "strawberry",
-    price: 4.29,
-    family: "Rosaceae",
-    vitamin: ["Vitamin B", "Vitamin C"],
-    color: ["orange", "red"]
-  },
-  {
-    name: "watermelon",
-    price: 2.67,
-    family: "Cucurbitaceae",
-    vitamin: ["Vitamin C", "Vitamin E"],
-    color: ["pink"]
-  }
+    {
+        name: "apple",
+        price: 2.85,
+        family: "Rosaceae",
+        vitamin: ["Vitamin B", "Vitamin K"],
+        color: ["red"],
+    },
+    {
+        name: "apricot",
+        price: 4.16,
+        family: "Rosaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["orange", "red"],
+    },
+    {
+        name: "avocado",
+        price: 4.02,
+        family: "Lauraceae",
+        vitamin: ["Vitamin B", "Vitamin C"],
+        color: ["yellow"],
+    },
+    {
+        name: "banana",
+        price: 3.51,
+        family: "Musaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["red"],
+    },
+    {
+        name: "blackberry",
+        price: 3.12,
+        family: "Rosaceae",
+        vitamin: ["Vitamin D", "Vitamin A"],
+        color: ["yellow"],
+    },
+    {
+        name: "blueberry",
+        price: 1.19,
+        family: "Ericaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["green"],
+    },
+    {
+        name: "cherry",
+        price: 3.81,
+        family: "Rosaceae",
+        vitamin: ["Vitamin B", "Vitamin C"],
+        color: ["orange", "red"],
+    },
+    {
+        name: "dragon-fruit",
+        price: 4.36,
+        family: "Cactaceae",
+        vitamin: ["Vitamin D", "Vitamin A"],
+        color: ["red", "green"],
+    },
+    {
+        name: "fig",
+        price: 3.21,
+        family: "Moraceae",
+        vitamin: ["Vitamin B", "Vitamin K"],
+        color: ["red", "green"],
+    },
+    {
+        name: "grape",
+        price: 3.36,
+        family: "Vitaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["green"],
+    },
+    {
+        name: "grapefruit",
+        price: 1.32,
+        family: "Rutaceae",
+        vitamin: ["Vitamin D", "Vitamin A"],
+        color: ["yellow", "green"],
+    },
+    {
+        name: "kiwi",
+        price: 3.35,
+        family: "Actinidiaceae",
+        vitamin: ["Vitamin B", "Vitamin K"],
+        color: ["orange", "red"],
+    },
+    {
+        name: "lemon",
+        price: 1.59,
+        family: "Rutaceae",
+        vitamin: ["Vitamin C", "Vitamin E"],
+        color: ["yellow"],
+    },
+    {
+        name: "lime",
+        price: 4.33,
+        family: "Rutaceae",
+        vitamin: ["Vitamin D", "Vitamin A"],
+        color: ["yellow", "green"],
+    },
+    {
+        name: "mango",
+        price: 4.09,
+        family: "Anacardiaceae",
+        vitamin: ["Vitamin B", "Vitamin C"],
+        color: ["yellow", "green"],
+    },
+    {
+        name: "mangosteen",
+        price: 3.9,
+        family: "Clusiaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["purple"],
+    },
+    {
+        name: "melon",
+        price: 4.81,
+        family: "Cucurbitaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["red"],
+    },
+    {
+        name: "nectarine",
+        price: 2.44,
+        family: "Rosaceae",
+        vitamin: ["Vitamin B", "Vitamin C"],
+        color: ["yellow", "green"],
+    },
+    {
+        name: "orange",
+        price: 4.98,
+        family: "Rutaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["purple"],
+    },
+    {
+        name: "papaya",
+        price: 1.8,
+        family: "Caricaceae",
+        vitamin: ["Vitamin D", "Vitamin A"],
+        color: ["red"],
+    },
+    {
+        name: "passion-fruit",
+        price: 4.84,
+        family: "Passifloraceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["pink"],
+    },
+    {
+        name: "pear",
+        price: 4.19,
+        family: "Rosaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["purple"],
+    },
+    {
+        name: "persimmon",
+        price: 4.24,
+        family: "Ebenaceae",
+        vitamin: ["Vitamin C", "Vitamin E"],
+        color: ["green"],
+    },
+    {
+        name: "pineapple",
+        price: 4.43,
+        family: "Bromeliaceae",
+        vitamin: ["Vitamin B", "Vitamin K"],
+        color: ["yellow"],
+    },
+    {
+        name: "plum",
+        price: 4.4,
+        family: "Rosaceae",
+        vitamin: ["Vitamin C", "Vitamin E"],
+        color: ["pink"],
+    },
+    {
+        name: "raspberry",
+        price: 3.97,
+        family: "Rosaceae",
+        vitamin: ["Vitamin A", "Vitamin C"],
+        color: ["orange", "red"],
+    },
+    {
+        name: "rose-apple",
+        price: 3.82,
+        family: "Myrtaceae",
+        vitamin: ["Vitamin D", "Vitamin A"],
+        color: ["yellow", "green"],
+    },
+    {
+        name: "strawberry",
+        price: 4.29,
+        family: "Rosaceae",
+        vitamin: ["Vitamin B", "Vitamin C"],
+        color: ["orange", "red"],
+    },
+    {
+        name: "watermelon",
+        price: 2.67,
+        family: "Cucurbitaceae",
+        vitamin: ["Vitamin C", "Vitamin E"],
+        color: ["pink"],
+    },
 ];
 
 export default fruits;

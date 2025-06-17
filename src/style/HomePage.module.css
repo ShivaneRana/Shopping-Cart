@@ -17,11 +17,11 @@
     padding: 20px 20px 20px 20px;
 }
 
-.welcomeText > h1{
+.welcomeText > h1 {
     font-size: 40px;
 }
 
-.welcomeText > p{
+.welcomeText > p {
     font-size: 18px;
     line-height: 1.4;
     word-spacing: 0.1rem;
@@ -32,7 +32,7 @@
     margin: 20px 0px 20px 0px;
 }
 
-.shopButton > button{
+.shopButton > button {
     font-size: 13px;
     font-weight: bolder;
     padding: 15px;

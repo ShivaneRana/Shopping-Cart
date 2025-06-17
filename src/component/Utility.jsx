@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-export function useFavoriteState(){
-    const [favourite,setFavourite] = useState(false);
+export function useFavoriteState() {
+    const [favourite, setFavourite] = useState(false);
 
-    function toggleFavourite(){
+    function toggleFavourite() {
         setFavourite((prev) => !prev);
     }
 
-    return{
+    return {
         favourite,
         toggleFavourite,
-    }
+    };
 }

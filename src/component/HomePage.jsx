@@ -11,39 +11,33 @@ function HomePage() {
     );
 }
 
-function WelcomeText(){
-    return(
+function WelcomeText() {
+    return (
         <div className={style.welcomeText}>
             <h1>Welcome to EdenCrate.</h1>
-            <p>Welcome to your online fruit store.Enjoy the freshest fruits delivered right to your doorstep.</p>
+            <p>
+                Welcome to your online fruit store.Enjoy the freshest fruits
+                delivered right to your doorstep.
+            </p>
         </div>
-    )
+    );
 }
 
-function ShopButton(){
-    return(
+function ShopButton() {
+    return (
         <Link to="Store" className={style.shopButton}>
-            <button>
-                Shop Now
-            </button>
+            <button>Shop Now</button>
         </Link>
-    )
+    );
 }
 
-function Carousel(){
-    return(
+function Carousel() {
+    return (
         <div className={style.carousel}>
-            <div className={style.mainPart}>
-
-            </div>
-            <div className={style.secondaryPart}>
-
-            </div>
+            <div className={style.mainPart}></div>
+            <div className={style.secondaryPart}></div>
         </div>
-    )
+    );
 }
-
-
-
 
 export default HomePage;

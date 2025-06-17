@@ -66,7 +66,7 @@ function SearchField() {
 }
 
 function FavouriteButton() {
-    const {favourite,toggleFavourite} = useContext(context);
+    const { favourite, toggleFavourite } = useContext(context);
 
     return (
         <button
@@ -76,9 +76,7 @@ function FavouriteButton() {
         >
             <img
                 title={
-                    favourite
-                        ? "Hide favourite icon"
-                        : "Display favourite icon"
+                    favourite ? "Hide favourite icon" : "Display favourite icon"
                 }
                 alt="favourite icon"
                 src={favourite ? favIconClicked : favIconNotClicked}

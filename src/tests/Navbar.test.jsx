@@ -11,17 +11,18 @@ import { vitest } from "vitest";
 
 describe("Navbar component", () => {
     const mockContextValue = {
-        favourite:true,
+        favourite: true,
         toggleFavourite: vitest.fn(),
-    }
+    };
 
     beforeEach(() => {
         render(
             <context.Provider value={mockContextValue}>
-            <MemoryRouter>
-                <Navbar />
-            </MemoryRouter>,
-            </context.Provider>
+                <MemoryRouter>
+                    <Navbar />
+                </MemoryRouter>
+                ,
+            </context.Provider>,
         );
     });
 
