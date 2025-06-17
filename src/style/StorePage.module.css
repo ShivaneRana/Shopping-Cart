@@ -1,7 +1,7 @@
 .main {
     min-width: 100vw;
     min-height: 90vh;
-    background-color: red;
+    background-color: lightgreen;
     display: flex;
     justify-content: center;
     align-items: center;
