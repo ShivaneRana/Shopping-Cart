@@ -3,7 +3,8 @@ import favIconClicked from "../assets/images/fav.png";
 import favIconNotClicked from "../assets/images/notfav.png";
 import cartIcon from "../assets/images/cart.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
+import { context } from "../App.jsx";
 
 function Navbar() {
     return (
@@ -65,27 +66,22 @@ function SearchField() {
 }
 
 function FavouriteButton() {
-    const [displayFav, setDisplayFav] = useState(false);
-
-    function toggleFav() {
-        setDisplayFav((prev) => !prev);
-        console.log(!displayFav);
-    }
+    const {favourite,toggleFavourite} = useContext(context);
 
     return (
         <button
             onClick={() => {
-                toggleFav();
+                toggleFavourite();
             }}
         >
             <img
                 title={
-                    displayFav
+                    favourite
                         ? "Hide favourite icon"
                         : "Display favourite icon"
                 }
                 alt="favourite icon"
-                src={displayFav ? favIconClicked : favIconNotClicked}
+                src={favourite ? favIconClicked : favIconNotClicked}
             ></img>
         </button>
     );
