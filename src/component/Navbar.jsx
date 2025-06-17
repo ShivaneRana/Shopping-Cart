@@ -28,7 +28,7 @@ function Navbar() {
 
 function Logo() {
     return (
-        <Link>
+        <Link to="/Shopping-Cart">
             <h1>EdenCrate.</h1>
         </Link>
     );
@@ -37,7 +37,9 @@ function Logo() {
 function HomeButton() {
     return (
         <button title="Go to home">
-            <Link>Home</Link>
+            <Link to="/Shopping-Cart">
+                Home
+            </Link>
         </button>
     );
 }
@@ -45,7 +47,7 @@ function HomeButton() {
 function StoreButton() {
     return (
         <button title="Go to store">
-            <Link>Store</Link>
+            <Link to="Store">Store</Link>
         </button>
     );
 }
@@ -93,9 +95,11 @@ function FavouriteButton() {
 
 function CartButton() {
     return (
-        <button>
-            <img title="Display Cart" alt="cart icon" src={cartIcon}></img>
-        </button>
+        <Link to= "Checkout">
+            <button>
+                <img title="Display Cart" alt="cart icon" src={cartIcon}></img>
+            </button>
+        </Link>
     );
 }
 
