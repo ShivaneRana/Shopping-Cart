@@ -69,6 +69,7 @@ function FavouriteButton() {
     const { favourite, toggleFavourite } = useContext(context);
 
     return (
+        <Link to="Store">
         <button
             onClick={() => {
                 toggleFavourite();
@@ -76,12 +77,13 @@ function FavouriteButton() {
         >
             <img
                 title={
-                    favourite ? "Hide favourite icon" : "Display favourite icon"
+                    favourite ? "Hide favourite items" : "Display favourite items"
                 }
                 alt="favourite icon"
                 src={favourite ? favIconClicked : favIconNotClicked}
             ></img>
         </button>
+        </Link>
     );
 }
 
