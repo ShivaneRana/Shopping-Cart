@@ -9,7 +9,7 @@ const Routes = [
         path: "/Shopping-Cart",
         element: <App></App>,
         errorElement: <ErrorPage></ErrorPage>,
-        children:[
+        children: [
             {
                 index: true,
                 element: <HomePage></HomePage>,
@@ -20,9 +20,9 @@ const Routes = [
             },
             {
                 path: "Checkout",
-                element:<CheckoutPage></CheckoutPage>,
-            }
-        ]
+                element: <CheckoutPage></CheckoutPage>,
+            },
+        ],
     },
     {
         path: "*",
