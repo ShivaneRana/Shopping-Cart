@@ -91,7 +91,22 @@
     outline: none;
 }
 
+/* this is for the favourite button */
 .rightside > div > button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    & > img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* this is for the cart button */
+.rightside > div > a > button{
     height: 30px;
     width: 30px;
     border: none;
