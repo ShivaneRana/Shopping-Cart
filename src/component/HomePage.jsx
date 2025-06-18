@@ -44,73 +44,81 @@ function ShopButton() {
 }
 
 function Carousel() {
-    const [showArray,setShowArray] = useState([0,1,2]);
+    const [showArray, setShowArray] = useState([0, 1, 2]);
     const interval = 3000;
-    
-    function incrementShowArray(){
-        let [a,b,c] = showArray;
 
-        a === fruitsArray.length - 1 ? a = 0 : a++;
-        b === fruitsArray.length - 1 ? b = 0 : b++;
-        c === fruitsArray.length - 1 ? c = 0 : c++;
+    function incrementShowArray() {
+        let [a, b, c] = showArray;
 
-        setShowArray([a,b,c]);
+        a === fruitsArray.length - 1 ? (a = 0) : a++;
+        b === fruitsArray.length - 1 ? (b = 0) : b++;
+        c === fruitsArray.length - 1 ? (c = 0) : c++;
+
+        setShowArray([a, b, c]);
     }
 
-    function decrementShowArray(){
-        let [a,b,c] = showArray;
+    function decrementShowArray() {
+        let [a, b, c] = showArray;
 
-        a === 0 ? a = 6 : a--;
-        b === 0 ? b = 6 : b--;
-        c === 0 ? c = 6 : c--;
+        a === 0 ? (a = 6) : a--;
+        b === 0 ? (b = 6) : b--;
+        c === 0 ? (c = 6) : c--;
 
-        setShowArray([a,b,c]);
+        setShowArray([a, b, c]);
     }
-            
+
     useEffect(() => {
         const time = setInterval(() => {
             incrementShowArray();
-        },interval)
+        }, interval);
 
         return () => {
             clearInterval(time);
-        }
-    },[showArray])
+        };
+    }, [showArray]);
 
     return (
         <div className={style.carousel}>
             <div className={style.mainContainer}>
-            <button title="Previous" onClick={decrementShowArray}>
-                <img alt="icon for displaying previous sets of images" src={previousIcon}></img>
-            </button>
-            {
-                showArray.map(item => {
+                <button title="Previous" onClick={decrementShowArray}>
+                    <img
+                        alt="icon for displaying previous sets of images"
+                        src={previousIcon}
+                    ></img>
+                </button>
+                {showArray.map((item) => {
                     const element = fruitsArray[item];
                     const tempUUID = uuidv7();
                     return (
-                        <div key={tempUUID} title={element.name} className={style.fruitCard}>
+                        <div
+                            key={tempUUID}
+                            title={element.name}
+                            className={style.fruitCard}
+                        >
                             <img alt="fruits icon" src={element.path}></img>
                             <p>{element.name}</p>
                         </div>
-                    )
-                })
-            }
-            <button title="Next" onClick={incrementShowArray}>
-                <img alt="icon for displaying next sets of images" src={nextIcon}></img>
-            </button>
+                    );
+                })}
+                <button title="Next" onClick={incrementShowArray}>
+                    <img
+                        alt="icon for displaying next sets of images"
+                        src={nextIcon}
+                    ></img>
+                </button>
             </div>
         </div>
     );
 }
 
 const fruitsArray = [
-  { name: "Apple", path: apple },
-  { name: "Pear", path: pear },
-  { name: "Banana", path: banana },
-  { name: "Grape", path: grape },
-  { name: "Kiwi", path: kiwi },
-  { name: "Watermelon", path: watermelon },
-  { name: "Lime", path: lime },
+    { name: "Apple", path: apple },
+    { name: "Pear", path: pear },
+    { name: "Banana", path: banana },
+    { name: "Grape", path: grape },
+    { name: "Kiwi", path: kiwi },
+    { name: "Watermelon", path: watermelon },
+    { name: "Lime", path: lime },
 ];
 
 export default HomePage;

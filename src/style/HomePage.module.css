@@ -45,7 +45,7 @@
     word-spacing: 0.1rem;
 }
 
-.shopButton > button:hover{
+.shopButton > button:hover {
     background-color: var(--color-darkGray);
 }
 
@@ -61,25 +61,25 @@
     padding: 20px 20px 20px 20px;
 }
 
-.mainContainer{
+.mainContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.mainContainer > button{
+.mainContainer > button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.mainContainer > button > img{
+.mainContainer > button > img {
     width: 50px;
     height: 50px;
 }
 
-.fruitCard{
+.fruitCard {
     position: relative;
     min-width: 250px;
     min-height: 250px;
@@ -91,12 +91,12 @@
     cursor: pointer;
 }
 
-.fruitCard > img{
+.fruitCard > img {
     width: 70px;
     height: 70px;
 }
 
-.fruitCard > p{
+.fruitCard > p {
     position: absolute;
     font-size: var(--font-size);
     font-weight: bolder;

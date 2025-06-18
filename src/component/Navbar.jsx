@@ -70,19 +70,21 @@ function FavouriteButton() {
 
     return (
         <Link to="Store">
-        <button
-            onClick={() => {
-                toggleFavourite();
-            }}
-        >
-            <img
-                title={
-                    favourite ? "Hide favourite items" : "Display favourite items"
-                }
-                alt="favourite icon"
-                src={favourite ? favIconClicked : favIconNotClicked}
-            ></img>
-        </button>
+            <button
+                onClick={() => {
+                    toggleFavourite();
+                }}
+            >
+                <img
+                    title={
+                        favourite
+                            ? "Hide favourite items"
+                            : "Display favourite items"
+                    }
+                    alt="favourite icon"
+                    src={favourite ? favIconClicked : favIconNotClicked}
+                ></img>
+            </button>
         </Link>
     );
 }
