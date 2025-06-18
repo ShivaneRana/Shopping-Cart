@@ -5,6 +5,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin B", "Vitamin K"],
         color: ["red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "apricot",
@@ -12,6 +15,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["orange", "red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "avocado",
@@ -19,6 +25,9 @@ const fruits = [
         family: "Lauraceae",
         vitamin: ["Vitamin B", "Vitamin C"],
         color: ["yellow"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "banana",
@@ -26,6 +35,9 @@ const fruits = [
         family: "Musaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "blackberry",
@@ -33,6 +45,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin D", "Vitamin A"],
         color: ["yellow"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "blueberry",
@@ -40,6 +55,9 @@ const fruits = [
         family: "Ericaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "cherry",
@@ -47,6 +65,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin B", "Vitamin C"],
         color: ["orange", "red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "dragon-fruit",
@@ -54,6 +75,9 @@ const fruits = [
         family: "Cactaceae",
         vitamin: ["Vitamin D", "Vitamin A"],
         color: ["red", "green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "fig",
@@ -61,6 +85,9 @@ const fruits = [
         family: "Moraceae",
         vitamin: ["Vitamin B", "Vitamin K"],
         color: ["red", "green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "grape",
@@ -68,6 +95,9 @@ const fruits = [
         family: "Vitaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "grapefruit",
@@ -75,6 +105,9 @@ const fruits = [
         family: "Rutaceae",
         vitamin: ["Vitamin D", "Vitamin A"],
         color: ["yellow", "green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "kiwi",
@@ -82,6 +115,9 @@ const fruits = [
         family: "Actinidiaceae",
         vitamin: ["Vitamin B", "Vitamin K"],
         color: ["orange", "red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "lemon",
@@ -89,6 +125,9 @@ const fruits = [
         family: "Rutaceae",
         vitamin: ["Vitamin C", "Vitamin E"],
         color: ["yellow"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "lime",
@@ -96,6 +135,9 @@ const fruits = [
         family: "Rutaceae",
         vitamin: ["Vitamin D", "Vitamin A"],
         color: ["yellow", "green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "mango",
@@ -103,6 +145,9 @@ const fruits = [
         family: "Anacardiaceae",
         vitamin: ["Vitamin B", "Vitamin C"],
         color: ["yellow", "green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "mangosteen",
@@ -110,6 +155,9 @@ const fruits = [
         family: "Clusiaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["purple"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "melon",
@@ -117,6 +165,9 @@ const fruits = [
         family: "Cucurbitaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "nectarine",
@@ -124,6 +175,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin B", "Vitamin C"],
         color: ["yellow", "green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "orange",
@@ -131,6 +185,9 @@ const fruits = [
         family: "Rutaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["purple"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "papaya",
@@ -138,6 +195,9 @@ const fruits = [
         family: "Caricaceae",
         vitamin: ["Vitamin D", "Vitamin A"],
         color: ["red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "passion-fruit",
@@ -145,6 +205,9 @@ const fruits = [
         family: "Passifloraceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["pink"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "pear",
@@ -152,6 +215,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["purple"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "persimmon",
@@ -159,6 +225,9 @@ const fruits = [
         family: "Ebenaceae",
         vitamin: ["Vitamin C", "Vitamin E"],
         color: ["green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "pineapple",
@@ -166,6 +235,9 @@ const fruits = [
         family: "Bromeliaceae",
         vitamin: ["Vitamin B", "Vitamin K"],
         color: ["yellow"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "plum",
@@ -173,6 +245,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin C", "Vitamin E"],
         color: ["pink"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "raspberry",
@@ -180,6 +255,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["orange", "red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "rose-apple",
@@ -187,6 +265,9 @@ const fruits = [
         family: "Myrtaceae",
         vitamin: ["Vitamin D", "Vitamin A"],
         color: ["yellow", "green"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "strawberry",
@@ -194,6 +275,9 @@ const fruits = [
         family: "Rosaceae",
         vitamin: ["Vitamin B", "Vitamin C"],
         color: ["orange", "red"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
     {
         name: "watermelon",
@@ -201,6 +285,9 @@ const fruits = [
         family: "Cucurbitaceae",
         vitamin: ["Vitamin C", "Vitamin E"],
         color: ["pink"],
+        inCart: false,
+        favourite: false,
+        quantity: 1,
     },
 ];
 
