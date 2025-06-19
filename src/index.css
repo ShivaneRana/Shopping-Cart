@@ -10,6 +10,7 @@
     --color-red: #ff4646;
     --color-darkGray: #e5e5e5;
     --color-black: #000000;
+    --border-radius: 10px;
 }
 
 body {
