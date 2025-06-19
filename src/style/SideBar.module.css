@@ -1,5 +1,24 @@
 .main {
     min-width: 300px;
+    padding: 0px 45px 0px 45px;
+}
+
+.headingHolder {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.headingHolder > p {
+    font-size: 18px;
+    font-weight: var(--font-weight);
+}
+
+.headingHolder > img {
+    width: 40px;
+    height: 40px;
 }
 
 .colorContainer {
@@ -9,29 +28,8 @@
     justify-content: center;
     align-items: center;
 }
-
-.colorHeadingHolder {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px 0px 30px;
-    cursor: pointer;
-}
-
-.colorHeadingHolder > p {
-    font-size: 18px;
-    font-weight: var(--font-weight);
-}
-
-.colorHeadingHolder > img {
-    width: 40px;
-    height: 40px;
-}
-
 .colorItemHolder {
     width: 100%;
-    padding: 0px 30px 0px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +43,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
 }
 
 .colorItem:hover {
@@ -57,7 +56,6 @@
     height: 30px;
     border: none;
     border-radius: 50%;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,4 +68,42 @@
 
 .colorItem > p {
     font-size: 14px;
+}
+
+.priceContainer{
+    margin-top: 10px;
+}
+
+.priceItemHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.priceItemHolder > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.priceItemHolder > div:hover{
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius);
+}
+
+.priceItemHolder > div > label{
+    cursor: pointer;
+}
+
+.priceItemHolder > div > input{
+    width: 25px;
+    height: 25px;
+    accent-color: black;
+    cursor: pointer;
+    border-color: var(--color-gray);
 }
