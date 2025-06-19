@@ -10,16 +10,15 @@ import { context } from "../App.jsx";
 function Navbar() {
     const location = useLocation();
 
-    console.log(location.pathname)
+    console.log(location.pathname);
     return (
         <div className={style.main}>
             <div className={style.leftside}>
                 <Logo></Logo>
                 {/* display hamburger menu only when the path is at store page */}
-                {
-                    location.pathname === "/Shopping-Cart/Store" ?
-                    <Hamburger></Hamburger> : null
-                }
+                {location.pathname === "/Shopping-Cart/Store" ? (
+                    <Hamburger></Hamburger>
+                ) : null}
                 <div>
                     <HomeButton></HomeButton>
                     <StoreButton></StoreButton>
@@ -44,12 +43,12 @@ function Logo() {
     );
 }
 
-function Hamburger(){
-    return(
+function Hamburger() {
+    return (
         <button>
             <img alt="icon for hamburger menu" src={hamburgerIcon}></img>
         </button>
-    )
+    );
 }
 
 function HomeButton() {

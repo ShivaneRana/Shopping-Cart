@@ -8,7 +8,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Apples are crisp, juicy fruits from the Rosaceae family. They come in various colors and flavors, ranging from sweet to tart. Apples are often eaten raw, used in baking, and pressed into cider."
+        description:
+            "Apples are crisp, juicy fruits from the Rosaceae family. They come in various colors and flavors, ranging from sweet to tart. Apples are often eaten raw, used in baking, and pressed into cider.",
     },
     {
         name: "apricot",
@@ -19,7 +20,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Apricots are small, orange fruits from the Rosaceae family known for their velvety skin and sweet-tart flavor. They are commonly eaten fresh, dried, or used in jams and desserts."
+        description:
+            "Apricots are small, orange fruits from the Rosaceae family known for their velvety skin and sweet-tart flavor. They are commonly eaten fresh, dried, or used in jams and desserts.",
     },
     {
         name: "avocado",
@@ -30,7 +32,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Avocados are creamy, nutrient-dense fruits from the Lauraceae family. Rich in healthy fats and vitamins, they are often used in salads, spreads, and dips like guacamole."
+        description:
+            "Avocados are creamy, nutrient-dense fruits from the Lauraceae family. Rich in healthy fats and vitamins, they are often used in salads, spreads, and dips like guacamole.",
     },
     {
         name: "banana",
@@ -41,7 +44,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Bananas are elongated, sweet fruits from the Musaceae family. They are a convenient snack, rich in potassium and energy-boosting carbohydrates."
+        description:
+            "Bananas are elongated, sweet fruits from the Musaceae family. They are a convenient snack, rich in potassium and energy-boosting carbohydrates.",
     },
     {
         name: "blackberry",
@@ -52,7 +56,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Blackberries are dark purple to black fruits from the Rosaceae family. They have a sweet-tart flavor and are commonly used in desserts, jams, and smoothies."
+        description:
+            "Blackberries are dark purple to black fruits from the Rosaceae family. They have a sweet-tart flavor and are commonly used in desserts, jams, and smoothies.",
     },
     {
         name: "blueberry",
@@ -63,7 +68,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Blueberries are small, round fruits from the Ericaceae family, known for their sweet flavor and deep blue color. They are rich in antioxidants and widely used in baking and snacks."
+        description:
+            "Blueberries are small, round fruits from the Ericaceae family, known for their sweet flavor and deep blue color. They are rich in antioxidants and widely used in baking and snacks.",
     },
     {
         name: "cherry",
@@ -74,7 +80,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Cherries are small, round fruits with a sweet or tart flavor. Belonging to the Rosaceae family, they are enjoyed fresh, in pies, or preserved as jams."
+        description:
+            "Cherries are small, round fruits with a sweet or tart flavor. Belonging to the Rosaceae family, they are enjoyed fresh, in pies, or preserved as jams.",
     },
     {
         name: "dragon-fruit",
@@ -85,7 +92,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Dragon fruit, or pitaya, comes from the cactus family. It has a striking appearance with a spiky skin and sweet, mildly tangy flesh speckled with black seeds."
+        description:
+            "Dragon fruit, or pitaya, comes from the cactus family. It has a striking appearance with a spiky skin and sweet, mildly tangy flesh speckled with black seeds.",
     },
     {
         name: "fig",
@@ -96,7 +104,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Figs are sweet, pear-shaped fruits from the Moraceae family with a soft texture and many tiny seeds. They are eaten fresh, dried, or used in baking and preserves."
+        description:
+            "Figs are sweet, pear-shaped fruits from the Moraceae family with a soft texture and many tiny seeds. They are eaten fresh, dried, or used in baking and preserves.",
     },
     {
         name: "grape",
@@ -107,7 +116,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Grapes are small, juicy fruits from the Vitaceae family. Available in various colors, they are eaten fresh, dried into raisins, or used to make juice and wine."
+        description:
+            "Grapes are small, juicy fruits from the Vitaceae family. Available in various colors, they are eaten fresh, dried into raisins, or used to make juice and wine.",
     },
     {
         name: "grapefruit",
@@ -118,7 +128,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Grapefruits are large, tart citrus fruits from the Rutaceae family. They are enjoyed for their juicy segments and are commonly eaten fresh or juiced."
+        description:
+            "Grapefruits are large, tart citrus fruits from the Rutaceae family. They are enjoyed for their juicy segments and are commonly eaten fresh or juiced.",
     },
     {
         name: "kiwi",
@@ -129,7 +140,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Kiwis are small, fuzzy fruits from the Actinidiaceae family. They have bright green or golden flesh with a unique sweet-tart flavor and are rich in vitamin C."
+        description:
+            "Kiwis are small, fuzzy fruits from the Actinidiaceae family. They have bright green or golden flesh with a unique sweet-tart flavor and are rich in vitamin C.",
     },
     {
         name: "lemon",
@@ -140,7 +152,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Lemons are bright yellow citrus fruits from the Rutaceae family, known for their sour taste and high vitamin C content. They are widely used in cooking and beverages."
+        description:
+            "Lemons are bright yellow citrus fruits from the Rutaceae family, known for their sour taste and high vitamin C content. They are widely used in cooking and beverages.",
     },
     {
         name: "lime",
@@ -151,7 +164,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Limes are small, green citrus fruits with a tart flavor. Belonging to the Rutaceae family, they are essential in many dishes and drinks for their zest and acidity."
+        description:
+            "Limes are small, green citrus fruits with a tart flavor. Belonging to the Rutaceae family, they are essential in many dishes and drinks for their zest and acidity.",
     },
     {
         name: "mango",
@@ -162,7 +176,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Mangoes are juicy, tropical fruits from the Anacardiaceae family. Their sweet, rich flesh is enjoyed fresh, in smoothies, or used in cooking and desserts."
+        description:
+            "Mangoes are juicy, tropical fruits from the Anacardiaceae family. Their sweet, rich flesh is enjoyed fresh, in smoothies, or used in cooking and desserts.",
     },
     {
         name: "mangosteen",
@@ -173,7 +188,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Mangosteens are tropical fruits with a thick purple rind and juicy, white inner segments. Known as the 'queen of fruits,' they have a unique sweet-tart flavor."
+        description:
+            "Mangosteens are tropical fruits with a thick purple rind and juicy, white inner segments. Known as the 'queen of fruits,' they have a unique sweet-tart flavor.",
     },
     {
         name: "melon",
@@ -184,7 +200,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Melon is a broad term that refers to various fruits belonging to the Gourd family, including cantaloupe, honeydew, and watermelon. Melons are characterized by their sweet, juicy flesh and refreshing taste."
+        description:
+            "Melon is a broad term that refers to various fruits belonging to the Gourd family, including cantaloupe, honeydew, and watermelon. Melons are characterized by their sweet, juicy flesh and refreshing taste.",
     },
     {
         name: "nectarine",
@@ -195,7 +212,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Nectarines are smooth-skinned relatives of peaches from the Rosaceae family. They have a juicy, sweet flavor and are often eaten fresh or used in desserts."
+        description:
+            "Nectarines are smooth-skinned relatives of peaches from the Rosaceae family. They have a juicy, sweet flavor and are often eaten fresh or used in desserts.",
     },
     {
         name: "orange",
@@ -206,7 +224,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Oranges are citrus fruits from the Rutaceae family, valued for their juicy, sweet-tart segments. They are popular in juices, snacks, and desserts."
+        description:
+            "Oranges are citrus fruits from the Rutaceae family, valued for their juicy, sweet-tart segments. They are popular in juices, snacks, and desserts.",
     },
     {
         name: "papaya",
@@ -217,7 +236,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Papayas are tropical fruits with sweet, orange-red flesh and black seeds. They come from the Caricaceae family and are often eaten fresh or used in smoothies."
+        description:
+            "Papayas are tropical fruits with sweet, orange-red flesh and black seeds. They come from the Caricaceae family and are often eaten fresh or used in smoothies.",
     },
     {
         name: "passion-fruit",
@@ -228,7 +248,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Passion fruits are round, tropical fruits with a tough rind and aromatic, tangy pulp. They are commonly used in drinks, desserts, and sauces."
+        description:
+            "Passion fruits are round, tropical fruits with a tough rind and aromatic, tangy pulp. They are commonly used in drinks, desserts, and sauces.",
     },
     {
         name: "pear",
@@ -239,7 +260,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Pears are soft, juicy fruits with a sweet flavor and a grainy texture. From the Rosaceae family, they are eaten fresh, poached, or used in desserts."
+        description:
+            "Pears are soft, juicy fruits with a sweet flavor and a grainy texture. From the Rosaceae family, they are eaten fresh, poached, or used in desserts.",
     },
     {
         name: "persimmon",
@@ -250,7 +272,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Persimmons are orange-red fruits with a sweet, honey-like flavor. From the Ebenaceae family, they can be eaten fresh or dried when fully ripe."
+        description:
+            "Persimmons are orange-red fruits with a sweet, honey-like flavor. From the Ebenaceae family, they can be eaten fresh or dried when fully ripe.",
     },
     {
         name: "pineapple",
@@ -261,7 +284,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Pineapples are tropical fruits from the Bromeliaceae family with spiky skin and sweet-tart yellow flesh. They are widely used in cooking and drinks."
+        description:
+            "Pineapples are tropical fruits from the Bromeliaceae family with spiky skin and sweet-tart yellow flesh. They are widely used in cooking and drinks.",
     },
     {
         name: "plum",
@@ -272,7 +296,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Plums are juicy fruits from the Rosaceae family, with smooth skin and a sweet-tart taste. They are eaten fresh, dried as prunes, or used in cooking."
+        description:
+            "Plums are juicy fruits from the Rosaceae family, with smooth skin and a sweet-tart taste. They are eaten fresh, dried as prunes, or used in cooking.",
     },
     {
         name: "raspberry",
@@ -283,7 +308,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Raspberries are small, red fruits with a delicate, sweet-tart flavor. They are commonly used in desserts, jams, and health foods."
+        description:
+            "Raspberries are small, red fruits with a delicate, sweet-tart flavor. They are commonly used in desserts, jams, and health foods.",
     },
     {
         name: "rose-apple",
@@ -294,7 +320,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Rose apples are bell-shaped tropical fruits with a crisp texture and subtle floral taste. They belong to the Myrtaceae family and are often eaten fresh."
+        description:
+            "Rose apples are bell-shaped tropical fruits with a crisp texture and subtle floral taste. They belong to the Myrtaceae family and are often eaten fresh.",
     },
     {
         name: "strawberry",
@@ -305,7 +332,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Strawberries are sweet, red berries with a juicy texture and fragrant aroma. From the Rosaceae family, they are popular in desserts, salads, and preserves."
+        description:
+            "Strawberries are sweet, red berries with a juicy texture and fragrant aroma. From the Rosaceae family, they are popular in desserts, salads, and preserves.",
     },
     {
         name: "watermelon",
@@ -316,7 +344,8 @@ const fruits = [
         inCart: false,
         favourite: false,
         quantity: 1,
-        description: "Watermelons are large fruits from the Cucurbitaceae family with juicy, sweet, red or pink flesh. They are perfect for hydration and enjoyed fresh during summer."
+        description:
+            "Watermelons are large fruits from the Cucurbitaceae family with juicy, sweet, red or pink flesh. They are perfect for hydration and enjoyed fresh during summer.",
     },
 ];
 
