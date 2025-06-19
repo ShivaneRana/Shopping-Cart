@@ -1,12 +1,5 @@
 .main {
     min-width: 100vw;
     min-height: 90vh;
-    background-color: lightgreen;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main > h1 {
-    text-decoration: underline;
 }
