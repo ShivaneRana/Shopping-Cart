@@ -9,10 +9,12 @@ function SideBar() {
     return (
         <div className={style.main}>
             <ColorSelector></ColorSelector>
+            <PriceSelector></PriceSelector>
         </div>
     );
 }
 
+// holds the entire colorSet
 function ColorSelector() {
     const [expanded, setExpanded] = useState(true);
     const colorList = ["Red", "Orange", "Yellow", "Green", "Purple", "Pink"];
@@ -23,9 +25,10 @@ function ColorSelector() {
 
     return (
         <div className={style.colorContainer}>
-            <div onClick={toggleExpanded} className={style.colorHeadingHolder}>
+            <div onClick={toggleExpanded} className={style.headingHolder}>
                 <p>Color</p>
                 <img
+                    alt="icon for expand/ shrink icon"
                     title={expanded ? "Shrink section" : "Expand section"}
                     src={expanded ? shrinkIcon : expandedIcon}
                 ></img>
@@ -47,6 +50,7 @@ function ColorSelector() {
     );
 }
 
+// for individual color item
 function ColorItem({ color }) {
     const [check, setCheck] = useState(false);
 
@@ -55,16 +59,75 @@ function ColorItem({ color }) {
     }
 
     return (
-        <div className={style.colorItem}>
+        <div className={style.colorItem} onClick={toggleCheck}>
             <button
-                onClick={toggleCheck}
                 style={{ backgroundColor: `${color}` }}
             >
-                {check ? <img src={checkIcon}></img> : null}
+                {check ? <img alt="check mark" src={checkIcon}></img> : null}
             </button>
             <p>{color}</p>
         </div>
     );
+}
+
+function PriceSelector(){
+    const [expanded, setExpanded] = useState(true);
+
+    function toggleExpanded() {
+        setExpanded((prev) => !prev);
+    }
+
+    return(
+        <div className={style.priceContainer}>
+            <div onClick={toggleExpanded} className={style.headingHolder}>
+                <p>Price</p>
+                <img
+                    title={expanded ? "Shrink section" : "Expand section"}
+                    src={expanded ? shrinkIcon : expandedIcon}
+                ></img>
+            </div>
+            {
+                expanded ? 
+                 <PriceItem></PriceItem>
+                 : 
+            null
+            }
+        </div>
+    )
+}
+
+function PriceItem(){
+
+    const [lowToHigh,setLowToHigh] = useState(false);
+    const [HighToLow,setHighToLow] = useState(false);
+
+    function toggleLowToHigh(){
+        if(HighToLow){
+            setHighToLow(false)
+        }
+
+        setLowToHigh((prev) => !prev);
+    }
+
+    function toggleHighToLow(){
+        if(lowToHigh){
+            setLowToHigh(false);
+        }
+
+        setHighToLow((prev) => !prev);
+    }
+
+    return(
+    <div className={style.priceItemHolder}>
+                <div onClick={toggleLowToHigh}>
+                    <input checked={lowToHigh} onChange={toggleLowToHigh} name="lowToHigh" type="checkbox"></input>
+                    <label htmlFor="lowToHigh">Set price low to high</label>
+                </div>
+                <div onClick={toggleHighToLow}>
+                    <input checked={HighToLow} onChange={toggleHighToLow} name="highToLow" type="checkbox"></input>
+                    <label htmlFor="highToLow">Set price high to low</label>
+                </div>
+            </div>)
 }
 
 export default SideBar;
