@@ -70,18 +70,18 @@
     font-size: 14px;
 }
 
-.priceContainer{
+.priceContainer {
     margin-top: 10px;
 }
 
-.priceItemHolder{
+.priceItemHolder {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.priceItemHolder > div{
+.priceItemHolder > div {
     width: 100%;
     display: flex;
     align-items: center;
@@ -91,16 +91,16 @@
     cursor: pointer;
 }
 
-.priceItemHolder > div:hover{
+.priceItemHolder > div:hover {
     background-color: var(--color-gray);
     border-radius: var(--border-radius);
 }
 
-.priceItemHolder > div > label{
+.priceItemHolder > div > label {
     cursor: pointer;
 }
 
-.priceItemHolder > div > input{
+.priceItemHolder > div > input {
     width: 25px;
     height: 25px;
     accent-color: black;

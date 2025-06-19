@@ -60,9 +60,7 @@ function ColorItem({ color }) {
 
     return (
         <div className={style.colorItem} onClick={toggleCheck}>
-            <button
-                style={{ backgroundColor: `${color}` }}
-            >
+            <button style={{ backgroundColor: `${color}` }}>
                 {check ? <img alt="check mark" src={checkIcon}></img> : null}
             </button>
             <p>{color}</p>
@@ -70,14 +68,14 @@ function ColorItem({ color }) {
     );
 }
 
-function PriceSelector(){
+function PriceSelector() {
     const [expanded, setExpanded] = useState(true);
 
     function toggleExpanded() {
         setExpanded((prev) => !prev);
     }
 
-    return(
+    return (
         <div className={style.priceContainer}>
             <div onClick={toggleExpanded} className={style.headingHolder}>
                 <p>Price</p>
@@ -86,48 +84,53 @@ function PriceSelector(){
                     src={expanded ? shrinkIcon : expandedIcon}
                 ></img>
             </div>
-            {
-                expanded ? 
-                 <PriceItem></PriceItem>
-                 : 
-            null
-            }
+            {expanded ? <PriceItem></PriceItem> : null}
         </div>
-    )
+    );
 }
 
-function PriceItem(){
+function PriceItem() {
+    const [lowToHigh, setLowToHigh] = useState(false);
+    const [HighToLow, setHighToLow] = useState(false);
 
-    const [lowToHigh,setLowToHigh] = useState(false);
-    const [HighToLow,setHighToLow] = useState(false);
-
-    function toggleLowToHigh(){
-        if(HighToLow){
-            setHighToLow(false)
+    function toggleLowToHigh() {
+        if (HighToLow) {
+            setHighToLow(false);
         }
 
         setLowToHigh((prev) => !prev);
     }
 
-    function toggleHighToLow(){
-        if(lowToHigh){
+    function toggleHighToLow() {
+        if (lowToHigh) {
             setLowToHigh(false);
         }
 
         setHighToLow((prev) => !prev);
     }
 
-    return(
-    <div className={style.priceItemHolder}>
-                <div onClick={toggleLowToHigh}>
-                    <input checked={lowToHigh} onChange={toggleLowToHigh} name="lowToHigh" type="checkbox"></input>
-                    <label htmlFor="lowToHigh">Set price low to high</label>
-                </div>
-                <div onClick={toggleHighToLow}>
-                    <input checked={HighToLow} onChange={toggleHighToLow} name="highToLow" type="checkbox"></input>
-                    <label htmlFor="highToLow">Set price high to low</label>
-                </div>
-            </div>)
+    return (
+        <div className={style.priceItemHolder}>
+            <div onClick={toggleLowToHigh}>
+                <input
+                    checked={lowToHigh}
+                    onChange={toggleLowToHigh}
+                    name="lowToHigh"
+                    type="checkbox"
+                ></input>
+                <label htmlFor="lowToHigh">Set price low to high</label>
+            </div>
+            <div onClick={toggleHighToLow}>
+                <input
+                    checked={HighToLow}
+                    onChange={toggleHighToLow}
+                    name="highToLow"
+                    type="checkbox"
+                ></input>
+                <label htmlFor="highToLow">Set price high to low</label>
+            </div>
+        </div>
+    );
 }
 
 export default SideBar;
