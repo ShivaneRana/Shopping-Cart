@@ -2,7 +2,7 @@ import style from "./App.module.css";
 import Navbar from "./component/Navbar.jsx";
 import { createContext } from "react";
 import { Outlet } from "react-router-dom";
-import { useFavoriteState } from "./component/Utility.jsx";
+import { useFavoriteState } from "./utility/Favourite.jsx";
 
 export let context = createContext();
 
