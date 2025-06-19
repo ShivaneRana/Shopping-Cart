@@ -2,15 +2,24 @@ import style from "../style/Navbar.module.css";
 import favIconClicked from "../assets/images/fav.png";
 import favIconNotClicked from "../assets/images/notfav.png";
 import cartIcon from "../assets/images/cart.png";
-import { Link } from "react-router-dom";
+import hamburgerIcon from "../assets/images/hamburger.svg";
+import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { context } from "../App.jsx";
 
 function Navbar() {
+    const location = useLocation();
+
+    console.log(location.pathname)
     return (
         <div className={style.main}>
             <div className={style.leftside}>
                 <Logo></Logo>
+                {/* display hamburger menu only when the path is at store page */}
+                {
+                    location.pathname === "/Shopping-Cart/Store" ?
+                    <Hamburger></Hamburger> : null
+                }
                 <div>
                     <HomeButton></HomeButton>
                     <StoreButton></StoreButton>
@@ -33,6 +42,14 @@ function Logo() {
             <h1>EdenCrate.</h1>
         </Link>
     );
+}
+
+function Hamburger(){
+    return(
+        <button>
+            <img alt="icon for hamburger menu" src={hamburgerIcon}></img>
+        </button>
+    )
 }
 
 function HomeButton() {
