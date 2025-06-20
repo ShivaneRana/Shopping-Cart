@@ -8,7 +8,6 @@ function SideBar() {
     return (
         <div className={style.main}>
             <ColorSelector></ColorSelector>
-            <PriceSelector></PriceSelector>
             <FamilySelector></FamilySelector>
             <VitaminSelector></VitaminSelector>
         </div>
@@ -36,12 +35,12 @@ function ColorSelector() {
             </div>
             <div className={style.colorItemHolder}>
                 {expanded
-                    ? colorList.map((item) => {
+                    && colorList.map((item) => {
                           return (
                               <ColorItem key={item} color={item}></ColorItem>
                           );
                       })
-                    : null}
+                    }
             </div>
         </div>
     );
@@ -65,33 +64,6 @@ function ColorItem({ color }) {
     );
 }
 
-function PriceSelector() {
-    const [expanded, setExpanded] = useState(true);
-
-    function toggleExpanded() {
-        setExpanded((prev) => !prev);
-    }
-
-    return (
-        <div className={style.priceContainer}>
-            <div onClick={toggleExpanded} className={style.headingHolder}>
-                <p>Price</p>
-                <img
-                    title={expanded ? "Shrink section" : "Expand section"}
-                    src={expanded ? shrinkIcon : expandedIcon}
-                ></img>
-            </div>
-            {expanded ? <PriceItemHolder></PriceItemHolder> : null}
-        </div>
-    );
-}
-
-function PriceItemHolder() {
-    const [priceSort, setPriceSort] = useState(null);
-
-    return <div className={style.priceItemHolder}></div>;
-}
-
 function FamilySelector() {
     const [expanded, setExpanded] = useState(true);
 
@@ -108,7 +80,7 @@ function FamilySelector() {
                     src={expanded ? shrinkIcon : expandedIcon}
                 ></img>
             </div>
-            {expanded ? <FamilyItemHolder></FamilyItemHolder> : null}
+            {expanded && <FamilyItemHolder></FamilyItemHolder>}
         </div>
     );
 }
@@ -154,6 +126,7 @@ function VitaminSelector() {
                     src={expanded ? shrinkIcon : expandedIcon}
                 ></img>
             </div>
+            {expanded && VitaminItemHolder}
         </div>
     );
 }
