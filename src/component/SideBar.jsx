@@ -38,10 +38,7 @@ function ColorSelector() {
                 {expanded
                     ? colorList.map((item) => {
                           return (
-                              <ColorItem
-                                  key={item}
-                                  color={item}
-                              ></ColorItem>
+                              <ColorItem key={item} color={item}></ColorItem>
                           );
                       })
                     : null}
@@ -90,12 +87,9 @@ function PriceSelector() {
 }
 
 function PriceItemHolder() {
-    const [priceSort,setPriceSort] = useState(null);
+    const [priceSort, setPriceSort] = useState(null);
 
-    return (
-        <div className={style.priceItemHolder}>
-        </div>
-    );
+    return <div className={style.priceItemHolder}></div>;
 }
 
 function FamilySelector() {
@@ -120,34 +114,31 @@ function FamilySelector() {
 }
 
 function FamilyItemHolder() {
-    const [selectedFamily,setSelectedFamily] = useState(null);
+    const [selectedFamily, setSelectedFamily] = useState(null);
     const familyList = [
-  "Rose",
-  "Laurel",
-  "Banana",
-  "Heath",
-  "Cactus",
-  "Fig",
-  "Grape",
-  "Citrus",
-  "Kiwi",
-  "Cashew",
-  "Gourd",
-  "Papaya",
-  "Ebony",
-  "Myrtle",
-  "Pineapple",
-  "Passionfruit",
-  "Mangosteen",
+        "Rose",
+        "Laurel",
+        "Banana",
+        "Heath",
+        "Cactus",
+        "Fig",
+        "Grape",
+        "Citrus",
+        "Kiwi",
+        "Cashew",
+        "Gourd",
+        "Papaya",
+        "Ebony",
+        "Myrtle",
+        "Pineapple",
+        "Passionfruit",
+        "Mangosteen",
     ];
 
-    return(
-        <div className={style.familyItemHolder}>
-        </div>
-    )
+    return <div className={style.familyItemHolder}></div>;
 }
 
-function VitaminSelector(){
+function VitaminSelector() {
     const [expanded, setExpanded] = useState(true);
 
     function toggleExpanded() {
@@ -167,11 +158,8 @@ function VitaminSelector(){
     );
 }
 
-function VitaminItemHolder(){
-    return(
-        <div className={style.vitaminItemHolder}>
-        </div>
-    )
+function VitaminItemHolder() {
+    return <div className={style.vitaminItemHolder}></div>;
 }
 
 export default SideBar;
