@@ -3,13 +3,14 @@ import expandedIcon from "../assets/images/down.svg";
 import shrinkIcon from "../assets/images/top.svg";
 import checkIcon from "../assets/images/check.svg";
 import { useState } from "react";
-import { uuidv7 } from "uuidv7";
 
 function SideBar() {
     return (
         <div className={style.main}>
             <ColorSelector></ColorSelector>
             <PriceSelector></PriceSelector>
+            <FamilySelector></FamilySelector>
+            <VitaminSelector></VitaminSelector>
         </div>
     );
 }
@@ -36,10 +37,9 @@ function ColorSelector() {
             <div className={style.colorItemHolder}>
                 {expanded
                     ? colorList.map((item) => {
-                          const tempUUID = uuidv7();
                           return (
                               <ColorItem
-                                  key={tempUUID}
+                                  key={item}
                                   color={item}
                               ></ColorItem>
                           );
@@ -84,53 +84,94 @@ function PriceSelector() {
                     src={expanded ? shrinkIcon : expandedIcon}
                 ></img>
             </div>
-            {expanded ? <PriceItem></PriceItem> : null}
+            {expanded ? <PriceItemHolder></PriceItemHolder> : null}
         </div>
     );
 }
 
-function PriceItem() {
-    const [lowToHigh, setLowToHigh] = useState(false);
-    const [HighToLow, setHighToLow] = useState(false);
-
-    function toggleLowToHigh() {
-        if (HighToLow) {
-            setHighToLow(false);
-        }
-
-        setLowToHigh((prev) => !prev);
-    }
-
-    function toggleHighToLow() {
-        if (lowToHigh) {
-            setLowToHigh(false);
-        }
-
-        setHighToLow((prev) => !prev);
-    }
+function PriceItemHolder() {
+    const [priceSort,setPriceSort] = useState(null);
 
     return (
         <div className={style.priceItemHolder}>
-            <div onClick={toggleLowToHigh}>
-                <input
-                    checked={lowToHigh}
-                    onChange={toggleLowToHigh}
-                    name="lowToHigh"
-                    type="checkbox"
-                ></input>
-                <label htmlFor="lowToHigh">Set price low to high</label>
+        </div>
+    );
+}
+
+function FamilySelector() {
+    const [expanded, setExpanded] = useState(true);
+
+    function toggleExpanded() {
+        setExpanded((prev) => !prev);
+    }
+
+    return (
+        <div className={style.familyContainer}>
+            <div onClick={toggleExpanded} className={style.headingHolder}>
+                <p>Family</p>
+                <img
+                    title={expanded ? "Shrink section" : "Expand section"}
+                    src={expanded ? shrinkIcon : expandedIcon}
+                ></img>
             </div>
-            <div onClick={toggleHighToLow}>
-                <input
-                    checked={HighToLow}
-                    onChange={toggleHighToLow}
-                    name="highToLow"
-                    type="checkbox"
-                ></input>
-                <label htmlFor="highToLow">Set price high to low</label>
+            {expanded ? <FamilyItemHolder></FamilyItemHolder> : null}
+        </div>
+    );
+}
+
+function FamilyItemHolder() {
+    const [selectedFamily,setSelectedFamily] = useState(null);
+    const familyList = [
+  "Rose",
+  "Laurel",
+  "Banana",
+  "Heath",
+  "Cactus",
+  "Fig",
+  "Grape",
+  "Citrus",
+  "Kiwi",
+  "Cashew",
+  "Gourd",
+  "Papaya",
+  "Ebony",
+  "Myrtle",
+  "Pineapple",
+  "Passionfruit",
+  "Mangosteen",
+    ];
+
+    return(
+        <div className={style.familyItemHolder}>
+        </div>
+    )
+}
+
+function VitaminSelector(){
+    const [expanded, setExpanded] = useState(true);
+
+    function toggleExpanded() {
+        setExpanded((prev) => !prev);
+    }
+
+    return (
+        <div className={style.vitaminContainer}>
+            <div onClick={toggleExpanded} className={style.headingHolder}>
+                <p>Vitamins</p>
+                <img
+                    title={expanded ? "Shrink section" : "Expand section"}
+                    src={expanded ? shrinkIcon : expandedIcon}
+                ></img>
             </div>
         </div>
     );
+}
+
+function VitaminItemHolder(){
+    return(
+        <div className={style.vitaminItemHolder}>
+        </div>
+    )
 }
 
 export default SideBar;
