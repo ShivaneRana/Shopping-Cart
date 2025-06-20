@@ -1,4 +1,85 @@
 .main {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 20px;
+}
+
+.headingHolder{
     min-width: 100%;
-    background-color: rebeccapurple;
+}
+
+.headingHolder > h2{
+    font-size: 18px;
+}
+
+.productHolder{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 18px;
+}
+
+.productItem{
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius);
+    aspect-ratio: 9/10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* contains fruit icon */
+.imageHolder{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageHolder > img{
+    width: 60px;
+    height: 60px;
+}
+
+/* contains fruit name and family name */
+.nameHolder{
+    width: 100%;
+}
+
+.nameHolder > h2{
+    font-size: 16px;
+}
+
+.nameHolder > h3{
+    margin-top: 5px;
+    font-weight: 100;
+    font-size: 16px;
+    color: #a3a3a3;
+}
+
+/* contains fruit price and cart icon */
+.priceHolder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priceHolder > h3{
+    font-size: 16px;
+}
+
+.priceHolder > img{
+    width: 25px;
+    height: 25px;
 }
