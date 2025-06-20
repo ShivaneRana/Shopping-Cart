@@ -32,7 +32,7 @@ function ProductItem({ itemDetails }) {
             </div>
             <div className={style.nameHolder}>
                 <h2>{itemDetails.name}</h2>
-                <h3>{itemDetails.family}</h3>
+                <h3>{itemDetails.family} Family</h3>
             </div>
             <div className={style.priceHolder}>
                 <h3>$ {itemDetails.price}</h3>
