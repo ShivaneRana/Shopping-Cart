@@ -52,13 +52,14 @@
 }
 
 .colorItem > button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: none;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .colorItem > button > img {
@@ -67,43 +68,29 @@
 }
 
 .colorItem > p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .priceContainer {
     margin-top: 10px;
 }
 
-.priceItemHolder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.priceItemHolder{
+    min-width: 100%;
 }
 
-.priceItemHolder > div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
+.familyContainer {
+    margin-top: 10px;
 }
 
-.priceItemHolder > div:hover {
-    background-color: var(--color-gray);
-    border-radius: var(--border-radius);
+.familyItemHolder{
+    min-width: 100%;
 }
 
-.priceItemHolder > div > label {
-    cursor: pointer;
+.vitaminContainer{
+    margin-top: 10px;
 }
 
-.priceItemHolder > div > input {
-    width: 25px;
-    height: 25px;
-    accent-color: black;
-    cursor: pointer;
-    border-color: var(--color-gray);
+.vitaminItemHolder{
+    min-width: 100%;
 }
