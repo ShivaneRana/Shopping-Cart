@@ -83,28 +83,23 @@ function FamilySelector() {
 }
 
 function FamilyItemHolder() {
-    const [selectedFamily, setSelectedFamily] = useState(null);
     const familyList = [
-        "Rose",
-        "Laurel",
-        "Banana",
-        "Heath",
-        "Cactus",
-        "Fig",
-        "Grape",
-        "Citrus",
-        "Kiwi",
-        "Cashew",
-        "Gourd",
-        "Papaya",
-        "Ebony",
-        "Myrtle",
-        "Pineapple",
-        "Passionfruit",
-        "Mangosteen",
-    ];
+    "Rose", "Avocado", "Banana", "Berry",
+    "Grape", "Citrus", "Tropical", "Gourd","Others"
+    ]
 
-    return <div className={style.familyItemHolder}></div>;
+    return <div className={style.familyItemHolder}>
+        {
+            familyList.map((item) => {
+                return (
+                    <div key={item} className={style.familyItem}>
+                        <input type="checkbox" name="family"></input>
+                        <label htmlFor="family">{item}</label>
+                    </div>
+                )
+            })
+        }
+    </div>;
 }
 
 function VitaminSelector() {
@@ -123,13 +118,33 @@ function VitaminSelector() {
                     src={expanded ? shrinkIcon : expandedIcon}
                 ></img>
             </div>
-            {expanded && VitaminItemHolder}
+            {expanded && <VitaminItemHolder></VitaminItemHolder>}
         </div>
     );
 }
 
 function VitaminItemHolder() {
-    return <div className={style.vitaminItemHolder}></div>;
+    const vitaminList = [
+        "Vitamin A",
+        "Vitamin B",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin E",
+        "Vitamin K"
+    ]
+
+    return <div className={style.vitaminItemHolder}>
+        {
+            vitaminList.map((item) => {
+                return (
+                    <div key={item} className={style.vitaminItem}>
+                        <input type="checkbox" name="vitamin"></input>
+                        <label htmlFor="vitamin">{item}</label>
+                    </div>
+                )
+            })
+        }
+    </div>;
 }
 
 export default SideBar;
