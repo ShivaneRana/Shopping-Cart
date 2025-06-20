@@ -84,22 +84,29 @@ function FamilySelector() {
 
 function FamilyItemHolder() {
     const familyList = [
-    "Rose", "Avocado", "Banana", "Berry",
-    "Grape", "Citrus", "Tropical", "Gourd","Others"
-    ]
+        "Rose",
+        "Avocado",
+        "Banana",
+        "Berry",
+        "Grape",
+        "Citrus",
+        "Tropical",
+        "Gourd",
+        "Others",
+    ];
 
-    return <div className={style.familyItemHolder}>
-        {
-            familyList.map((item) => {
+    return (
+        <div className={style.familyItemHolder}>
+            {familyList.map((item) => {
                 return (
                     <div key={item} className={style.familyItem}>
                         <input type="checkbox" name="family"></input>
                         <label htmlFor="family">{item}</label>
                     </div>
-                )
-            })
-        }
-    </div>;
+                );
+            })}
+        </div>
+    );
 }
 
 function VitaminSelector() {
@@ -130,21 +137,21 @@ function VitaminItemHolder() {
         "Vitamin C",
         "Vitamin D",
         "Vitamin E",
-        "Vitamin K"
-    ]
+        "Vitamin K",
+    ];
 
-    return <div className={style.vitaminItemHolder}>
-        {
-            vitaminList.map((item) => {
+    return (
+        <div className={style.vitaminItemHolder}>
+            {vitaminList.map((item) => {
                 return (
                     <div key={item} className={style.vitaminItem}>
                         <input type="checkbox" name="vitamin"></input>
                         <label htmlFor="vitamin">{item}</label>
                     </div>
-                )
-            })
-        }
-    </div>;
+                );
+            })}
+        </div>
+    );
 }
 
 export default SideBar;
