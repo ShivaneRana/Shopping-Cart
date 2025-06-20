@@ -5,22 +5,27 @@ import cartIcon from "../assets/images/cart.png";
 import cartPressedIcon from "../assets/images/cartPressed.png";
 
 function ProductShowcase() {
-    return <div className={style.main}>
-        <div className={style.headingHolder}>
-            <h2>Items ({fruits.length})</h2>
+    return (
+        <div className={style.main}>
+            <div className={style.headingHolder}>
+                <h2>Items ({fruits.length})</h2>
+            </div>
+            <div className={style.productHolder}>
+                {fruits.map((item) => {
+                    return (
+                        <ProductItem
+                            itemDetails={item}
+                            key={item.name}
+                        ></ProductItem>
+                    );
+                })}
+            </div>
         </div>
-        <div className={style.productHolder}>
-            {
-                fruits.map((item) => {
-                    return <ProductItem itemDetails={item} key={item.name}></ProductItem>
-                })
-            }
-        </div>
-    </div>;
+    );
 }
 
-function ProductItem({itemDetails}){
-    return(
+function ProductItem({ itemDetails }) {
+    return (
         <div className={style.productItem}>
             <div className={style.imageHolder}>
                 <img src={tempImage}></img>
@@ -34,8 +39,7 @@ function ProductItem({itemDetails}){
                 <img alt="Cart icon" src={cartIcon}></img>
             </div>
         </div>
-    )
+    );
 }
-
 
 export default ProductShowcase;
