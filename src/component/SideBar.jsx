@@ -34,13 +34,10 @@ function ColorSelector() {
                 ></img>
             </div>
             <div className={style.colorItemHolder}>
-                {expanded
-                    && colorList.map((item) => {
-                          return (
-                              <ColorItem key={item} color={item}></ColorItem>
-                          );
-                      })
-                    }
+                {expanded &&
+                    colorList.map((item) => {
+                        return <ColorItem key={item} color={item}></ColorItem>;
+                    })}
             </div>
         </div>
     );
