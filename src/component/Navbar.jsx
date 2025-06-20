@@ -1,6 +1,6 @@
 import style from "../style/Navbar.module.css";
-import favIconClicked from "../assets/images/fav.png";
-import favIconNotClicked from "../assets/images/notfav.png";
+import favIconClicked from "../assets/images/favPressed.png";
+import favIconNotClicked from "../assets/images/fav.png";
 import cartIcon from "../assets/images/cart.png";
 import hamburgerIcon from "../assets/images/hamburger.svg";
 import { Link, useLocation } from "react-router-dom";
