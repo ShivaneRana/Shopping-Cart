@@ -17,8 +17,8 @@
 }
 
 .headingHolder > img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .colorContainer {
@@ -28,6 +28,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .colorItemHolder {
     width: 100%;
     display: flex;
@@ -71,16 +72,8 @@
     font-size: 12px;
 }
 
-.priceContainer {
-    margin-top: 10px;
-}
-
-.priceItemHolder {
-    min-width: 100%;
-}
-
 .familyContainer {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .familyItemHolder {
@@ -88,7 +81,7 @@
 }
 
 .vitaminContainer {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .vitaminItemHolder {
