@@ -7,8 +7,8 @@ import pear from "../assets/images/fruits/pear.png";
 import kiwi from "../assets/images/fruits/kiwi.png";
 import watermelon from "../assets/images/fruits/watermelon.png";
 import lime from "../assets/images/fruits/lime.png";
-import nextIcon from "../assets/images/next.png";
-import previousIcon from "../assets/images/previous.png";
+// import nextIcon from "../assets/images/next.png";
+// import previousIcon from "../assets/images/previous.png";
 import { useState } from "react";
 import { useEffect } from "react";
 import { uuidv7 } from "uuidv7";
@@ -45,7 +45,7 @@ function ShopButton() {
 
 function Carousel() {
     const [showArray, setShowArray] = useState([0, 1, 2]);
-    const interval = 3000;
+    const interval = 1500;
 
     function incrementShowArray() {
         let [a, b, c] = showArray;
@@ -80,12 +80,12 @@ function Carousel() {
     return (
         <div className={style.carousel}>
             <div className={style.mainContainer}>
-                <button title="Previous" onClick={decrementShowArray}>
+                {/* <button title="Previous" onClick={decrementShowArray}>
                     <img
                         alt="icon for displaying previous sets of images"
                         src={previousIcon}
                     ></img>
-                </button>
+                </button> */}
                 {showArray.map((item) => {
                     const element = fruitsArray[item];
                     const tempUUID = uuidv7();
@@ -100,12 +100,12 @@ function Carousel() {
                         </div>
                     );
                 })}
-                <button title="Next" onClick={incrementShowArray}>
+                {/* <button title="Next" onClick={incrementShowArray}>
                     <img
                         alt="icon for displaying next sets of images"
                         src={nextIcon}
                     ></img>
-                </button>
+                </button> */}
             </div>
         </div>
     );
