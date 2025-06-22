@@ -25,12 +25,12 @@ function ProductShowcase() {
 }
 
 function ProductItem({ itemDetails }) {
-    const images = import.meta.glob('/src/assets/images/fruits/*.png', {
-        eager: true, 
-        import: 'default',
+    const images = import.meta.glob("/src/assets/images/fruits/*.png", {
+        eager: true,
+        import: "default",
     });
 
-    const name = (itemDetails.name).toLowerCase();
+    const name = itemDetails.name.toLowerCase();
     const imageKey = `/src/assets/images/fruits/${name}.png`;
     const src = images[imageKey];
 

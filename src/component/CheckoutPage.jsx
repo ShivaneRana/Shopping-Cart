@@ -17,30 +17,22 @@ function CheckoutPage() {
     );
 }
 
-function BackButton(){
-    return(
+function BackButton() {
+    return (
         <Link to="/Shopping-Cart/Store">
             <button className={style.backButton}>
                 <img title="Go back" alt="back icon" src={backIcon}></img>
             </button>
         </Link>
-    )
+    );
 }
 
-function ShoppingBag(){
-    return(
-        <div className={style.shoppingBag}>
-            shoppingBag
-        </div>
-    )
+function ShoppingBag() {
+    return <div className={style.shoppingBag}>shoppingBag</div>;
 }
 
-function OrderSummary(){
-    return(
-        <div className={style.orderSummary}>
-            orderSummary
-        </div>
-    )
+function OrderSummary() {
+    return <div className={style.orderSummary}>orderSummary</div>;
 }
 
 export default CheckoutPage;
