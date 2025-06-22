@@ -28,11 +28,15 @@ function BackButton() {
 }
 
 function ShoppingBag() {
-    return <div className={style.shoppingBag}>shoppingBag</div>;
+    return <div className={style.shoppingBag}>
+
+    </div>;
 }
 
 function OrderSummary() {
-    return <div className={style.orderSummary}>orderSummary</div>;
+    return <div className={style.orderSummary}>
+
+    </div>;
 }
 
 export default CheckoutPage;
