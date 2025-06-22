@@ -8,6 +8,11 @@ function CheckoutPage() {
             <div className={style.buttonHolder}>
                 <BackButton></BackButton>
             </div>
+            <h3>Shopping bag</h3>
+            <div className={style.checkoutContainer}>
+                <ShoppingBag></ShoppingBag>
+                <OrderSummary></OrderSummary>
+            </div>
         </div>
     );
 }
@@ -19,6 +24,22 @@ function BackButton(){
                 <img title="Go back" alt="back icon" src={backIcon}></img>
             </button>
         </Link>
+    )
+}
+
+function ShoppingBag(){
+    return(
+        <div className={style.shoppingBag}>
+            shoppingBag
+        </div>
+    )
+}
+
+function OrderSummary(){
+    return(
+        <div className={style.orderSummary}>
+            orderSummary
+        </div>
     )
 }
 
