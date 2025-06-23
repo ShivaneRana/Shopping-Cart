@@ -35,7 +35,26 @@ function ShoppingBag() {
 
 function OrderSummary() {
     return <div className={style.orderSummary}>
-
+        <div>
+            <div className={style.orderSubtotal}>
+                <h3>Order Summary</h3>
+                <h3>$89.90</h3>
+                <div>
+                    <p>Subtotal (5 items)</p>
+                    <p>$ 12.87</p>
+                </div>
+                <div>
+                    <p>GST (25%)</p>
+                    <p>$ 2.87</p>
+                </div>
+            </div>
+            <hr></hr>
+            <div className={style.orderTotal}>
+                <h3>Total</h3>
+                <h3>$ 14.12</h3>
+            </div>
+            <button className={style.checkoutButton}>Checkout</button>
+        </div>
     </div>;
 }
 
