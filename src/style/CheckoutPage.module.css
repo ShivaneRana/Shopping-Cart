@@ -11,6 +11,10 @@
     width: min-content;
 }
 
+
+
+/* BackButton Component */
+
 .backButton {
     width: 40px;
     height: 40px;
@@ -40,10 +44,130 @@
     align-items: flex-start;
 }
 
+
+
+/* ShoppingBag component */
+
 .shoppingBag {
-    width: 60vw;
-    height: 500px;
+    width: 1000px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
 }
+
+.orderContainer{
+    width: 75%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageHolder{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background-color: var(--color-gray);
+    cursor: pointer;
+}
+
+.imageHolder > img{
+    width: 50px;
+    height: 50px;
+}
+
+.itemDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.itemDetail > .itemName,.itemFamily{
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+.itemDetail > .itemQuantity,.itemStock{
+    font-size: 14px;
+}
+
+.itemDetail > .itemStock{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    color: var(--color-blue);
+}
+
+.itemDetail > .itemStock > img{
+    width: 16px;
+    height: 16px;
+}
+
+.quantityController{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quantityController > button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;    
+    border-radius: 5px;
+    background-color: var(--color-gray);
+    outline: 1px solid var(--color-darkGray);
+    cursor: pointer;
+}
+
+.quantityController > button > img{
+    width: 50%;
+    height: 50%;
+}
+
+.priceDetail{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* delete button */
+.priceDetail > button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;    
+    border-radius: 5px;
+    background-color: var(--color-gray);
+    outline: 1px solid var(--color-darkGray);
+    cursor: pointer;
+    font-family: var(--font-family);
+}
+
+.priceDetail > button > img{
+    width: 50%;
+    height: 50%;
+}
+
+.priceDetail > h5{
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+
+
+/* OrderSummary Component */
 
 .orderSummary {
     min-width: 400px;
@@ -105,6 +229,7 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    font-family: var(--font-family);
 }
 
 .checkoutButton:hover {
