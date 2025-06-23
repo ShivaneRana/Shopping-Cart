@@ -1,11 +1,13 @@
 import style from "../style/Navbar.module.css";
 import favIconClicked from "../assets/images/favPressed.png";
 import favIconNotClicked from "../assets/images/fav.png";
-import cartIcon from "../assets/images/cart.png";
+import cartIconNotClicked from "../assets/images/cart.png";
+import cartIconClicked from "../assets/images/cartPressed.png";
 import hamburgerIcon from "../assets/images/hamburger.svg";
 import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { context } from "../App.jsx";
+import { useState } from "react";
 
 function Navbar() {
     const location = useLocation();
@@ -105,10 +107,12 @@ function FavouriteButton() {
 }
 
 function CartButton() {
+    const [clicked,setClicked] = useState(false);
+
     return (
         <Link to="Checkout">
-            <button>
-                <img title="Display Cart" alt="cart icon" src={cartIcon}></img>
+            <button onClick={() => setClicked(prev => !prev)}>
+                <img title="Display Cart" alt="cart icon" src={clicked ? cartIconClicked : cartIconNotClicked}></img>
             </button>
         </Link>
     );
