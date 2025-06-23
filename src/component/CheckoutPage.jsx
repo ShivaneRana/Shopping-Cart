@@ -56,7 +56,10 @@ function ShoppingBag() {
                 return (
                     <div className={style.orderContainer} key={item.name}>
                         {/* contains the product image */}
-                        <div title="Go to product page" className={style.imageHolder}>
+                        <div
+                            title="Go to product page"
+                            className={style.imageHolder}
+                        >
                             <img alt="product icon" src={src}></img>
                         </div>
 
@@ -122,7 +125,10 @@ function OrderSummary() {
                     <h3>Total</h3>
                     <h3>$ 14.12</h3>
                 </div>
-                <button title="Complete purchase" className={style.checkoutButton}>
+                <button
+                    title="Complete purchase"
+                    className={style.checkoutButton}
+                >
                     Checkout
                 </button>
             </div>

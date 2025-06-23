@@ -72,7 +72,7 @@
     cursor: pointer;
 }
 
-.imageHolder:hover{
+.imageHolder:hover {
     background-color: var(--color-darkGray);
 }
 
@@ -131,7 +131,7 @@
     cursor: pointer;
 }
 
-.quantityController > button:hover{
+.quantityController > button:hover {
     background-color: var(--color-darkGray);
 }
 
@@ -161,7 +161,7 @@
     cursor: pointer;
 }
 
-.priceDetail > button:hover{
+.priceDetail > button:hover {
     background-color: var(--color-darkGray);
 }
 
