@@ -10,7 +10,6 @@ import { context } from "../App.jsx";
 function Navbar() {
     const location = useLocation();
 
-    console.log(location.pathname);
     return (
         <div className={style.main}>
             <div className={style.leftside}>
