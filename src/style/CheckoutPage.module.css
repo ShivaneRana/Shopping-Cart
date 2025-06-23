@@ -25,6 +25,7 @@
 .backButton:hover {
     background-color: var(--color-darkGray);
 }
+
 .backButton > img {
     width: 20px;
     height: 20px;
@@ -69,6 +70,10 @@
     border-radius: var(--border-radius);
     background-color: var(--color-gray);
     cursor: pointer;
+}
+
+.imageHolder:hover{
+    background-color: var(--color-darkGray);
 }
 
 .imageHolder > img {
@@ -126,6 +131,10 @@
     cursor: pointer;
 }
 
+.quantityController > button:hover{
+    background-color: var(--color-darkGray);
+}
+
 .quantityController > button > img {
     width: 50%;
     height: 50%;
@@ -150,7 +159,10 @@
     background-color: var(--color-gray);
     outline: 1px solid var(--color-darkGray);
     cursor: pointer;
-    font-family: var(--font-family);
+}
+
+.priceDetail > button:hover{
+    background-color: var(--color-darkGray);
 }
 
 .priceDetail > button > img {
