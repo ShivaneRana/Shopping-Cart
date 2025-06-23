@@ -56,8 +56,8 @@ function ShoppingBag() {
                 return (
                     <div className={style.orderContainer} key={item.name}>
                         {/* contains the product image */}
-                        <div className={style.imageHolder}>
-                            <img src={src}></img>
+                        <div title="Go to product page" className={style.imageHolder}>
+                            <img alt="product icon" src={src}></img>
                         </div>
 
                         {/* contains the product detail */}
@@ -78,19 +78,19 @@ function ShoppingBag() {
 
                         {/* increase/ decrease product quantity */}
                         <div className={style.quantityController}>
-                            <button>
-                                <img src={minusIcon}></img>
+                            <button title="Decrease quantity">
+                                <img alt="minux icon" src={minusIcon}></img>
                             </button>
                             <p>{item.quantity}</p>
-                            <button>
-                                <img src={plusIcon}></img>
+                            <button title="Increase quantity">
+                                <img alt="plus icon" src={plusIcon}></img>
                             </button>
                         </div>
 
                         {/*  display price and delete button */}
                         <div className={style.priceDetail}>
-                            <button>
-                                <img src={deleteIcon}></img>
+                            <button title="Delete item">
+                                <img alt="delete icon" src={deleteIcon}></img>
                             </button>
                             <h5>$ 90.90</h5>
                         </div>
@@ -122,7 +122,7 @@ function OrderSummary() {
                     <h3>Total</h3>
                     <h3>$ 14.12</h3>
                 </div>
-                <button title="" className={style.checkoutButton}>
+                <button title="Complete purchase" className={style.checkoutButton}>
                     Checkout
                 </button>
             </div>
