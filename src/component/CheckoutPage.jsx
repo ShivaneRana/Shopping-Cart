@@ -33,14 +33,9 @@ function BackButton() {
 }
 
 function ShoppingBag() {
-    let start = 0;
-    let end = 10;
-
-    const list = fruits.splice(start, end);
-
     return (
         <div className={style.shoppingBag}>
-            {list.map((item) => {
+            {fruits.map((item) => {
                 const images = import.meta.glob(
                     "/src/assets/images/fruits/*.png",
                     {
