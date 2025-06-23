@@ -55,16 +55,6 @@ function Carousel() {
         setShowArray([a, b, c]);
     }
 
-    function decrementShowArray() {
-        let [a, b, c] = showArray;
-
-        a === 0 ? (a = 6) : a--;
-        b === 0 ? (b = 6) : b--;
-        c === 0 ? (c = 6) : c--;
-
-        setShowArray([a, b, c]);
-    }
-
     useEffect(() => {
         const time = setInterval(() => {
             incrementShowArray();
