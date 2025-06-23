@@ -55,7 +55,7 @@
 }
 
 .orderContainer {
-    width: 75%;
+    width: 70%;
     height: 150px;
     display: flex;
     justify-content: space-between;
@@ -72,7 +72,7 @@
     cursor: pointer;
 }
 
-.imageHolder:hover {
+.imageHolder:hover{
     background-color: var(--color-darkGray);
 }
 
@@ -84,18 +84,29 @@
 .itemDetail {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
 }
 
-.itemDetail > .itemName,
-.itemFamily {
+.itemDetail > .itemName{
     font-size: var(--font-size);
     font-weight: var(--font-weight);
+}
+
+.itemDetail > .itemFamily{
+    font-size: var(--font-size);
+    font-weight: 100;
+    color: grey;
 }
 
 .itemDetail > .itemQuantity,
 .itemStock {
     font-size: 14px;
+}
+
+.itemDetail > .itemQuantity{
+    color: grey;
 }
 
 .itemDetail > .itemStock {
@@ -114,7 +125,7 @@
 .quantityController {
     width: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -131,7 +142,7 @@
     cursor: pointer;
 }
 
-.quantityController > button:hover {
+.quantityController > button:hover{
     background-color: var(--color-darkGray);
 }
 
@@ -161,7 +172,7 @@
     cursor: pointer;
 }
 
-.priceDetail > button:hover {
+.priceDetail > button:hover{
     background-color: var(--color-darkGray);
 }
 
