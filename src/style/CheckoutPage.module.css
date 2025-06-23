@@ -11,8 +11,6 @@
     width: min-content;
 }
 
-
-
 /* BackButton Component */
 
 .backButton {
@@ -44,8 +42,6 @@
     align-items: flex-start;
 }
 
-
-
 /* ShoppingBag component */
 
 .shoppingBag {
@@ -57,14 +53,14 @@
     gap: 30px;
 }
 
-.orderContainer{
+.orderContainer {
     width: 75%;
     height: 150px;
     display: flex;
     justify-content: space-between;
 }
 
-.imageHolder{
+.imageHolder {
     width: 150px;
     height: 150px;
     display: flex;
@@ -75,27 +71,29 @@
     cursor: pointer;
 }
 
-.imageHolder > img{
+.imageHolder > img {
     width: 50px;
     height: 50px;
 }
 
-.itemDetail{
+.itemDetail {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.itemDetail > .itemName,.itemFamily{
+.itemDetail > .itemName,
+.itemFamily {
     font-size: var(--font-size);
     font-weight: var(--font-weight);
 }
 
-.itemDetail > .itemQuantity,.itemStock{
+.itemDetail > .itemQuantity,
+.itemStock {
     font-size: 14px;
 }
 
-.itemDetail > .itemStock{
+.itemDetail > .itemStock {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -103,37 +101,37 @@
     color: var(--color-blue);
 }
 
-.itemDetail > .itemStock > img{
+.itemDetail > .itemStock > img {
     width: 16px;
     height: 16px;
 }
 
-.quantityController{
+.quantityController {
     width: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.quantityController > button{
+.quantityController > button {
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;    
+    border: none;
     border-radius: 5px;
     background-color: var(--color-gray);
     outline: 1px solid var(--color-darkGray);
     cursor: pointer;
 }
 
-.quantityController > button > img{
+.quantityController > button > img {
     width: 50%;
     height: 50%;
 }
 
-.priceDetail{
+.priceDetail {
     width: 200px;
     display: flex;
     align-items: center;
@@ -141,13 +139,13 @@
 }
 
 /* delete button */
-.priceDetail > button{
+.priceDetail > button {
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;    
+    border: none;
     border-radius: 5px;
     background-color: var(--color-gray);
     outline: 1px solid var(--color-darkGray);
@@ -155,17 +153,15 @@
     font-family: var(--font-family);
 }
 
-.priceDetail > button > img{
+.priceDetail > button > img {
     width: 50%;
     height: 50%;
 }
 
-.priceDetail > h5{
+.priceDetail > h5 {
     font-size: var(--font-size);
     font-weight: var(--font-weight);
 }
-
-
 
 /* OrderSummary Component */
 

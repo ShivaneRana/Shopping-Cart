@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import fruits from "../Fruits.jsx";
 
 function CheckoutPage() {
-
     return (
         <div className={style.main}>
             <div className={style.buttonHolder}>
@@ -34,27 +33,28 @@ function BackButton() {
 }
 
 function ShoppingBag() {
-
     let start = 0;
     let end = 10;
 
-    const list = fruits.splice(start,end);
+    const list = fruits.splice(start, end);
 
-    return <div className={style.shoppingBag}>
-        {
-            list.map(item => {
-                const images = import.meta.glob("/src/assets/images/fruits/*.png", {
-                    eager: true,
-                    import: "default",
-                });
+    return (
+        <div className={style.shoppingBag}>
+            {list.map((item) => {
+                const images = import.meta.glob(
+                    "/src/assets/images/fruits/*.png",
+                    {
+                        eager: true,
+                        import: "default",
+                    },
+                );
 
                 const name = item.name.toLowerCase();
                 const imageKey = `/src/assets/images/fruits/${name}.png`;
                 const src = images[imageKey];
 
-                return(
+                return (
                     <div className={style.orderContainer} key={item.name}>
-
                         {/* contains the product image */}
                         <div className={style.imageHolder}>
                             <img src={src}></img>
@@ -64,19 +64,23 @@ function ShoppingBag() {
                         {/* name, family, quanitity */}
                         <div className={style.itemDetail}>
                             <h3 className={style.itemName}>{item.name}</h3>
-                            <h3 className={style.itemFamily}>{item.family} Family</h3>
+                            <h3 className={style.itemFamily}>
+                                {item.family} Family
+                            </h3>
                             <div className={style.itemStock}>
-                                <img src={stockIcon}></img> 
+                                <img src={stockIcon}></img>
                                 <p>In stock</p>
                             </div>
-                            <h3 className={style.itemQuantity}>Qty: {item.quantity}</h3>
+                            <h3 className={style.itemQuantity}>
+                                Qty: {item.quantity}
+                            </h3>
                         </div>
 
                         {/* increase/ decrease product quantity */}
                         <div className={style.quantityController}>
                             <button>
                                 <img src={minusIcon}></img>
-                            </button> 
+                            </button>
                             <p>{item.quantity}</p>
                             <button>
                                 <img src={plusIcon}></img>
@@ -91,10 +95,10 @@ function ShoppingBag() {
                             <h5>$ 90.90</h5>
                         </div>
                     </div>
-                )
-            })
-        }
-    </div>;
+                );
+            })}
+        </div>
+    );
 }
 
 function OrderSummary() {
@@ -118,7 +122,9 @@ function OrderSummary() {
                     <h3>Total</h3>
                     <h3>$ 14.12</h3>
                 </div>
-                <button title = "" className={style.checkoutButton}>Checkout</button>
+                <button title="" className={style.checkoutButton}>
+                    Checkout
+                </button>
             </div>
         </div>
     );
