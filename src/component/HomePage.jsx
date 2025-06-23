@@ -36,7 +36,7 @@ function WelcomeText() {
 function ShopButton() {
     return (
         <Link to="Store" className={style.shopButton}>
-            <button title="Show now">Shop Now</button>
+            <button title="Shop now">Shop Now</button>
         </Link>
     );
 }
