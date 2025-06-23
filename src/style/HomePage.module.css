@@ -68,17 +68,6 @@
     gap: 20px;
 }
 
-.mainContainer > button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.mainContainer > button > img {
-    width: 50px;
-    height: 50px;
-}
-
 .fruitCard {
     position: relative;
     min-width: 250px;
