@@ -72,7 +72,7 @@
     cursor: pointer;
 }
 
-.imageHolder:hover{
+.imageHolder:hover {
     background-color: var(--color-darkGray);
 }
 
@@ -89,12 +89,12 @@
     gap: 10px;
 }
 
-.itemDetail > .itemName{
+.itemDetail > .itemName {
     font-size: var(--font-size);
     font-weight: var(--font-weight);
 }
 
-.itemDetail > .itemFamily{
+.itemDetail > .itemFamily {
     font-size: var(--font-size);
     font-weight: 100;
     color: grey;
@@ -105,7 +105,7 @@
     font-size: 14px;
 }
 
-.itemDetail > .itemQuantity{
+.itemDetail > .itemQuantity {
     color: grey;
     font-weight: 300;
 }
@@ -143,7 +143,7 @@
     cursor: pointer;
 }
 
-.quantityController > button:hover{
+.quantityController > button:hover {
     background-color: var(--color-darkGray);
 }
 
@@ -173,7 +173,7 @@
     cursor: pointer;
 }
 
-.priceDetail > button:hover{
+.priceDetail > button:hover {
     background-color: var(--color-darkGray);
 }
 

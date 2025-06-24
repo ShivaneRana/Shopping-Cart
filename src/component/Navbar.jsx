@@ -72,7 +72,11 @@ function StoreButton() {
 function SearchField() {
     return (
         <div>
-            <img className={style.searchIcon} alt="search icon" src={searchIcon}></img>
+            <img
+                className={style.searchIcon}
+                alt="search icon"
+                src={searchIcon}
+            ></img>
             <label htmlFor="searchFruit"></label>
             <input
                 title="Search"
@@ -109,12 +113,16 @@ function FavouriteButton() {
 }
 
 function CartButton() {
-    const [clicked,setClicked] = useState(false);
+    const [clicked, setClicked] = useState(false);
 
     return (
         <Link to="Checkout">
-            <button onClick={() => setClicked(prev => !prev)}>
-                <img title="Display Cart" alt="cart icon" src={clicked ? cartIconClicked : cartIconNotClicked}></img>
+            <button onClick={() => setClicked((prev) => !prev)}>
+                <img
+                    title="Display Cart"
+                    alt="cart icon"
+                    src={clicked ? cartIconClicked : cartIconNotClicked}
+                ></img>
             </button>
         </Link>
     );
