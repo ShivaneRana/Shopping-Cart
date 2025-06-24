@@ -44,7 +44,7 @@
     cursor: pointer;
 }
 
-.favButton{
+.favButton {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -56,11 +56,11 @@
     top: 20px;
 }
 
-.favButton:hover{
+.favButton:hover {
     transform: scale(1.2);
 }
 
-.favButton > img{
+.favButton > img {
     width: 30px;
     height: 30px;
     cursor: pointer;

@@ -34,7 +34,7 @@ function ProductShowcase() {
 }
 
 function ProductItem({ itemDetails }) {
-    const [clicked,setClicked] = useState(false);
+    const [clicked, setClicked] = useState(false);
 
     const images = import.meta.glob("/src/assets/images/fruits/*.png", {
         eager: true,
@@ -47,12 +47,15 @@ function ProductItem({ itemDetails }) {
 
     return (
         <div className={style.productItem}>
-            <button className={style.favButton}
-               title={clicked ? "Remove from favourite" : "Add to favourite"}
-               onClick={() => setClicked(prev => !prev)} 
+            <button
+                className={style.favButton}
+                title={clicked ? "Remove from favourite" : "Add to favourite"}
+                onClick={() => setClicked((prev) => !prev)}
             >
-                <img alt="image of an heart" src={clicked ? favPressedIcon : favIcon}>
-                </img>
+                <img
+                    alt="image of an heart"
+                    src={clicked ? favPressedIcon : favIcon}
+                ></img>
             </button>
             <div className={style.imageHolder}>
                 <img src={src}></img>
