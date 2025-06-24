@@ -108,7 +108,17 @@
     font-size: 16px;
 }
 
-.priceHolder > img {
-    width: 25px;
-    height: 25px;
+.priceHolder > button{
+    background-color: transparent;
+    border: none;
+}
+
+.priceHolder > button:hover{
+    transform: scale(1.2);
+}
+
+.priceHolder > button > img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
