@@ -31,6 +31,7 @@
 }
 
 .productItem {
+    position: relative;
     background-color: var(--color-gray);
     border-radius: var(--border-radius);
     aspect-ratio: 9/10;
@@ -40,6 +41,28 @@
     align-items: center;
     padding: 20px;
     gap: 10px;
+    cursor: pointer;
+}
+
+.favButton{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    transition: 0.15s;
+    right: 20px;
+    top: 20px;
+}
+
+.favButton:hover{
+    transform: scale(1.2);
+}
+
+.favButton > img{
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
