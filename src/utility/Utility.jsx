@@ -12,3 +12,16 @@ export function useFavoriteState() {
         toggleFavourite,
     };
 }
+
+export function useCartState(){
+    const [cart,setCart] = useState(false);
+
+    function toggleCart(){
+        setCart(prev => !prev);
+    }
+
+    return{
+        cart,
+        toggleCart,
+    }
+}
