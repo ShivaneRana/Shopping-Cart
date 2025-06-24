@@ -73,16 +73,18 @@ function Carousel() {
                     const tempUUID = uuidv7();
                     return (
                         <Link
-                            to={"/Shopping-Cart/Store/"+fruitsArray[item].name}
+                            to={
+                                "/Shopping-Cart/Store/" + fruitsArray[item].name
+                            }
                             key={tempUUID}
                         >
-                        <div
-                            title={element.name}
-                            className={style.fruitCard}
-                        >
-                            <img alt="fruits icon" src={element.path}></img>
-                            <p>{element.name}</p>
-                        </div>
+                            <div
+                                title={element.name}
+                                className={style.fruitCard}
+                            >
+                                <img alt="fruits icon" src={element.path}></img>
+                                <p>{element.name}</p>
+                            </div>
                         </Link>
                     );
                 })}
