@@ -13,15 +13,15 @@ export function useFavoriteState() {
     };
 }
 
-export function useCartState(){
-    const [cart,setCart] = useState(false);
+export function useCartState() {
+    const [cart, setCart] = useState(false);
 
-    function toggleCart(){
-        setCart(prev => !prev);
+    function toggleCart() {
+        setCart((prev) => !prev);
     }
 
-    return{
+    return {
         cart,
         toggleCart,
-    }
+    };
 }

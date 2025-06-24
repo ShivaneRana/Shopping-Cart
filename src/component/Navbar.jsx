@@ -93,9 +93,7 @@ function FavouriteButton() {
 
     return (
         <Link to="Store">
-            <button
-                onClick={toggleFavourite}
-            >
+            <button onClick={toggleFavourite}>
                 <img
                     title={
                         favourite
@@ -111,7 +109,7 @@ function FavouriteButton() {
 }
 
 function CartButton() {
-    const {cart,toggleCart} = useContext(context);
+    const { cart, toggleCart } = useContext(context);
 
     return (
         <Link to="Checkout">
