@@ -50,7 +50,9 @@ function ProductItem({ itemDetails }) {
         <div className={style.productItem}>
             <button
                 className={style.favButton}
-                title={favClicked ? "Remove from favourite" : "Add to favourite"}
+                title={
+                    favClicked ? "Remove from favourite" : "Add to favourite"
+                }
                 onClick={() => setFavClicked((prev) => !prev)}
             >
                 <img
@@ -68,9 +70,13 @@ function ProductItem({ itemDetails }) {
             <div className={style.priceHolder}>
                 <h3>$ {itemDetails.price}</h3>
                 <button
-                title={cartClicked ? "Remove from cart" : "Add to cart"}
-                onClick={() => setCartClicked(prev => !prev)}>
-                    <img alt="Cart icon" src={cartClicked ? cartPressedIcon : cartIcon}></img>
+                    title={cartClicked ? "Remove from cart" : "Add to cart"}
+                    onClick={() => setCartClicked((prev) => !prev)}
+                >
+                    <img
+                        alt="Cart icon"
+                        src={cartClicked ? cartPressedIcon : cartIcon}
+                    ></img>
                 </button>
             </div>
         </div>

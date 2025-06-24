@@ -108,12 +108,12 @@
     font-size: 16px;
 }
 
-.priceHolder > button{
+.priceHolder > button {
     background-color: transparent;
     border: none;
 }
 
-.priceHolder > button:hover{
+.priceHolder > button:hover {
     transform: scale(1.2);
 }
 
