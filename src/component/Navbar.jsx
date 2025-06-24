@@ -94,9 +94,7 @@ function FavouriteButton() {
     return (
         <Link to="Store">
             <button
-                onClick={() => {
-                    toggleFavourite();
-                }}
+                onClick={toggleFavourite}
             >
                 <img
                     title={
@@ -113,15 +111,15 @@ function FavouriteButton() {
 }
 
 function CartButton() {
-    const [clicked, setClicked] = useState(false);
+    const {cart,toggleCart} = useContext(context);
 
     return (
         <Link to="Checkout">
-            <button onClick={() => setClicked((prev) => !prev)}>
+            <button onClick={toggleCart}>
                 <img
                     title="Display Cart"
                     alt="cart icon"
-                    src={clicked ? cartIconClicked : cartIconNotClicked}
+                    src={cart ? cartIconClicked : cartIconNotClicked}
                 ></img>
             </button>
         </Link>
