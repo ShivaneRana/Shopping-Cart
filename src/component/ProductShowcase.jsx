@@ -2,8 +2,11 @@ import style from "../style/ProductShowcase.module.css";
 import fruits from "../Fruits.jsx";
 import cartIcon from "../assets/images/cart.png";
 import cartPressedIcon from "../assets/images/cartPressed.png";
+import favPressedIcon from "../assets/images/heartClicked.png";
+import favIcon from "../assets/images/heartNotClicked.png";
 import { context } from "../App.jsx";
 import { useContext } from "react";
+import { useState } from "react";
 
 function ProductShowcase() {
     const { favourite } = useContext(context);
@@ -31,6 +34,8 @@ function ProductShowcase() {
 }
 
 function ProductItem({ itemDetails }) {
+    const [clicked,setClicked] = useState(false);
+
     const images = import.meta.glob("/src/assets/images/fruits/*.png", {
         eager: true,
         import: "default",
@@ -42,6 +47,13 @@ function ProductItem({ itemDetails }) {
 
     return (
         <div className={style.productItem}>
+            <button className={style.favButton}
+               title={clicked ? "Remove from favourite" : "Add to favourite"}
+               onClick={() => setClicked(prev => !prev)} 
+            >
+                <img alt="image of an heart" src={clicked ? favPressedIcon : favIcon}>
+                </img>
+            </button>
             <div className={style.imageHolder}>
                 <img src={src}></img>
             </div>
