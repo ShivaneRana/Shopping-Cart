@@ -15,6 +15,12 @@
     font-size: 18px;
 }
 
+.headingHolder > h2 > span{
+    margin-left: 10px;
+    font-size: 18px;
+    color: #a3a3a3;
+}
+
 .productHolder {
     width: 100%;
     height: 100%;
