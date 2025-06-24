@@ -1,14 +1,17 @@
 import style from "../style/ProductShowcase.module.css";
-import tempImage from "../assets/images/fruits/apple.png";
 import fruits from "../Fruits.jsx";
 import cartIcon from "../assets/images/cart.png";
 import cartPressedIcon from "../assets/images/cartPressed.png";
+import { context } from "../App.jsx";
+import { useContext } from "react";
 
 function ProductShowcase() {
+    const {favourite} = useContext(context)
+
     return (
         <div className={style.main}>
             <div className={style.headingHolder}>
-                <h2>Items ({fruits.length})</h2>
+                <h2>Items ({fruits.length}) {favourite && <span> — Favourites</span>}</h2>
             </div>
             <div className={style.productHolder}>
                 {fruits.map((item) => {
