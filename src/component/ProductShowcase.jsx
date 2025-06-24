@@ -34,7 +34,8 @@ function ProductShowcase() {
 }
 
 function ProductItem({ itemDetails }) {
-    const [clicked, setClicked] = useState(false);
+    const [favClicked, setFavClicked] = useState(false);
+    const [cartClicked, setCartClicked] = useState(false);
 
     const images = import.meta.glob("/src/assets/images/fruits/*.png", {
         eager: true,
@@ -49,12 +50,12 @@ function ProductItem({ itemDetails }) {
         <div className={style.productItem}>
             <button
                 className={style.favButton}
-                title={clicked ? "Remove from favourite" : "Add to favourite"}
-                onClick={() => setClicked((prev) => !prev)}
+                title={favClicked ? "Remove from favourite" : "Add to favourite"}
+                onClick={() => setFavClicked((prev) => !prev)}
             >
                 <img
                     alt="image of an heart"
-                    src={clicked ? favPressedIcon : favIcon}
+                    src={favClicked ? favPressedIcon : favIcon}
                 ></img>
             </button>
             <div className={style.imageHolder}>
@@ -66,7 +67,11 @@ function ProductItem({ itemDetails }) {
             </div>
             <div className={style.priceHolder}>
                 <h3>$ {itemDetails.price}</h3>
-                <img alt="Cart icon" src={cartIcon}></img>
+                <button
+                title={cartClicked ? "Remove from cart" : "Add to cart"}
+                onClick={() => setCartClicked(prev => !prev)}>
+                    <img alt="Cart icon" src={cartClicked ? cartPressedIcon : cartIcon}></img>
+                </button>
             </div>
         </div>
     );
