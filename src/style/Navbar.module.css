@@ -77,6 +77,7 @@
 
 /* hold cart and icon button */
 .rightside > div {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -84,20 +85,27 @@
 }
 
 /* search button */
-.rightside > input {
-    position: relative;
+.rightside > div > input {
+    min-width: 100%;
     font-size: var(--font-size);
     font-family: Arial, Helvetica, sans-serif;
     border: none;
     font-weight: var(--font-weight);
     border-radius: 25px;
-    padding: 15px 15px 15px 30px;
-    background: url("../assets/images/search.svg") no-repeat left;
+    padding: 15px 15px 15px 40px;
     background-color: var(--color-gray);
-    background-size: 25px;
+    background-size: 30px;
 }
 
-.rightside > input:focus {
+.searchIcon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 5px;
+    z-index: 1;
+}
+
+.rightside > div > input:focus {
     outline: none;
 }
 
