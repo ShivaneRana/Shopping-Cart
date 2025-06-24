@@ -4,6 +4,7 @@ import favIconNotClicked from "../assets/images/fav.png";
 import cartIconNotClicked from "../assets/images/cart.png";
 import cartIconClicked from "../assets/images/cartPressed.png";
 import hamburgerIcon from "../assets/images/hamburger.svg";
+import searchIcon from "../assets/images/search.svg";
 import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { context } from "../App.jsx";
@@ -70,7 +71,8 @@ function StoreButton() {
 
 function SearchField() {
     return (
-        <>
+        <div>
+            <img className={style.searchIcon} alt="search icon" src={searchIcon}></img>
             <label htmlFor="searchFruit"></label>
             <input
                 title="Search"
@@ -78,7 +80,7 @@ function SearchField() {
                 name="searchFruit"
                 placeholder="Search"
             ></input>
-        </>
+        </div>
     );
 }
 
