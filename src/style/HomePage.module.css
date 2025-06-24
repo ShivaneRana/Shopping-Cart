@@ -88,6 +88,7 @@
 .fruitCard > p {
     position: absolute;
     font-size: var(--font-size);
+    color: black;
     font-weight: bolder;
     left: 20px;
     bottom: 20px;
