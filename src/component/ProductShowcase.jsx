@@ -6,12 +6,15 @@ import { context } from "../App.jsx";
 import { useContext } from "react";
 
 function ProductShowcase() {
-    const {favourite} = useContext(context)
+    const { favourite } = useContext(context);
 
     return (
         <div className={style.main}>
             <div className={style.headingHolder}>
-                <h2>Items ({fruits.length}) {favourite && <span> — Favourites</span>}</h2>
+                <h2>
+                    Items ({fruits.length}){" "}
+                    {favourite && <span> — Favourites</span>}
+                </h2>
             </div>
             <div className={style.productHolder}>
                 {fruits.map((item) => {
