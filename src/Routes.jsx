@@ -19,6 +19,10 @@ const Routes = [
                 element: <StorePage></StorePage>,
             },
             {
+                path: "Store/:name",
+                element: <StorePage></StorePage>
+            },
+            {
                 path: "Checkout",
                 element: <CheckoutPage></CheckoutPage>,
             },
