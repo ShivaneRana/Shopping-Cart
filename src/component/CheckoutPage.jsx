@@ -10,9 +10,7 @@ import fruits from "../Fruits.jsx";
 function CheckoutPage() {
     return (
         <div className={style.main}>
-            <div className={style.buttonHolder}>
-                <BackButton></BackButton>
-            </div>
+            <BackButton></BackButton>
             <h3>Shopping bag</h3>
             <div className={style.checkoutContainer}>
                 <ShoppingBag></ShoppingBag>
