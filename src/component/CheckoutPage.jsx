@@ -22,7 +22,7 @@ function CheckoutPage() {
     );
 }
 
-function BackButton() {
+export function BackButton() {
     return (
         <Link to="/Shopping-Cart/Store">
             <button className={style.backButton}>
@@ -35,68 +35,101 @@ function BackButton() {
 function ShoppingBag() {
     return (
         <div className={style.shoppingBag}>
-            {fruits.map((item) => {
-                const images = import.meta.glob(
-                    "/src/assets/images/fruits/*.png",
-                    {
-                        eager: true,
-                        import: "default",
-                    },
-                );
-
-                const name = item.name.toLowerCase();
-                const imageKey = `/src/assets/images/fruits/${name}.png`;
-                const src = images[imageKey];
-
-                return (
-                    <div className={style.orderContainer} key={item.name}>
-                        {/* contains the product image */}
-                        <div
-                            title="Go to product page"
-                            className={style.imageHolder}
-                        >
-                            <img alt="product icon" src={src}></img>
-                        </div>
-
-                        {/* contains the product detail */}
-                        {/* name, family, quanitity */}
-                        <div className={style.itemDetail}>
-                            <h3 className={style.itemName}>{item.name}</h3>
-                            <h3 className={style.itemFamily}>
-                                {item.family} Family
-                            </h3>
-                            <div className={style.itemStock}>
-                                <img src={stockIcon}></img>
-                                <p>In stock</p>
-                            </div>
-                            <h3 className={style.itemQuantity}>
-                                Qty: {item.quantity}
-                            </h3>
-                        </div>
-
-                        {/* increase/ decrease product quantity */}
-                        <div className={style.quantityController}>
-                            <button title="Decrease quantity">
-                                <img alt="minux icon" src={minusIcon}></img>
-                            </button>
-                            <p>{item.quantity}</p>
-                            <button title="Increase quantity">
-                                <img alt="plus icon" src={plusIcon}></img>
-                            </button>
-                        </div>
-
-                        {/*  display price and delete button */}
-                        <div className={style.priceDetail}>
-                            <button title="Delete item">
-                                <img alt="delete icon" src={deleteIcon}></img>
-                            </button>
-                            <h5>$ 90.90</h5>
-                        </div>
-                    </div>
-                );
-            })}
+            {
+                fruits.map((item) => {
+                    return <ShoppingItem key={item.name} item={item}></ShoppingItem>
+                })
+            }
         </div>
     );
+}
+
+function ShoppingItem({item}){
+    const images = import.meta.glob(
+        "/src/assets/images/fruits/*.png",
+        {
+            eager: true,
+            import: "default",
+        },
+    );
+
+    const name = item.name.toLowerCase();
+    const imageKey = `/src/assets/images/fruits/${name}.png`;
+    const src = images[imageKey];
+    const location = "/Shopping-Cart/Store/"+ item.name.toLowerCase();
+
+    return (
+        <div className={style.orderContainer} key={item.name}>
+            {/* contains the product image */}
+            <ProductImage location={location} src = {src}></ProductImage>
+
+            {/* contains the product detail */}
+            {/* name, family, quanitity */}
+            <ItemDetail item={item}></ItemDetail>
+
+            {/* increase/ decrease product quantity */}
+            <QuantityController item={item}></QuantityController>
+
+            {/*  display price and delete button */}
+            <PriceDetail item={item}></PriceDetail>
+        </div>
+    );
+}
+
+function ProductImage({location,src}){
+    return(
+        <Link to={location}>
+            <div
+                title="Go to product page"
+                className={style.imageHolder}
+            >
+                <img alt="product icon" src={src}></img>
+            </div>
+        </Link>
+    )
+}
+
+function ItemDetail({item}){
+    return(
+        <div className={style.itemDetail}>
+            <h3 className={style.itemName}>{item.name}</h3>
+            <h3 className={style.itemFamily}>
+                {item.family} Family
+            </h3>
+            <div className={style.itemStock}>
+                <img src={stockIcon}></img>
+                <p>In stock</p>
+            </div>
+            <h3 className={style.itemQuantity}>
+                Qty: {item.quantity}
+            </h3>
+        </div>
+    )
+}
+
+function QuantityController({item}){
+    return(
+        <div className={style.quantityController}>
+            <button title="Decrease quantity">
+                <img alt="minux icon" src={minusIcon}></img>
+            </button>
+            <p>{item.quantity}</p>
+            <button title="Increase quantity">
+                <img alt="plus icon" src={plusIcon}></img>
+            </button>
+        </div>
+    )
+}
+
+function PriceDetail({item}){
+    return(
+        <div className={style.priceDetail}>
+            <button title="Delete item">
+                <img alt="delete icon" src={deleteIcon}></img>
+            </button>
+            <h5>{item.price}</h5>
+        </div>
+    )
 }
 
 function OrderSummary() {
