@@ -1,16 +1,16 @@
 import style from "../style/ItemPage.module.css";
-import { BackButton } from "./CheckoutPage";
+import stockIcon from "../assets/images/inStock.svg";
+import { BackButton, QuantityController } from "./CheckoutPage";
 
 function ItemPage({ itemDetail }) {
     console.log(itemDetail);
 
     return (
         <div className={style.main}>
-            <div className={style.buttonHolder}>
-                <BackButton></BackButton>
-            </div>
+            <BackButton></BackButton>
             <div className={style.product}>
                 <ProductImage itemDetail={itemDetail}></ProductImage>
+                <ProductInfo itemDetail={itemDetail}></ProductInfo>
             </div>
         </div>
     );
@@ -58,6 +58,36 @@ function ProductImage({ itemDetail }) {
             </div>
         </div>
     );
+}
+
+function ProductInfo({itemDetail}){
+    return(
+        <div className={style.productInfo}>
+
+            {/* heading */}
+            <h1 className={style.itemName}>{itemDetail.name}</h1>
+
+            {/* contains family, inStock, price, quantity Controller */}
+            <div className={style.itemInfo}>
+                <h3 className={style.itemFamily}>{itemDetail.family}</h3>
+                <div className={style.inStock}>
+                    <img alt="image of inStock icon" src={stockIcon}></img>
+                    <p>In stock</p>
+                </div>
+                <h3 className={style.itemPrice}>$ {itemDetail.price}</h3>
+                <QuantityController item={itemDetail}></QuantityController>
+            </div>
+
+            {/* description */}
+            <p className={style.itemDescription}>{itemDetail.description}</p>
+            
+            {/* buy now and add to cart button */}
+            <div className={style.buttonHolder}>
+                <button>Buy now</button>
+                <button>{itemDetail.inCart ? "Remove from cart" : "Add to cart"}</button>
+            </div>
+        </div>
+    )
 }
 
 export default ItemPage;
