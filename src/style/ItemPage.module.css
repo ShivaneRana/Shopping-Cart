@@ -11,12 +11,12 @@
     width: min-content;
 }
 
-.product{
+.product {
     width: 100%;
     height: 500px;
 }
 
-.productImage{
+.productImage {
     width: 500px;
     height: 500px;
     display: flex;
@@ -24,7 +24,7 @@
     justify-content: space-around;
 }
 
-.productImage > .imageHolder{
+.productImage > .imageHolder {
     width: 100%;
     height: 90%;
     display: flex;
@@ -34,18 +34,19 @@
     background-color: var(--color-gray);
 }
 
-.productImage > .imageHolder > img{
+.productImage > .imageHolder > img {
     width: 120px;
     height: 120px;
 }
 
-.productImage > .vitaminColorHolder{
+.productImage > .vitaminColorHolder {
     width: 100%;
     display: flex;
     gap: 10px;
 }
 
-.color,.vitamin{
+.color,
+.vitamin {
     display: flex;
     justify-content: center;
     align-items: center;

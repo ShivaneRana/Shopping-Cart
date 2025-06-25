@@ -17,7 +17,7 @@ function ItemPage({ itemDetail }) {
 }
 
 // display product image, color and vitamins
-function ProductImage({itemDetail}){
+function ProductImage({ itemDetail }) {
     const images = import.meta.glob("/src/assets/images/fruits/*.png", {
         eager: true,
         import: "default",
@@ -27,38 +27,30 @@ function ProductImage({itemDetail}){
     const imageKey = `/src/assets/images/fruits/${name}.png`;
     const src = images[imageKey];
 
-    return(
+    return (
         <div className={style.productImage}>
             <div className={style.imageHolder}>
                 <img src={src}></img>
             </div>
             <div className={style.vitaminColorHolder}>
-                {
-                    itemDetail.color.map(color => {
-                        return (
-                            <div className={style.color} key={color}>
-                                {
-                                    color
-                                }
-                            </div>
-                        )
-                    })
-                }
+                {itemDetail.color.map((color) => {
+                    return (
+                        <div className={style.color} key={color}>
+                            {color}
+                        </div>
+                    );
+                })}
 
-                {
-                    itemDetail.vitamin.map(vitamin => {
-                        return (
-                            <div className={style.vitamin} key={vitamin}>
-                                {
-                                    vitamin
-                                }
-                            </div>
-                        )
-                    })
-                }
+                {itemDetail.vitamin.map((vitamin) => {
+                    return (
+                        <div className={style.vitamin} key={vitamin}>
+                            {vitamin}
+                        </div>
+                    );
+                })}
             </div>
         </div>
-    )
+    );
 }
 
 export default ItemPage;
