@@ -25,7 +25,7 @@
 .welcomeText > p {
     font-size: 18px;
     line-height: 1.4;
-    word-spacing: 0.1rem;
+    letter-spacing: 0.02rem;
     text-align: center;
 }
 
