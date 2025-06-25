@@ -36,10 +36,13 @@ function ProductImage({ itemDetail }) {
                 {itemDetail.color.map((color) => {
                     return (
                         <div
-                        // fetch background color dynamically
-                        style={{backgroundColor : `var(--color-${color.toLowerCase()})`}}
-                        className={style.color}
-                        key={color}>
+                            // fetch background color dynamically
+                            style={{
+                                backgroundColor: `var(--color-${color.toLowerCase()})`,
+                            }}
+                            className={style.color}
+                            key={color}
+                        >
                             {color}
                         </div>
                     );
@@ -47,9 +50,7 @@ function ProductImage({ itemDetail }) {
 
                 {itemDetail.vitamin.map((vitamin) => {
                     return (
-                        <div
-                        className={style.vitamin}
-                        key={vitamin}>
+                        <div className={style.vitamin} key={vitamin}>
                             {vitamin}
                         </div>
                     );

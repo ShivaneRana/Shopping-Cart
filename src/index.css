@@ -12,12 +12,12 @@
     --color-blue: #3895ff;
     --color-blueHover: #2666dc;
     --border-radius: 10px;
-    --color-red:    #FF8A80;
-    --color-yellow: #FFF596;
-    --color-orange: #FFBC8A;
-    --color-green: #BFFCC6;
-    --color-purple: #E0BBFF;
-    --color-pink: #FFCCE5;
+    --color-red: #ff8a80;
+    --color-yellow: #fff596;
+    --color-orange: #ffbc8a;
+    --color-green: #bffcc6;
+    --color-purple: #e0bbff;
+    --color-pink: #ffcce5;
 }
 
 body {
