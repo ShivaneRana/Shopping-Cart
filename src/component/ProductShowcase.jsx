@@ -7,6 +7,7 @@ import favIcon from "../assets/images/heartNotClicked.png";
 import { context } from "../App.jsx";
 import { useContext } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProductShowcase() {
     const { favourite } = useContext(context);
@@ -46,14 +47,21 @@ function ProductItem({ itemDetails }) {
     const imageKey = `/src/assets/images/fruits/${name}.png`;
     const src = images[imageKey];
 
+    const location = "/Shopping-Cart/Store/"+itemDetails.name;
+
     return (
+        <Link to={location}>
         <div className={style.productItem}>
             <button
                 className={style.favButton}
                 title={
                     favClicked ? "Remove from favourite" : "Add to favourite"
                 }
-                onClick={() => setFavClicked((prev) => !prev)}
+                onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    setFavClicked((prev) => !prev)
+                }}
             >
                 <img
                     alt="image of an heart"
@@ -71,7 +79,11 @@ function ProductItem({ itemDetails }) {
                 <h3>$ {itemDetails.price}</h3>
                 <button
                     title={cartClicked ? "Remove from cart" : "Add to cart"}
-                    onClick={() => setCartClicked((prev) => !prev)}
+                    onClick={(e) => {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        setCartClicked((prev) => !prev)
+                    }}
                 >
                     <img
                         alt="Cart icon"
@@ -80,6 +92,7 @@ function ProductItem({ itemDetails }) {
                 </button>
             </div>
         </div>
+        </Link>
     );
 }
 
