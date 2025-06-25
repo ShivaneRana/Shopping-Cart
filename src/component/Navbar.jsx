@@ -5,10 +5,9 @@ import cartIconNotClicked from "../assets/images/cart.png";
 import cartIconClicked from "../assets/images/cartPressed.png";
 import hamburgerIcon from "../assets/images/hamburger.svg";
 import searchIcon from "../assets/images/search.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation , useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { context } from "../App.jsx";
-import { useState } from "react";
 
 function Navbar() {
     const location = useLocation();
@@ -70,6 +69,8 @@ function StoreButton() {
 }
 
 function SearchField() {
+    const navigate = useNavigate();
+
     return (
         <div>
             <img
@@ -79,6 +80,9 @@ function SearchField() {
             ></img>
             <label htmlFor="searchFruit"></label>
             <input
+                onFocus={() => {
+                    navigate("/Shopping-Cart/Store")
+                }}
                 title="Search"
                 type="text"
                 name="searchFruit"
