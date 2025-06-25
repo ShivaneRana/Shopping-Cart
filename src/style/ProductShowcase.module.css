@@ -30,6 +30,10 @@
     gap: 18px;
 }
 
+.productHolder > a{
+    text-decoration: none;
+}
+
 .productItem {
     position: relative;
     background-color: var(--color-gray);
@@ -87,6 +91,7 @@
 
 .nameHolder > h2 {
     font-size: 16px;
+    color: var(--color-black);
 }
 
 .nameHolder > h3 {
@@ -106,6 +111,7 @@
 
 .priceHolder > h3 {
     font-size: 16px;
+    color: var(--color-black);
 }
 
 .priceHolder > button {
