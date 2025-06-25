@@ -55,7 +55,7 @@
     outline: 1px solid var(--color-darkGray);
 }
 
-.productInfo{
+.productInfo {
     width: 70%;
     height: 400px;
     padding: 5px;
@@ -65,25 +65,25 @@
 }
 
 /* heading */
-.itemName{
+.itemName {
     font-size: 40px;
 }
 
-.itemInfo{
+.itemInfo {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 /* family */
-.itemInfo > .itemFamily{
+.itemInfo > .itemFamily {
     font-size: 16px;
     font-weight: 500;
     color: grey;
 }
 
 /* instock icon and text */
-.itemInfo > .inStock{
+.itemInfo > .inStock {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -97,27 +97,27 @@
 }
 
 /* price */
-.itemInfo > .itemPrice{
+.itemInfo > .itemPrice {
     font-size: 18px;
     font-weight: 600;
 }
 
 /* description */
-.itemDescription{
+.itemDescription {
     line-height: 1.4;
     letter-spacing: 0.02rem;
     font-size: var(--font-size);
 }
 
 /* contains buy now and checkout button */
-.buttonHolder{
+.buttonHolder {
     width: 300px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.buttonHolder > button{
+.buttonHolder > button {
     padding: 15px;
     font-size: 14px;
     border-radius: 5px;
@@ -128,22 +128,22 @@
 }
 
 /* buy now button */
-.buttonHolder > button:nth-child(1){
+.buttonHolder > button:nth-child(1) {
     color: var(--color-white);
     background-color: var(--color-blue);
 }
 
-.buttonHolder > button:nth-child(1):hover{
+.buttonHolder > button:nth-child(1):hover {
     background-color: var(--color-blueHover);
 }
 
 /* checkout button */
-.buttonHolder > button:nth-child(2){
+.buttonHolder > button:nth-child(2) {
     background-color: var(--color-white);
     outline: 1px solid var(--color-darkGray);
 }
 
-.buttonHolder > button:nth-child(2):hover{
+.buttonHolder > button:nth-child(2):hover {
     background-color: var(--color-darkGray);
     outline: none;
 }

@@ -60,10 +60,9 @@ function ProductImage({ itemDetail }) {
     );
 }
 
-function ProductInfo({itemDetail}){
-    return(
+function ProductInfo({ itemDetail }) {
+    return (
         <div className={style.productInfo}>
-
             {/* heading */}
             <h1 className={style.itemName}>{itemDetail.name}</h1>
 
@@ -80,14 +79,16 @@ function ProductInfo({itemDetail}){
 
             {/* description */}
             <p className={style.itemDescription}>{itemDetail.description}</p>
-            
+
             {/* buy now and add to cart button */}
             <div className={style.buttonHolder}>
                 <button>Buy now</button>
-                <button>{itemDetail.inCart ? "Remove from cart" : "Add to cart"}</button>
+                <button>
+                    {itemDetail.inCart ? "Remove from cart" : "Add to cart"}
+                </button>
             </div>
         </div>
-    )
+    );
 }
 
 export default ItemPage;
