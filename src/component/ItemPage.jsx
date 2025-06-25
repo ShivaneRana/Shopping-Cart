@@ -1,9 +1,12 @@
 import style from "../style/ItemPage.module.css";
+import { BackButton } from "./CheckoutPage";
 
 function ItemPage({ itemDetail }) {
     return (
     <div className={style.main}>
-        <h2>{itemDetail.name || "An error has occurred"}</h2>
+            <div className={style.buttonHolder}>
+                <BackButton></BackButton>
+            </div>
     </div>
     );
 }
