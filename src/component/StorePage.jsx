@@ -15,22 +15,20 @@ function StorePage() {
         }
     })
 
-    return (
+    if(name !== undefined){
+        return(
+            <ItemPage itemDetail={itemDetail}></ItemPage>
+        )
+
+    }else{
+        return(
         <div className={style.main}>
-            {
-                // if param exists render item page
-                name !== undefined ? (
-                    <ItemPage itemDetail={itemDetail}></ItemPage>
-                ) : (
-                    // by default without any param render store
-                    <>
-                        <SideBar></SideBar>
-                        <ProductShowcase></ProductShowcase>
-                    </>
-                )
-            }
+            <SideBar></SideBar>
+            <ProductShowcase></ProductShowcase>
         </div>
-    );
+        )
+
+    }
 }
 
 export default StorePage;
