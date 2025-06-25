@@ -6,28 +6,24 @@ import ItemPage from "./ItemPage.jsx";
 import { useParams } from "react-router-dom";
 
 function StorePage() {
-    const {name} = useParams();
+    const { name } = useParams();
     let itemDetail;
 
-    fruits.forEach(item => {
-        if(item.name === name){
+    fruits.forEach((item) => {
+        if (item.name === name) {
             itemDetail = item;
         }
-    })
+    });
 
-    if(name !== undefined){
-        return(
-            <ItemPage itemDetail={itemDetail}></ItemPage>
-        )
-
-    }else{
-        return(
-        <div className={style.main}>
-            <SideBar></SideBar>
-            <ProductShowcase></ProductShowcase>
-        </div>
-        )
-
+    if (name !== undefined) {
+        return <ItemPage itemDetail={itemDetail}></ItemPage>;
+    } else {
+        return (
+            <div className={style.main}>
+                <SideBar></SideBar>
+                <ProductShowcase></ProductShowcase>
+            </div>
+        );
     }
 }
 

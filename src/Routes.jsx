@@ -20,7 +20,7 @@ const Routes = [
             },
             {
                 path: "Store/:name",
-                element: <StorePage></StorePage>
+                element: <StorePage></StorePage>,
             },
             {
                 path: "Checkout",

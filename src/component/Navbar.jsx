@@ -5,7 +5,7 @@ import cartIconNotClicked from "../assets/images/cart.png";
 import cartIconClicked from "../assets/images/cartPressed.png";
 import hamburgerIcon from "../assets/images/hamburger.svg";
 import searchIcon from "../assets/images/search.svg";
-import { Link, useLocation , useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { context } from "../App.jsx";
 
@@ -81,7 +81,7 @@ function SearchField() {
             <label htmlFor="searchFruit"></label>
             <input
                 onFocus={() => {
-                    navigate("/Shopping-Cart/Store")
+                    navigate("/Shopping-Cart/Store");
                 }}
                 title="Search"
                 type="text"
