@@ -95,7 +95,7 @@ function ItemDetail({ item }) {
     );
 }
 
-function QuantityController({ item }) {
+export function QuantityController({ item }) {
     return (
         <div className={style.quantityController}>
             <button title="Decrease quantity">
