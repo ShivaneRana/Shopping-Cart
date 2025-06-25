@@ -1,11 +1,9 @@
 import style from "../style/ItemPage.module.css";
-import Navbar from "./Navbar";
 
 function ItemPage({ itemDetail }) {
     return (
     <div className={style.main}>
-        <Navbar></Navbar>
-        <h2>{itemDetail.name || "SHivane Rana was here"}</h2>
+        <h2>{itemDetail.name || "An error has occurred"}</h2>
     </div>
     );
 }
