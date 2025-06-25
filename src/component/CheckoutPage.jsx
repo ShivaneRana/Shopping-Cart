@@ -51,7 +51,7 @@ function ShoppingItem({ item }) {
     const name = item.name.toLowerCase();
     const imageKey = `/src/assets/images/fruits/${name}.png`;
     const src = images[imageKey];
-    const location = "/Shopping-Cart/Store/" + item.name.toLowerCase();
+    const location = "/Shopping-Cart/Store/" + item.name;
 
     return (
         <div className={style.orderContainer} key={item.name}>
