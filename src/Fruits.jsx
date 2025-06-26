@@ -4,7 +4,7 @@ const fruits = [
         price: 2.85,
         family: "Rose",
         vitamin: ["Vitamin B", "Vitamin K"],
-        color: ["Green"],
+        color: ["Red"],
         inCart: false,
         favourite: false,
         quantity: 1,
