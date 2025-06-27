@@ -70,6 +70,7 @@ function StoreButton() {
 
 function SearchField() {
     const navigate = useNavigate();
+    const {filter, changeName} = useContext(mainContext);
 
     return (
         <div>
@@ -80,12 +81,16 @@ function SearchField() {
             ></img>
             <label htmlFor="searchFruit"></label>
             <input
+                value={filter.name}
                 onFocus={() => {
                     navigate("/Shopping-Cart/Store");
                 }}
+                onChange={(e) => {
+                    changeName(e.target.value);
+                }}
+                name ="searchFruit"
                 title="Search"
                 type="text"
-                name="searchFruit"
                 placeholder="Search"
             ></input>
         </div>
