@@ -1,6 +1,7 @@
 import { useImmer } from "use-immer";
 
 function useFilter(){
+
     const [filter,updateFilter] = useImmer({
         name: "",
         family: "",
@@ -44,7 +45,9 @@ function useFilter(){
 
         if(typeof(color) !== "string") throw new Error("wrong data type, must be a string")
         updateFilter(draft => {
-            draft.color = draft.color.filter(item => item !== color)
+            if(draft.color.length >= 1){
+                draft.color = draft.color.filter(item => item !== color)
+            }
         })
     }
 
@@ -60,7 +63,9 @@ function useFilter(){
 
         if(typeof(color) !== "string") throw new Error("wrong data type, must be a string")
         updateFilter(draft => {
-            draft.vitamin.filter(item => item !== vitamin)
+            if(draft.vitamin.length >= 1){
+                draft.vitamin.filter(item => item !== vitamin)
+            }
         })
     }
     
@@ -121,13 +126,15 @@ function useFilter(){
 
     return{
         filter,
+        tFav : toggleFavourite,
         changeName,
         changeFamily,
         addColor,
         addVitamin,
         removeColor,
         removeVitamin,
-        filterFruit
+        filterFruit,
+        toggleFavourite
     }
 }
 
