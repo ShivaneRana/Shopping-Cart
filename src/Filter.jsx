@@ -145,7 +145,6 @@ function useFilter() {
 
     return {
         filter,
-        tFav: toggleFavourite,
         changeName,
         changeFamily,
         addColor,
