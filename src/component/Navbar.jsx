@@ -70,7 +70,7 @@ function StoreButton() {
 
 function SearchField() {
     const navigate = useNavigate();
-    const {filter, changeName} = useContext(mainContext);
+    const { filter, changeName } = useContext(mainContext);
 
     return (
         <div>
@@ -88,7 +88,7 @@ function SearchField() {
                 onChange={(e) => {
                     changeName(e.target.value);
                 }}
-                name ="searchFruit"
+                name="searchFruit"
                 title="Search"
                 type="text"
                 placeholder="Search"

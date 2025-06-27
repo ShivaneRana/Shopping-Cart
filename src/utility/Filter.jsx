@@ -33,7 +33,7 @@ function useFilter() {
     }
 
     function addColor(newColor) {
-        if (typeof newColor !== "string"){
+        if (typeof newColor !== "string") {
             throw new Error("wrong data type, must be a string");
         }
 
@@ -43,9 +43,8 @@ function useFilter() {
     }
 
     function removeColor(color) {
-        if (typeof color !== "string"){
+        if (typeof color !== "string") {
             throw new Error("wrong data type, must be a string");
-
         }
 
         updateFilter((draft) => {
@@ -56,23 +55,25 @@ function useFilter() {
     }
 
     function addVitamin(newVitamin) {
-        if (typeof newVitamin !== "string"){
+        if (typeof newVitamin !== "string") {
             throw new Error("wrong data type, must be a string");
         }
-            
+
         updateFilter((draft) => {
             draft.vitamin.push(newVitamin.toLowerCase());
         });
     }
 
     function removeVitamin(vitamin) {
-        if (typeof color !== "string"){
+        if (typeof color !== "string") {
             throw new Error("wrong data type, must be a string");
         }
 
         updateFilter((draft) => {
             if (draft.vitamin.length >= 1) {
-                draft.vitamin = draft.vitamin.filter((item) => item !== vitamin);
+                draft.vitamin = draft.vitamin.filter(
+                    (item) => item !== vitamin,
+                );
             }
         });
     }

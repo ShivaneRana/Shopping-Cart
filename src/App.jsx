@@ -25,11 +25,9 @@ function App() {
         filterFruit,
     } = useFilter();
 
-
     // toggle favourite to off when the url changes
     // this is to ensure that the favourite state is off when not is store root.
     useEffect(() => {
-
         if (location.pathname !== "/Shopping-Cart/Store" && favourite) {
             toggleFavourite();
         }
