@@ -4,11 +4,11 @@ import cartPressedIcon from "../assets/images/cartPressed.png";
 import favPressedIcon from "../assets/images/heartClicked.png";
 import favIcon from "../assets/images/heartNotClicked.png";
 import { mainContext } from "../App.jsx";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 function ProductShowcase() {
-    const { favourite, fruitArray } = useContext(mainContext);
+    const { displayFavourite, fruitArray } = useContext(mainContext);
     const fruits = fruitArray;
 
     return (
@@ -16,7 +16,10 @@ function ProductShowcase() {
             <div className={style.headingHolder}>
                 <h2>
                     Items ({fruits.length}){" "}
-                    {favourite && <span> — Favourites</span>}
+                    {
+                        displayFavourite && <span> — Favourites</span>
+                    }
+
                 </h2>
             </div>
             <div className={style.productHolder}>
@@ -34,8 +37,8 @@ function ProductShowcase() {
 }
 
 function ProductItem({ itemDetails }) {
-    const [favClicked, setFavClicked] = useState(false);
-    const [cartClicked, setCartClicked] = useState(false);
+    const favClicked = itemDetails.favourite;
+    const cartClicked = itemDetails.inCart;
 
     const images = import.meta.glob("/src/assets/images/fruits/*.png", {
         eager: true,
@@ -61,7 +64,6 @@ function ProductItem({ itemDetails }) {
                     onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        setFavClicked((prev) => !prev);
                     }}
                 >
                     <img
@@ -83,7 +85,6 @@ function ProductItem({ itemDetails }) {
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            setCartClicked((prev) => !prev);
                         }}
                     >
                         <img
