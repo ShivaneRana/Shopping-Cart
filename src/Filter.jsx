@@ -82,7 +82,7 @@ function useFilter() {
         return fruitArray.filter((item) => {
             let nameMatch = item.name
                 .toLowerCase()
-                .includes(filterObject.name.toLowerCase());
+                .includes(filterObject.name.toLowerCase().trim());
 
             let familyMatch = item.family
                 .toLowerCase()
