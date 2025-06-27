@@ -5,7 +5,9 @@ import plusIcon from "../assets/images/plus.svg";
 import deleteIcon from "../assets/images/delete.png";
 import stockIcon from "../assets/images/inStock.svg";
 import { Link } from "react-router-dom";
-import fruits from "../Fruits.jsx";
+import { mainContext } from "../App";
+import { useContext } from "react";
+
 
 function CheckoutPage() {
     return (
@@ -31,6 +33,9 @@ export function BackButton() {
 }
 
 function ShoppingBag() {
+    const {fruitArray} = useContext(mainContext);
+    const fruits = fruitArray.filter(product => product.inCart === true);
+
     return (
         <div className={style.shoppingBag}>
             {fruits.map((item) => {
