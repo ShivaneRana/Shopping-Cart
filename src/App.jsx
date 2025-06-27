@@ -40,10 +40,10 @@ function App() {
         });
     }
 
-    function removeFromCart(targetName){
+    function removeFromCart(targetName) {
         updateFruitList((draft) => {
             const target = draft.filter((item) => item.name === targetName)[0];
-            if(!target.inCart){
+            if (!target.inCart) {
                 addToCart();
             }
         });
