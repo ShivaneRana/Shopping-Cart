@@ -40,6 +40,15 @@ function App() {
         });
     }
 
+    function removeFromCart(targetName){
+        updateFruitList((draft) => {
+            const target = draft.filter((item) => item.name === targetName)[0];
+            if(!target.inCart){
+                addToCart();
+            }
+        });
+    }
+
     function toggleDisplayFavourite() {
         setDisplayFavourite((prev) => !prev);
         toggleFavourite();
@@ -79,6 +88,7 @@ function App() {
                     toggleDisplayFavourite,
                     addToCart,
                     addToFavourite,
+                    removeFromCart,
                 }}
             >
                 <Navbar></Navbar>
