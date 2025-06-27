@@ -34,7 +34,7 @@ function ProductShowcase() {
 }
 
 function ProductItem({ itemDetails }) {
-    const {addToCart , addToFavourite} = useContext(mainContext);
+    const { addToCart, addToFavourite } = useContext(mainContext);
     const favClicked = itemDetails.favourite;
     const cartClicked = itemDetails.inCart;
 
