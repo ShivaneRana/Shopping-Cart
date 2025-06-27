@@ -98,19 +98,19 @@ function SearchField() {
 }
 
 function FavouriteButton() {
-    const { favourite, toggleFavourite } = useContext(mainContext);
+    const {displayFavourite,toggleDisplayFavourite} = useContext(mainContext);
 
     return (
         <Link to="Store">
-            <button onClick={toggleFavourite}>
+            <button onClick={toggleDisplayFavourite}>
                 <img
                     title={
-                        favourite
+                        displayFavourite
                             ? "Hide favourite items"
                             : "Display favourite items"
                     }
                     alt="favourite icon"
-                    src={favourite ? favIconClicked : favIconNotClicked}
+                    src={displayFavourite ? favIconClicked : favIconNotClicked}
                 ></img>
             </button>
         </Link>
@@ -118,15 +118,15 @@ function FavouriteButton() {
 }
 
 function CartButton() {
-    const { cart, toggleCart } = useContext(mainContext);
+    const { displayCart, toggleDisplayCart} = useContext(mainContext)
 
     return (
         <Link to="Checkout">
-            <button onClick={toggleCart}>
+            <button onClick={toggleDisplayCart}>
                 <img
                     title="Display Cart"
                     alt="cart icon"
-                    src={cart ? cartIconClicked : cartIconNotClicked}
+                    src={displayCart ? cartIconClicked : cartIconNotClicked}
                 ></img>
             </button>
         </Link>
