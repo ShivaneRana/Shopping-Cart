@@ -11,6 +11,8 @@ export let mainContext = createContext();
 
 function App() {
     const { favourite, toggleFavourite } = useFavoriteState();
+    const { cart, toggleCart } = useCartState();
+    const location = useLocation();
     const {
         filter,
         tFav,
@@ -22,12 +24,10 @@ function App() {
         removeVitamin,
         filterFruit,
     } = useFilter();
-    const { cart, toggleCart } = useCartState();
-    const location = useLocation();
+
 
     // toggle favourite to off when the url changes
     // this is to ensure that the favourite state is off when not is store root.
-
     useEffect(() => {
         if (location.pathname !== "/Shopping-Cart/Store" && favourite) {
             toggleFavourite();
