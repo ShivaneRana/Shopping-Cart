@@ -11,7 +11,17 @@ export let mainContext = createContext();
 
 function App() {
     const { favourite, toggleFavourite } = useFavoriteState();
-    const { filter,tFav, changeName, changeFamily, addColor, addVitamin, removeColor, removeVitamin, filterFruit} = useFilter();
+    const {
+        filter,
+        tFav,
+        changeName,
+        changeFamily,
+        addColor,
+        addVitamin,
+        removeColor,
+        removeVitamin,
+        filterFruit,
+    } = useFilter();
     const { cart, toggleCart } = useCartState();
     const location = useLocation();
 
@@ -28,10 +38,9 @@ function App() {
         }
     }, [location]);
 
-    const fruitArray = filterFruit(fruits,filter); 
-    console.log("app component rendered")
+    const fruitArray = filterFruit(fruits, filter);
+    console.log("app component rendered");
     console.log(fruitArray);
-
 
     return (
         <div className={style.main}>

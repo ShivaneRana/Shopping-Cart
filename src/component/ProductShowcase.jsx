@@ -4,11 +4,11 @@ import cartPressedIcon from "../assets/images/cartPressed.png";
 import favPressedIcon from "../assets/images/heartClicked.png";
 import favIcon from "../assets/images/heartNotClicked.png";
 import { mainContext } from "../App.jsx";
-import {useState,useContext } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 function ProductShowcase() {
-    const { favourite , fruitArray} = useContext(mainContext);
+    const { favourite, fruitArray } = useContext(mainContext);
     const fruits = fruitArray;
 
     return (
