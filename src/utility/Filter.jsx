@@ -130,3 +130,5 @@ function useFilter(){
         filterFruit
     }
 }
+
+export default useFilter;
