@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import { mainContext } from "../App";
 import { useContext } from "react";
 
-
 function CheckoutPage() {
     return (
         <div className={style.main}>
@@ -33,8 +32,8 @@ export function BackButton() {
 }
 
 function ShoppingBag() {
-    const {fruitArray} = useContext(mainContext);
-    const fruits = fruitArray.filter(product => product.inCart === true);
+    const { fruitArray } = useContext(mainContext);
+    const fruits = fruitArray.filter((product) => product.inCart === true);
 
     return (
         <div className={style.shoppingBag}>

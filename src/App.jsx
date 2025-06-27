@@ -3,7 +3,7 @@ import Navbar from "./component/Navbar.jsx";
 import { createContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import useFilter from "./Filter.jsx";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import fruits from "./Fruits.jsx";
 
 export let mainContext = createContext();
@@ -40,11 +40,10 @@ function App() {
             toggleDisplayFavourite();
         }
 
-        if (location.pathname !== "/Shopping-Cart/Checkout" &&  displayCart) {
+        if (location.pathname !== "/Shopping-Cart/Checkout" && displayCart) {
             toggleDisplayCart();
         }
     }, [location]);
-
 
     const fruitArray = filterFruit(fruits, filter);
     console.log("app component rendered");

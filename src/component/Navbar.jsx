@@ -98,7 +98,8 @@ function SearchField() {
 }
 
 function FavouriteButton() {
-    const {displayFavourite,toggleDisplayFavourite} = useContext(mainContext);
+    const { displayFavourite, toggleDisplayFavourite } =
+        useContext(mainContext);
 
     return (
         <Link to="Store">
@@ -118,7 +119,7 @@ function FavouriteButton() {
 }
 
 function CartButton() {
-    const { displayCart, toggleDisplayCart} = useContext(mainContext)
+    const { displayCart, toggleDisplayCart } = useContext(mainContext);
 
     return (
         <Link to="Checkout">

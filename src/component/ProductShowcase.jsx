@@ -16,10 +16,7 @@ function ProductShowcase() {
             <div className={style.headingHolder}>
                 <h2>
                     Items ({fruits.length}){" "}
-                    {
-                        displayFavourite && <span> — Favourites</span>
-                    }
-
+                    {displayFavourite && <span> — Favourites</span>}
                 </h2>
             </div>
             <div className={style.productHolder}>
