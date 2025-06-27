@@ -29,6 +29,7 @@ function App() {
     // toggle favourite to off when the url changes
     // this is to ensure that the favourite state is off when not is store root.
     useEffect(() => {
+
         if (location.pathname !== "/Shopping-Cart/Store" && favourite) {
             toggleFavourite();
         }
@@ -46,10 +47,13 @@ function App() {
         <div className={style.main}>
             <mainContext.Provider
                 value={{
+                    filter,
                     favourite,
                     cart,
                     fruitArray,
                     toggleCart,
+                    changeName,
+                    changeFamily,
                     toggleFavourite,
                 }}
             >
