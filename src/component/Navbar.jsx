@@ -7,7 +7,7 @@ import hamburgerIcon from "../assets/images/hamburger.svg";
 import searchIcon from "../assets/images/search.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { context } from "../App.jsx";
+import { mainContext } from "../App.jsx";
 
 function Navbar() {
     const location = useLocation();
@@ -93,7 +93,7 @@ function SearchField() {
 }
 
 function FavouriteButton() {
-    const { favourite, toggleFavourite } = useContext(context);
+    const { favourite, toggleFavourite } = useContext(mainContext);
 
     return (
         <Link to="Store">
@@ -113,7 +113,7 @@ function FavouriteButton() {
 }
 
 function CartButton() {
-    const { cart, toggleCart } = useContext(context);
+    const { cart, toggleCart } = useContext(mainContext);
 
     return (
         <Link to="Checkout">
