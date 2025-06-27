@@ -44,7 +44,7 @@ function useFilter(){
 
         if(typeof(color) !== "string") throw new Error("wrong data type, must be a string")
         updateFilter(draft => {
-            draft.color.filter(item => item !== color)
+            draft.color = draft.color.filter(item => item !== color)
         })
     }
 
@@ -52,7 +52,7 @@ function useFilter(){
 
         if(typeof(newVitamin) !== "string") throw new Error("wrong data type, must be a string")
         updateFilter(draft => {
-            draft.vitamin.push(newVitamin.toLowerCase());
+            draft.vitamin = draft.vitamin.push(newVitamin.toLowerCase());
         })
     }
 
