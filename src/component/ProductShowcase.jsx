@@ -34,6 +34,7 @@ function ProductShowcase() {
 }
 
 function ProductItem({ itemDetails }) {
+    const {addToCart , addToFavourite} = useContext(mainContext);
     const favClicked = itemDetails.favourite;
     const cartClicked = itemDetails.inCart;
 
@@ -45,7 +46,6 @@ function ProductItem({ itemDetails }) {
     const name = itemDetails.name.toLowerCase();
     const imageKey = `/src/assets/images/fruits/${name}.png`;
     const src = images[imageKey];
-
     const location = "/Shopping-Cart/Store/" + itemDetails.name;
 
     return (
@@ -58,9 +58,11 @@ function ProductItem({ itemDetails }) {
                             ? "Remove from favourite"
                             : "Add to favourite"
                     }
+                    // add/remove to/from favourite
                     onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
+                        addToFavourite(itemDetails.name);
                     }}
                 >
                     <img
@@ -79,9 +81,11 @@ function ProductItem({ itemDetails }) {
                     <h3>$ {itemDetails.price}</h3>
                     <button
                         title={cartClicked ? "Remove from cart" : "Add to cart"}
+                        // add/remove to/from cart
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
+                            addToCart(itemDetails.name);
                         }}
                     >
                         <img
