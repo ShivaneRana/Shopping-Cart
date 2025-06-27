@@ -3,16 +3,18 @@ import Navbar from "./component/Navbar.jsx";
 import { createContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { useFavoriteState, useCartState } from "./utility/Utility.jsx";
+import useFilter from "./utility/Filter.jsx";
 import { useEffect } from "react";
+import fruits from "./Fruits.jsx";
 
-export let context = createContext();
+export let mainContext = createContext();
 
 function App() {
     const { favourite, toggleFavourite } = useFavoriteState();
+    const { filter,tFav, changeName, changeFamily, addColor, addVitamin, removeColor, removeVitamin, filterFruit} = useFilter();
     const { cart, toggleCart } = useCartState();
     const location = useLocation();
 
-    console.log(location.pathname);
     // toggle favourite to off when the url changes
     // this is to ensure that the favourite state is off when not is store root.
 
@@ -26,19 +28,25 @@ function App() {
         }
     }, [location]);
 
+    const fruitArray = filterFruit(fruits,filter); 
+    console.log("app component rendered")
+    console.log(fruitArray);
+
+
     return (
         <div className={style.main}>
-            <context.Provider
+            <mainContext.Provider
                 value={{
                     favourite,
                     cart,
+                    fruitArray,
                     toggleCart,
                     toggleFavourite,
                 }}
             >
                 <Navbar></Navbar>
                 <Outlet></Outlet>
-            </context.Provider>
+            </mainContext.Provider>
         </div>
     );
 }
