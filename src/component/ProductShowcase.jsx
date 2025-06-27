@@ -1,16 +1,15 @@
 import style from "../style/ProductShowcase.module.css";
-import fruits from "../Fruits.jsx";
 import cartIcon from "../assets/images/cart.png";
 import cartPressedIcon from "../assets/images/cartPressed.png";
 import favPressedIcon from "../assets/images/heartClicked.png";
 import favIcon from "../assets/images/heartNotClicked.png";
-import { context } from "../App.jsx";
-import { useContext } from "react";
-import { useState } from "react";
+import { mainContext } from "../App.jsx";
+import {useState,useContext } from "react";
 import { Link } from "react-router-dom";
 
 function ProductShowcase() {
-    const { favourite } = useContext(context);
+    const { favourite , fruitArray} = useContext(mainContext);
+    const fruits = fruitArray;
 
     return (
         <div className={style.main}>
