@@ -1,14 +1,16 @@
-import style from "./App.module.css";
-import Navbar from "./component/Navbar.jsx";
 import { createContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import useFilter from "./Filter.jsx";
 import { useEffect, useState } from "react";
-import fruits from "./Fruits.jsx";
+import { useImmer } from "use-immer";
+import fruits from "./Fruits.jsx"
+import useFilter from "./Filter.jsx";
+import style from "./App.module.css";
+import Navbar from "./component/Navbar.jsx";
 
 export let mainContext = createContext();
 
 function App() {
+    const [fruitList,updateFruitList] = useImmer(fruits);
     const [displayFavourite, setDisplayFavourite] = useState(false);
     const [displayCart, setDisplayCart] = useState(false);
     const location = useLocation();
@@ -23,6 +25,20 @@ function App() {
         toggleFavourite,
         filterFruit,
     } = useFilter();
+
+    function addToCart(targetName){
+        updateFruitList(draft => {
+            const target = draft.filter(item => item.name === targetName)[0];
+            target.inCart = !(target.inCart);
+        })
+    }
+
+    function addToFavourite(targetName){
+        updateFruitList(draft => {
+            const target = draft.filter(item => item.name === targetName)[0];
+            target.favourite = !(target.favourite);
+        })
+    }
 
     function toggleDisplayFavourite() {
         setDisplayFavourite((prev) => !prev);
@@ -45,7 +61,7 @@ function App() {
         }
     }, [location]);
 
-    const fruitArray = filterFruit(fruits, filter);
+    const fruitArray = filterFruit(fruitList, filter);
     console.log("app component rendered");
     console.log(fruitArray);
 
@@ -61,6 +77,8 @@ function App() {
                     changeName,
                     changeFamily,
                     toggleDisplayFavourite,
+                    addToCart,
+                    addToFavourite,
                 }}
             >
                 <Navbar></Navbar>
