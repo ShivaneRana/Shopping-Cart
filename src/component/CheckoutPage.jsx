@@ -161,8 +161,10 @@ function OrderSummary() {
     itemTotal = Number(itemTotal.toFixed(2));
     gst = Number(((itemTotal / 100) * gstPercentage).toFixed(2));
     gstTotal = Number((itemTotal + gst).toFixed(2));
-    alertText = itemTotal !== 0 ? "Congratulations! You would have made a successful purchase if this was a real store 😁" :
-    "Cannot proceed with checkout. Your bag is empty.";
+    alertText =
+        itemTotal !== 0
+            ? "Congratulations! You would have made a successful purchase if this was a real store 😁"
+            : "Cannot proceed with checkout. Your bag is empty.";
 
     return (
         <div className={style.orderSummary}>
@@ -191,7 +193,7 @@ function OrderSummary() {
                 <button
                     onClick={() => {
                         alert(alertText);
-                        if(itemTotal !== 0){
+                        if (itemTotal !== 0) {
                             clearCart();
                         }
                     }}
