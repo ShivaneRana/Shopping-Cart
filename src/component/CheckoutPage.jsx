@@ -100,13 +100,23 @@ function ItemDetail({ item }) {
 }
 
 export function QuantityController({ item }) {
+    const {changeQuantity} = useContext(mainContext);
+
     return (
         <div className={style.quantityController}>
-            <button title="Decrease quantity">
+            <button
+            onClick={() => {
+                changeQuantity(item.name)
+            }}
+            title="Decrease quantity">
                 <img alt="minux icon" src={minusIcon}></img>
             </button>
             <p>{item.quantity}</p>
-            <button title="Increase quantity">
+            <button
+            onClick={() => {
+                changeQuantity(item.name,"increase")
+            }}
+            title="Increase quantity">
                 <img alt="plus icon" src={plusIcon}></img>
             </button>
         </div>
@@ -131,27 +141,53 @@ function PriceDetail({ item }) {
 }
 
 function OrderSummary() {
+    const {fruitArray,clearCart} = useContext(mainContext);
+
+    let inCartFruit = fruitArray.filter(item => item.inCart === true);
+    let itemTotal = 0;
+    let gstTotal = 0;
+    let itemNumber = inCartFruit.length;
+    let gstPercentage = 25;
+    let gst = 0;
+
+
+    for(let item of inCartFruit){
+        itemTotal += item.orderPrice;
+    }
+
+    itemTotal = Number(itemTotal.toFixed(2));
+    gst = Number(((itemTotal/100)*gstPercentage).toFixed(2));
+    gstTotal = Number((itemTotal + gst).toFixed(2));
+
     return (
         <div className={style.orderSummary}>
             <div>
                 <div className={style.orderSubtotal}>
                     <h3>Order Summary</h3>
-                    <h3>$89.90</h3>
+                    {/* return total after GST */}
+                    <h3>$ {gstTotal}</h3>
                     <div>
-                        <p>Subtotal (5 items)</p>
-                        <p>$ 12.87</p>
+                        {/* return actual total of the product */}
+                        <p>Subtotal ({itemNumber} items)</p>
+                        <p>$ {itemTotal}</p>
                     </div>
                     <div>
-                        <p>GST (25%)</p>
-                        <p>$ 2.87</p>
+                        {/* return GST st on the product total */}
+                        <p>GST ({gstPercentage}%)</p>
+                        <p>$ {gst}</p>
                     </div>
                 </div>
                 <hr></hr>
                 <div className={style.orderTotal}>
+                    {/* return total after GST */}
                     <h3>Total</h3>
-                    <h3>$ 14.12</h3>
+                    <h3>$ {gstTotal}</h3>
                 </div>
                 <button
+                    onClick={() => {
+                        alert("Congratulations! You would have made a successful purchase if this was a real store 😁")
+                        clearCart();
+                    }}
                     title="Complete purchase"
                     className={style.checkoutButton}
                 >
