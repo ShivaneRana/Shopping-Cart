@@ -47,22 +47,28 @@ function App() {
         });
     }
 
-    function changeQuantity(targetName,flag = "decrease"){
+    function changeQuantity(targetName, flag = "decrease") {
         updateFruitList((draft) => {
             const target = draft.filter((item) => item.name === targetName)[0];
-            flag === "increase" ? target.quantity++ : (target.quantity > 1 ? target.quantity-- : 1);
-            target.orderPrice = Number((target.price*target.quantity).toFixed(2));
+            flag === "increase"
+                ? target.quantity++
+                : target.quantity > 1
+                  ? target.quantity--
+                  : 1;
+            target.orderPrice = Number(
+                (target.price * target.quantity).toFixed(2),
+            );
         });
     }
 
-    function clearCart(){
+    function clearCart() {
         updateFruitList((draft) => {
-            draft.forEach(item => {
-                if(item.inCart){
+            draft.forEach((item) => {
+                if (item.inCart) {
                     item.inCart = false;
                     item.orderPrice = item.price;
                 }
-            })
+            });
         });
     }
 

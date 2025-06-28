@@ -100,23 +100,25 @@ function ItemDetail({ item }) {
 }
 
 export function QuantityController({ item }) {
-    const {changeQuantity} = useContext(mainContext);
+    const { changeQuantity } = useContext(mainContext);
 
     return (
         <div className={style.quantityController}>
             <button
-            onClick={() => {
-                changeQuantity(item.name)
-            }}
-            title="Decrease quantity">
+                onClick={() => {
+                    changeQuantity(item.name);
+                }}
+                title="Decrease quantity"
+            >
                 <img alt="minux icon" src={minusIcon}></img>
             </button>
             <p>{item.quantity}</p>
             <button
-            onClick={() => {
-                changeQuantity(item.name,"increase")
-            }}
-            title="Increase quantity">
+                onClick={() => {
+                    changeQuantity(item.name, "increase");
+                }}
+                title="Increase quantity"
+            >
                 <img alt="plus icon" src={plusIcon}></img>
             </button>
         </div>
@@ -124,15 +126,16 @@ export function QuantityController({ item }) {
 }
 
 function PriceDetail({ item }) {
-    const {removeFromCart} = useContext(mainContext);
+    const { removeFromCart } = useContext(mainContext);
 
     return (
         <div className={style.priceDetail}>
             <button
-            onClick={() => {
-                removeFromCart(item.name)
-            }}
-            title="Remove from cart">
+                onClick={() => {
+                    removeFromCart(item.name);
+                }}
+                title="Remove from cart"
+            >
                 <img alt="delete icon" src={deleteIcon}></img>
             </button>
             <h5>$ {item.orderPrice}</h5>
@@ -141,22 +144,21 @@ function PriceDetail({ item }) {
 }
 
 function OrderSummary() {
-    const {fruitArray,clearCart} = useContext(mainContext);
+    const { fruitArray, clearCart } = useContext(mainContext);
 
-    let inCartFruit = fruitArray.filter(item => item.inCart === true);
+    let inCartFruit = fruitArray.filter((item) => item.inCart === true);
     let itemTotal = 0;
     let gstTotal = 0;
     let itemNumber = inCartFruit.length;
     let gstPercentage = 25;
     let gst = 0;
 
-
-    for(let item of inCartFruit){
+    for (let item of inCartFruit) {
         itemTotal += item.orderPrice;
     }
 
     itemTotal = Number(itemTotal.toFixed(2));
-    gst = Number(((itemTotal/100)*gstPercentage).toFixed(2));
+    gst = Number(((itemTotal / 100) * gstPercentage).toFixed(2));
     gstTotal = Number((itemTotal + gst).toFixed(2));
 
     return (
@@ -185,7 +187,9 @@ function OrderSummary() {
                 </div>
                 <button
                     onClick={() => {
-                        alert("Congratulations! You would have made a successful purchase if this was a real store 😁")
+                        alert(
+                            "Congratulations! You would have made a successful purchase if this was a real store 😁",
+                        );
                         clearCart();
                     }}
                     title="Complete purchase"
