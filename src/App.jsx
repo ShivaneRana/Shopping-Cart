@@ -67,6 +67,7 @@ function App() {
                 if (item.inCart) {
                     item.inCart = false;
                     item.orderPrice = item.price;
+                    item.quantity = 1;
                 }
             });
         });
