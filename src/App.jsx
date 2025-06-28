@@ -95,7 +95,21 @@ function App() {
         }
     }, [location]);
 
-    const fruitArray = filterFruit(fruitList, filter);
+
+    let fruitArray;
+    if(location.pathname === "/Shopping-Cart/Checkout"){
+        const filter = {
+        name: "",
+        family: "",
+        vitamin: [],
+        color: [],
+        inCart: false,
+        favourite: false,
+    };
+        fruitArray = filterFruit(fruitList, filter);
+    }else{
+        fruitArray = filterFruit(fruitList, filter);
+    }
 
     return (
         <div className={style.main}>
