@@ -6,7 +6,6 @@ import { useContext } from "react";
 import { mainContext } from "../App.jsx";
 
 function ItemPage({ itemDetail }) {
-
     return (
         <div className={style.main}>
             <BackButton></BackButton>
@@ -63,7 +62,7 @@ function ProductImage({ itemDetail }) {
 }
 
 function ProductInfo({ itemDetail }) {
-    const { addToCart , removeFromCart} = useContext(mainContext);
+    const { addToCart, removeFromCart } = useContext(mainContext);
     return (
         <div className={style.productInfo}>
             {/* heading */}
@@ -85,12 +84,12 @@ function ProductInfo({ itemDetail }) {
 
             {/* buy now and add to cart button */}
             <div className={style.buttonHolder}>
-                
                 {/* buy now button */}
                 <Link to="/Shopping-Cart/Checkout">
                     <button
-                     onClick={() => addToCart(itemDetail.name)}
-                     title="Go to checkout now">
+                        onClick={() => addToCart(itemDetail.name)}
+                        title="Go to checkout now"
+                    >
                         Buy now
                     </button>
                 </Link>
@@ -98,7 +97,11 @@ function ProductInfo({ itemDetail }) {
                 {/* checkout button */}
                 <button
                     onClick={() => {
-                        {itemDetail.inCart ? removeFromCart(itemDetail.name) : addToCart(itemDetail.name)}                        
+                        {
+                            itemDetail.inCart
+                                ? removeFromCart(itemDetail.name)
+                                : addToCart(itemDetail.name);
+                        }
                     }}
                 >
                     {itemDetail.inCart ? "Remove from cart" : "Add to cart"}

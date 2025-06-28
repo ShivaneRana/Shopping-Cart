@@ -127,7 +127,7 @@
     font-weight: var(--font-weight);
 }
 
-.buttonHolder > a > button{
+.buttonHolder > a > button {
     width: 100%;
     padding: 15px;
     font-size: 14px;
