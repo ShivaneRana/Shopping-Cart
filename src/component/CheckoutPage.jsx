@@ -125,7 +125,7 @@ function PriceDetail({ item }) {
             title="Remove from cart">
                 <img alt="delete icon" src={deleteIcon}></img>
             </button>
-            <h5>$ {item.price}</h5>
+            <h5>$ {item.orderPrice}</h5>
         </div>
     );
 }
