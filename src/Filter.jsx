@@ -48,7 +48,9 @@ function useFilter() {
         }
 
         updateFilter((draft) => {
-            draft.color = draft.color.filter((item) => item !== color.toLowerCase());
+            draft.color = draft.color.filter(
+                (item) => item !== color.toLowerCase(),
+            );
         });
     }
 
