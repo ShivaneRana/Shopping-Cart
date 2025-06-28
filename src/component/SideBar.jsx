@@ -2,7 +2,8 @@ import style from "../style/SideBar.module.css";
 import expandedIcon from "../assets/images/down.svg";
 import shrinkIcon from "../assets/images/top.svg";
 import checkIcon from "../assets/images/check.svg";
-import { useState } from "react";
+import { useState,useContext } from "react";
+import { mainContext } from "../App.jsx";
 
 function SideBar() {
     return (
@@ -45,10 +46,16 @@ function ColorSelector() {
 
 // for individual color item
 function ColorItem({ color }) {
+    const {addColor, removeColor} = useContext(mainContext);
     const [check, setCheck] = useState(false);
 
     function toggleCheck() {
         setCheck((prev) => !prev);
+        if(!check){
+            addColor(color);
+        }else{
+            removeColor(color);
+        }
     }
 
     return (
