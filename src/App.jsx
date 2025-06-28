@@ -47,6 +47,25 @@ function App() {
         });
     }
 
+    function changeQuantity(targetName,flag = "decrease"){
+        updateFruitList((draft) => {
+            const target = draft.filter((item) => item.name === targetName)[0];
+            flag === "increase" ? target.quantity++ : (target.quantity > 1 ? target.quantity-- : 1);
+            target.orderPrice = Number((target.price*target.quantity).toFixed(2));
+        });
+    }
+
+    function clearCart(){
+        updateFruitList((draft) => {
+            draft.forEach(item => {
+                if(item.inCart){
+                    item.inCart = false;
+                    item.orderPrice = item.price;
+                }
+            })
+        });
+    }
+
     function toggleDisplayFavourite() {
         setDisplayFavourite((prev) => !prev);
         toggleFavourite();
@@ -69,8 +88,6 @@ function App() {
     }, [location]);
 
     const fruitArray = filterFruit(fruitList, filter);
-    console.log("app component rendered");
-    console.log(fruitArray);
 
     return (
         <div className={style.main}>
@@ -87,6 +104,8 @@ function App() {
                     addToCart,
                     addToFavourite,
                     removeFromCart,
+                    changeQuantity,
+                    clearCart,
                 }}
             >
                 <Navbar></Navbar>
