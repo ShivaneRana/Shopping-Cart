@@ -29,7 +29,7 @@ function App() {
     function addToCart(targetName) {
         updateFruitList((draft) => {
             const target = draft.filter((item) => item.name === targetName)[0];
-            target.inCart = !target.inCart;
+            target.inCart = true;
         });
     }
 
