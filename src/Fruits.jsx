@@ -6,7 +6,7 @@ const fruits = [
         vitamin: ["Vitamin B", "Vitamin K"],
         color: ["Red"],
         inCart: false,
-        favourite: false,
+        favourite: true,
         quantity: 1,
         description:
             "Apples are crisp, juicy fruits. They come in various colors and flavors, ranging from sweet to tart. Apples are often eaten raw, used in baking, and pressed into cider.",
@@ -42,7 +42,7 @@ const fruits = [
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["Yellow"],
         inCart: false,
-        favourite: false,
+        favourite: true,
         quantity: 1,
         description:
             "Bananas are elongated, sweet fruits. They are a convenient snack, rich in potassium and energy-boosting carbohydrates.",
@@ -66,7 +66,7 @@ const fruits = [
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["Purple"],
         inCart: false,
-        favourite: false,
+        favourite: true,
         quantity: 1,
         description:
             "Blueberries are small, round fruits known for their sweet flavor and deep blue color. They are rich in antioxidants and widely used in baking and snacks.",
@@ -281,8 +281,8 @@ const fruits = [
         family: "Tropical",
         vitamin: ["Vitamin B", "Vitamin K"],
         color: ["Yellow"],
-        inCart: false,
-        favourite: false,
+        inCart: true,
+        favourite: true,
         quantity: 1,
         description:
             "Pineapples are tropical fruits with spiky skin and sweet-tart yellow flesh. They are widely used in cooking and drinks.",
@@ -293,7 +293,7 @@ const fruits = [
         family: "Rose",
         vitamin: ["Vitamin C", "Vitamin E"],
         color: ["Red"],
-        inCart: false,
+        inCart: true,
         favourite: false,
         quantity: 1,
         description:
@@ -305,7 +305,7 @@ const fruits = [
         family: "Rose",
         vitamin: ["Vitamin A", "Vitamin C"],
         color: ["Red"],
-        inCart: false,
+        inCart: true,
         favourite: false,
         quantity: 1,
         description:
@@ -329,7 +329,7 @@ const fruits = [
         family: "Rose",
         vitamin: ["Vitamin B", "Vitamin C"],
         color: ["Red"],
-        inCart: false,
+        inCart: true,
         favourite: false,
         quantity: 1,
         description:
@@ -341,7 +341,7 @@ const fruits = [
         family: "Gourd",
         vitamin: ["Vitamin C", "Vitamin E"],
         color: ["Green"],
-        inCart: false,
+        inCart: true,
         favourite: false,
         quantity: 1,
         description:
