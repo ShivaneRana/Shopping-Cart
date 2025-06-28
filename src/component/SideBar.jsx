@@ -105,17 +105,15 @@ function FamilyItemHolder() {
     return (
         <div className={style.familyItemHolder}>
             {familyList.map((item) => {
-                return (
-                    <FamilyItem key={item} item={item}></FamilyItem>
-                );
+                return <FamilyItem key={item} item={item}></FamilyItem>;
             })}
         </div>
     );
 }
 
-function FamilyItem({item}){
-    const {changeFamily, resetFamily , filter} = useContext(mainContext);
-    let exist = filter.family === (item.toLowerCase());
+function FamilyItem({ item }) {
+    const { changeFamily, resetFamily, filter } = useContext(mainContext);
+    let exist = filter.family === item.toLowerCase();
     const check = exist;
 
     function toggleCheck() {
@@ -125,13 +123,18 @@ function FamilyItem({item}){
             resetFamily(item.toLowerCase());
         }
     }
- 
-    return(
+
+    return (
         <div className={style.familyItem}>
-            <input checked={check} onChange={toggleCheck} type="checkbox" name="family"></input>
+            <input
+                checked={check}
+                onChange={toggleCheck}
+                type="checkbox"
+                name="family"
+            ></input>
             <label htmlFor="family">{item}</label>
         </div>
-    )
+    );
 }
 
 function VitaminSelector() {

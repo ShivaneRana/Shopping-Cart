@@ -26,7 +26,7 @@ function useFilter() {
         });
     }
 
-    function resetFamily(){
+    function resetFamily() {
         updateFilter((draft) => {
             draft.family = "";
         });
