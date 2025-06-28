@@ -97,6 +97,7 @@ function App() {
 
 
     let fruitArray;
+    // ensure that filter on or off does not hinder product from showing in checkout page.
     if(location.pathname === "/Shopping-Cart/Checkout"){
         const filter = {
         name: "",
