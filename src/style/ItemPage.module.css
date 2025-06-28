@@ -127,13 +127,24 @@
     font-weight: var(--font-weight);
 }
 
+.buttonHolder > a > button{
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+}
+
 /* buy now button */
-.buttonHolder > button:nth-child(1) {
+.buttonHolder > a > button:nth-child(1) {
     color: var(--color-white);
     background-color: var(--color-blue);
 }
 
-.buttonHolder > button:nth-child(1):hover {
+.buttonHolder > a > button:nth-child(1):hover {
     background-color: var(--color-blueHover);
 }
 
