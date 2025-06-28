@@ -95,20 +95,19 @@ function App() {
         }
     }, [location]);
 
-
     let fruitArray;
     // ensure that filter on or off does not hinder product from showing in checkout page.
-    if(location.pathname === "/Shopping-Cart/Checkout"){
+    if (location.pathname === "/Shopping-Cart/Checkout") {
         const filter = {
-        name: "",
-        family: "",
-        vitamin: [],
-        color: [],
-        inCart: false,
-        favourite: false,
-    };
+            name: "",
+            family: "",
+            vitamin: [],
+            color: [],
+            inCart: false,
+            favourite: false,
+        };
         fruitArray = filterFruit(fruitList, filter);
-    }else{
+    } else {
         fruitArray = filterFruit(fruitList, filter);
     }
 
