@@ -46,7 +46,7 @@ function ColorSelector() {
 
 // for individual color item
 function ColorItem({ color }) {
-    const { addColor, removeColor, filter} = useContext(mainContext);
+    const { addColor, removeColor, filter } = useContext(mainContext);
     let exist = filter.color.includes(color.toLowerCase());
     const check = exist;
 
@@ -138,7 +138,6 @@ function VitaminSelector() {
 }
 
 function VitaminItemHolder() {
-
     const vitaminList = [
         "Vitamin A",
         "Vitamin B",
@@ -151,16 +150,14 @@ function VitaminItemHolder() {
     return (
         <div className={style.vitaminItemHolder}>
             {vitaminList.map((item) => {
-                return (
-                    <VitaminItem key={item} item={item}></VitaminItem>
-                );
+                return <VitaminItem key={item} item={item}></VitaminItem>;
             })}
         </div>
     );
 }
 
-function VitaminItem({item}){
-    const {addVitamin, removeVitamin, filter} = useContext(mainContext);
+function VitaminItem({ item }) {
+    const { addVitamin, removeVitamin, filter } = useContext(mainContext);
     let exist = filter.vitamin.includes(item.toLowerCase());
     const check = exist;
 
@@ -172,17 +169,17 @@ function VitaminItem({item}){
         }
     }
 
-    return(
+    return (
         <div key={item} className={style.vitaminItem}>
             <input
                 checked={check}
                 onChange={toggleCheck}
                 type="checkbox"
-                name="vitamin"></input>
+                name="vitamin"
+            ></input>
             <label htmlFor="vitamin">{item}</label>
         </div>
-    )
-
+    );
 }
 
 export default SideBar;
