@@ -26,6 +26,12 @@ function useFilter() {
         });
     }
 
+    function resetFamily(){
+        updateFilter((draft) => {
+            draft.family = "";
+        });
+    }
+
     function toggleFavourite() {
         updateFilter((draft) => {
             draft.favourite = !draft.favourite;
@@ -145,6 +151,7 @@ function useFilter() {
         filter,
         changeName,
         changeFamily,
+        resetFamily,
         addColor,
         addVitamin,
         removeColor,
