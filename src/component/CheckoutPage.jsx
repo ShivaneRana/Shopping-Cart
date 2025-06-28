@@ -152,6 +152,7 @@ function OrderSummary() {
     let itemNumber = inCartFruit.length;
     let gstPercentage = 25;
     let gst = 0;
+    let alertText;
 
     for (let item of inCartFruit) {
         itemTotal += item.orderPrice;
@@ -160,6 +161,8 @@ function OrderSummary() {
     itemTotal = Number(itemTotal.toFixed(2));
     gst = Number(((itemTotal / 100) * gstPercentage).toFixed(2));
     gstTotal = Number((itemTotal + gst).toFixed(2));
+    alertText = itemTotal !== 0 ? "Congratulations! You would have made a successful purchase if this was a real store 😁" :
+    "Cannot proceed with checkout. Your bag is empty.";
 
     return (
         <div className={style.orderSummary}>
@@ -187,10 +190,10 @@ function OrderSummary() {
                 </div>
                 <button
                     onClick={() => {
-                        alert(
-                            "Congratulations! You would have made a successful purchase if this was a real store 😁",
-                        );
-                        clearCart();
+                        alert(alertText);
+                        if(itemTotal !== 0){
+                            clearCart();
+                        }
                     }}
                     title="Complete purchase"
                     className={style.checkoutButton}
