@@ -114,12 +114,18 @@ export function QuantityController({ item }) {
 }
 
 function PriceDetail({ item }) {
+    const {removeFromCart} = useContext(mainContext);
+
     return (
         <div className={style.priceDetail}>
-            <button title="Delete item">
+            <button
+            onClick={() => {
+                removeFromCart(item.name)
+            }}
+            title="Remove from cart">
                 <img alt="delete icon" src={deleteIcon}></img>
             </button>
-            <h5>{item.price}</h5>
+            <h5>$ {item.price}</h5>
         </div>
     );
 }
