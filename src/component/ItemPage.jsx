@@ -70,7 +70,7 @@ function ProductInfo({ itemDetail }) {
 
             {/* contains family, inStock, price, quantity Controller */}
             <div className={style.itemInfo}>
-                <h3 className={style.itemFamily}>{itemDetail.family}</h3>
+                <h3 className={style.itemFamily}>{itemDetail.family} Family</h3>
                 <div className={style.inStock}>
                     <img alt="image of inStock icon" src={stockIcon}></img>
                     <p>In stock</p>
