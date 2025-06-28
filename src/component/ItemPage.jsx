@@ -1,9 +1,11 @@
 import style from "../style/ItemPage.module.css";
 import stockIcon from "../assets/images/inStock.svg";
 import { BackButton, QuantityController } from "./CheckoutPage";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { mainContext } from "../App.jsx";
 
 function ItemPage({ itemDetail }) {
-    console.log(itemDetail);
 
     return (
         <div className={style.main}>
@@ -61,6 +63,7 @@ function ProductImage({ itemDetail }) {
 }
 
 function ProductInfo({ itemDetail }) {
+    const { addToCart , removeFromCart} = useContext(mainContext);
     return (
         <div className={style.productInfo}>
             {/* heading */}
@@ -73,7 +76,7 @@ function ProductInfo({ itemDetail }) {
                     <img alt="image of inStock icon" src={stockIcon}></img>
                     <p>In stock</p>
                 </div>
-                <h3 className={style.itemPrice}>$ {itemDetail.price}</h3>
+                <h3 className={style.itemPrice}>$ {itemDetail.orderPrice}</h3>
                 <QuantityController item={itemDetail}></QuantityController>
             </div>
 
@@ -82,8 +85,22 @@ function ProductInfo({ itemDetail }) {
 
             {/* buy now and add to cart button */}
             <div className={style.buttonHolder}>
-                <button>Buy now</button>
-                <button>
+                
+                {/* buy now button */}
+                <Link to="/Shopping-Cart/Checkout">
+                    <button
+                     onClick={() => addToCart(itemDetail.name)}
+                     title="Go to checkout now">
+                        Buy now
+                    </button>
+                </Link>
+
+                {/* checkout button */}
+                <button
+                    onClick={() => {
+                        {itemDetail.inCart ? removeFromCart(itemDetail.name) : addToCart(itemDetail.name)}                        
+                    }}
+                >
                     {itemDetail.inCart ? "Remove from cart" : "Add to cart"}
                 </button>
             </div>
