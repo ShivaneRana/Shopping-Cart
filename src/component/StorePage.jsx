@@ -1,11 +1,15 @@
 import style from "../style/StorePage.module.css";
 import SideBar from "./SideBar.jsx";
 import ProductShowcase from "./ProductShowcase.jsx";
-import fruits from "../Fruits.jsx";
 import ItemPage from "./ItemPage.jsx";
 import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { mainContext } from "../App.jsx";
 
 function StorePage() {
+    const { fruitArray } = useContext(mainContext);
+    const fruits = fruitArray;
+
     const { name } = useParams();
     let itemDetail;
 
