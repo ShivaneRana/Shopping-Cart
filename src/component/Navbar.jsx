@@ -128,9 +128,14 @@ function CartButton() {
                 <img
                     title="Display Cart"
                     alt="cart icon"
-                    // honestly i put location.pathname so that clicking cartIcon while in checkout page wont toggle this 
+                    // honestly i put location.pathname so that clicking cartIcon while in checkout page wont toggle this
                     // could remove displayCart but then thought it would'nt hurt to keep it. right?
-                    src={location.pathname === "/Shopping-Cart/Checkout" || displayCart ? cartIconClicked : cartIconNotClicked}
+                    src={
+                        location.pathname === "/Shopping-Cart/Checkout" ||
+                        displayCart
+                            ? cartIconClicked
+                            : cartIconNotClicked
+                    }
                 ></img>
             </button>
         </Link>
