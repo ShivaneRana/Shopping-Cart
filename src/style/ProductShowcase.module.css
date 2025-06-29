@@ -5,6 +5,7 @@
     flex-direction: column;
     padding: 5px;
     gap: 20px;
+    margin: 20px;
 }
 
 .headingHolder {
@@ -27,7 +28,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(clamp(250px,20vw,500px),1fr));
     grid-template-rows: auto;
-    gap: 18px;
+    gap: 20px;
 }
 
 .productHolder > a {
