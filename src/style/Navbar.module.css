@@ -137,7 +137,7 @@
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     /* logo */
     .leftside > a {
         display: none;
@@ -149,7 +149,7 @@
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .leftside > div {
         display: none;
     }
