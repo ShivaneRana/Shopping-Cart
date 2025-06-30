@@ -142,16 +142,14 @@
 }
 
 @media (max-width: 1024px) {
-    .main{
+    .main {
         position: absolute;
         left: -500px;
     }
 }
 
 @media (max-width: 768px) {
-
 }
 
 @media (max-width: 540px) {
-
 }
