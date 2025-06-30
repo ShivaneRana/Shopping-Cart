@@ -13,6 +13,7 @@ function App() {
     const [fruitList, updateFruitList] = useImmer(fruits);
     const [displayFavourite, setDisplayFavourite] = useState(false);
     const [displayCart, setDisplayCart] = useState(false);
+    const [showSideBar,setShowSideBar] = useState(false);
     const location = useLocation();
     const {
         filter,
@@ -26,6 +27,10 @@ function App() {
         toggleFavourite,
         filterFruit,
     } = useFilter();
+
+    function toggleSideBar(){
+        setShowSideBar(!showSideBar);
+    }
 
     function addToCart(targetName) {
         updateFruitList((draft) => {
@@ -98,15 +103,7 @@ function App() {
     let fruitArray;
     // ensure that filter on or off does not hinder product from showing in checkout page.
     if (location.pathname === "/Shopping-Cart/Checkout") {
-        const filter = {
-            name: "",
-            family: "",
-            vitamin: [],
-            color: [],
-            inCart: false,
-            favourite: false,
-        };
-        fruitArray = filterFruit(fruitList, filter);
+        fruitArray = filterFruit(fruitList, tempFilter);
     } else {
         fruitArray = filterFruit(fruitList, filter);
     }
@@ -119,6 +116,7 @@ function App() {
                     displayFavourite,
                     displayCart,
                     fruitArray,
+                    toggleSideBar,
                     toggleDisplayCart,
                     changeName,
                     changeFamily,
@@ -141,5 +139,16 @@ function App() {
         </div>
     );
 }
+
+// temporary filter to be used when visiting checkout page 
+// while having filter enabled
+const tempFilter = {
+    name: "",
+    family: "",
+    vitamin: [],
+    color: [],
+    inCart: false,
+    favourite: false,
+};
 
 export default App;
