@@ -38,8 +38,8 @@
     text-decoration: none;
 }
 
-.productItem { 
-    width: clamp(250px, 100% , 100%);
+.productItem {
+    width: clamp(250px, 100%, 100%);
     position: relative;
     background-color: var(--color-gray);
     border-radius: var(--border-radius);
