@@ -14,7 +14,9 @@
     gap: 40px;
 }
 
-/* burder button */
+/* hamburger button */
+/* hidden by default and only visible when required device size is met */
+/* with the help of media queries */
 .leftside > button {
     background-color: transparent;
     border: none;
@@ -70,6 +72,7 @@
 
 /* hold search button and div containing fav and cart button */
 .rightside {
+    position: relative;
     width: clamp(50%, 50%, 50%);
     display: flex;
     justify-content: flex-end;
@@ -156,14 +159,44 @@
         display: none;
     }
 
+    .leftside{
+        width: min-content;
+    }
+
+    .leftside > button{
+        width: 25px;
+        height: 25px;
+    }
+
     .rightside {
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         align-items: center;
+    }
+
+    .rightside > div:nth-child(1){
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        margin-right: 25px;
+        transform: translate(-50%, -50%);
+    }
+
+    .rightside > div:nth-child(1) > input{
+        width: 10%;
+    }
+
+    .rightside > div:nth-child(1) > img{
+        width: 25px;
+        height: 25px;
+        left: 10px;
+    }
+
+    .rightside > div > a > button{
+        width: 25px;
+        height: 25px;
     }
 }
 
 @media (max-width: 540px) {
-    .rightside {
-    }
 }
