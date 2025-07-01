@@ -37,11 +37,15 @@ function ShoppingBag() {
 
     return (
         <div className={style.shoppingBag}>
-            {fruits.map((item) => {
-                return (
-                    <ShoppingItem key={item.name} item={item}></ShoppingItem>
-                );
-            })}
+            {
+                fruits.length === 0 ?
+                    <p className={style.emptyCartText}>Cart is empty.</p> : 
+                    (fruits.map((item) => {
+                        return (
+                            <ShoppingItem key={item.name} item={item}></ShoppingItem>
+                        );
+                    }))
+            }
         </div>
     );
 }
