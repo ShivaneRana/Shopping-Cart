@@ -65,16 +65,18 @@ function ShoppingItem({ item }) {
         <div className={style.orderContainer} key={item.name}>
             {/* contains the product image */}
             <ProductImage location={location} src={src}></ProductImage>
+            <div className={style.infoDiv}>
+                {/* contains the product detail */}
+                {/* name, family, quanitity */}
+                <ItemDetail item={item}></ItemDetail>
 
-            {/* contains the product detail */}
-            {/* name, family, quanitity */}
-            <ItemDetail item={item}></ItemDetail>
+                {/* increase/ decrease product quantity */}
+                <QuantityController item={item}></QuantityController>
+            </div>
 
-            {/* increase/ decrease product quantity */}
-            <QuantityController item={item}></QuantityController>
-
-            {/*  display price and delete button */}
+            {/*  display price and delete button */ }
             <PriceDetail item={item}></PriceDetail>
+
         </div>
     );
 }
@@ -98,7 +100,6 @@ function ItemDetail({ item }) {
                 <img src={stockIcon}></img>
                 <p>In stock</p>
             </div>
-            <h3 className={style.itemQuantity}>Qty: {item.quantity}</h3>
         </div>
     );
 }
@@ -108,23 +109,26 @@ export function QuantityController({ item }) {
 
     return (
         <div className={style.quantityController}>
-            <button
-                onClick={() => {
-                    changeQuantity(item.name);
-                }}
-                title="Decrease quantity"
-            >
-                <img alt="minux icon" src={minusIcon}></img>
-            </button>
-            <p>{item.quantity}</p>
-            <button
-                onClick={() => {
-                    changeQuantity(item.name, "increase");
-                }}
-                title="Increase quantity"
-            >
-                <img alt="plus icon" src={plusIcon}></img>
-            </button>
+            <h3 className={style.itemQuantity}>Qty: </h3>
+            <div>
+                <button
+                    onClick={() => {
+                        changeQuantity(item.name);
+                    }}
+                    title="Decrease quantity"
+                >
+                    <img alt="minux icon" src={minusIcon}></img>
+                </button>
+                <p>{item.quantity}</p>
+                <button
+                    onClick={() => {
+                        changeQuantity(item.name, "increase");
+                    }}
+                    title="Increase quantity"
+                >
+                    <img alt="plus icon" src={plusIcon}></img>
+                </button>
+            </div>
         </div>
     );
 }
