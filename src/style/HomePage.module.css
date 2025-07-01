@@ -94,38 +94,37 @@
     bottom: 20px;
 }
 
-
 @media (max-width: 1024px) {
-    .main{
+    .main {
     }
 
-    .fruitCard{
+    .fruitCard {
         min-width: 200px;
         min-height: 200px;
     }
 
-    .fruitCard > img{
+    .fruitCard > img {
         width: 50px;
         height: 50px;
     }
 
-    .fruitCard > p{
+    .fruitCard > p {
         font-size: 14px;
     }
 }
 
 @media (max-width: 768px) {
-    .mainContainer{
+    .mainContainer {
         width: 230px;
         overflow: hidden;
     }
 
-    .fruitCard{
+    .fruitCard {
         min-width: 200px;
         min-height: 200px;
     }
 
-    .fruitCard > img{
+    .fruitCard > img {
         width: 50px;
         height: 50px;
     }
