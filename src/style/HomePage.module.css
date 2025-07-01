@@ -93,3 +93,43 @@
     left: 20px;
     bottom: 20px;
 }
+
+
+@media (max-width: 1024px) {
+    .main{
+    }
+
+    .fruitCard{
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    .fruitCard > img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .fruitCard > p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer{
+        width: 230px;
+        overflow: hidden;
+    }
+
+    .fruitCard{
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    .fruitCard > img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 540px) {
+}
