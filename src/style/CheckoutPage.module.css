@@ -53,17 +53,20 @@
 }
 
 .orderContainer {
-    width: 700px;
+    width: max-content;
     height: 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .orderContainer > .infoDiv {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
+    margin-left: 10px;
+    margin-right: 100px;
+    padding: 0px 0px 20px 0px;
 }
 
 .imageHolder {
@@ -166,10 +169,10 @@
 }
 
 .priceDetail {
-    width: 400px;
+    width: 150px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 /* delete button */
