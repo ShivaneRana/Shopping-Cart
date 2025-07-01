@@ -37,15 +37,18 @@ function ShoppingBag() {
 
     return (
         <div className={style.shoppingBag}>
-            {
-                fruits.length === 0 ?
-                    <p className={style.emptyCartText}>Cart is empty.</p> : 
-                    (fruits.map((item) => {
-                        return (
-                            <ShoppingItem key={item.name} item={item}></ShoppingItem>
-                        );
-                    }))
-            }
+            {fruits.length === 0 ? (
+                <p className={style.emptyCartText}>Cart is empty.</p>
+            ) : (
+                fruits.map((item) => {
+                    return (
+                        <ShoppingItem
+                            key={item.name}
+                            item={item}
+                        ></ShoppingItem>
+                    );
+                })
+            )}
         </div>
     );
 }
@@ -74,9 +77,8 @@ function ShoppingItem({ item }) {
                 <QuantityController item={item}></QuantityController>
             </div>
 
-            {/*  display price and delete button */ }
+            {/*  display price and delete button */}
             <PriceDetail item={item}></PriceDetail>
-
         </div>
     );
 }

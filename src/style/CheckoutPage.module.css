@@ -8,7 +8,7 @@
 }
 
 /* BackButton Component */
-.main > a{
+.main > a {
     width: min-content;
 }
 
@@ -59,7 +59,7 @@
     justify-content: space-between;
 }
 
-.orderContainer > .infoDiv{
+.orderContainer > .infoDiv {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -106,7 +106,6 @@
     color: grey;
 }
 
-
 .itemDetail > .itemStock {
     display: flex;
     align-items: center;
@@ -127,14 +126,15 @@
     align-items: center;
 }
 
-.quantityController > div{
+.quantityController > div {
     display: flex;
     width: 100px;
     justify-content: space-between;
     align-items: center;
 }
 
-.quantityController > .itemQuantity,.itemStock{
+.quantityController > .itemQuantity,
+.itemStock {
     font-size: 14px;
 }
 
@@ -160,7 +160,7 @@
     background-color: var(--color-darkGray);
 }
 
-.quantityController > div >  button > img {
+.quantityController > div > button > img {
     width: 50%;
     height: 50%;
 }
@@ -269,7 +269,7 @@
     background-color: var(--color-blueHover);
 }
 
-.emptyCartText{
+.emptyCartText {
     font-size: var(--font-size);
     color: grey;
     margin: 10px 0px;
