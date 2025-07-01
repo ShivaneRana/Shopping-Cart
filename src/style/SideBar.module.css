@@ -144,7 +144,9 @@
 @media (max-width: 1024px) {
     .main {
         position: absolute;
-        left: -500px;
+        left: -300px;
+        z-index: 1;
+        background-color: white;
     }
 }
 
