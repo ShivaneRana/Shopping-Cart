@@ -13,7 +13,6 @@ function App() {
     const [fruitList, updateFruitList] = useImmer(fruits);
     const [displayFavourite, setDisplayFavourite] = useState(false);
     const [displayCart, setDisplayCart] = useState(false);
-    const [showSideBar, setShowSideBar] = useState(false);
     const location = useLocation();
     const {
         filter,
@@ -27,10 +26,6 @@ function App() {
         toggleFavourite,
         filterFruit,
     } = useFilter();
-
-    function toggleSideBar() {
-        setShowSideBar(!showSideBar);
-    }
 
     function addToCart(targetName) {
         updateFruitList((draft) => {
@@ -116,7 +111,6 @@ function App() {
                     displayFavourite,
                     displayCart,
                     fruitArray,
-                    toggleSideBar,
                     toggleDisplayCart,
                     changeName,
                     changeFamily,
