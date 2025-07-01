@@ -13,7 +13,7 @@ function App() {
     const [fruitList, updateFruitList] = useImmer(fruits);
     const [displayFavourite, setDisplayFavourite] = useState(false);
     const [displayCart, setDisplayCart] = useState(false);
-    const [showSideBar,setShowSideBar] = useState(false);
+    const [showSideBar, setShowSideBar] = useState(false);
     const location = useLocation();
     const {
         filter,
@@ -28,7 +28,7 @@ function App() {
         filterFruit,
     } = useFilter();
 
-    function toggleSideBar(){
+    function toggleSideBar() {
         setShowSideBar(!showSideBar);
     }
 
@@ -140,7 +140,7 @@ function App() {
     );
 }
 
-// temporary filter to be used when visiting checkout page 
+// temporary filter to be used when visiting checkout page
 // while having filter enabled
 const tempFilter = {
     name: "",

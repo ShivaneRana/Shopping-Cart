@@ -159,11 +159,11 @@
         display: none;
     }
 
-    .leftside{
+    .leftside {
         width: min-content;
     }
 
-    .leftside > button{
+    .leftside > button {
         width: 25px;
         height: 25px;
     }
@@ -174,7 +174,7 @@
         align-items: center;
     }
 
-    .rightside > div:nth-child(1){
+    .rightside > div:nth-child(1) {
         position: absolute;
         top: 50%;
         left: 45%;
@@ -182,17 +182,17 @@
         transform: translate(-50%, -50%);
     }
 
-    .rightside > div:nth-child(1) > input{
+    .rightside > div:nth-child(1) > input {
         width: 10%;
     }
 
-    .rightside > div:nth-child(1) > img{
+    .rightside > div:nth-child(1) > img {
         width: 25px;
         height: 25px;
         left: 10px;
     }
 
-    .rightside > div > a > button{
+    .rightside > div > a > button {
         width: 25px;
         height: 25px;
     }
