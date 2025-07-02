@@ -316,16 +316,16 @@
 
 @media (max-width: 570px) {
     .main {
-        padding: 0px 5px;
+        padding: 0px 20px 0px 20px;
     }
 
     .orderContainer {
-        height: 150px;
+        height: 120px;
     }
 
     .imageHolder {
         width: 120px;
-        height: 150px;
+        height: 120px;
         margin-right: 5px;
     }
 
