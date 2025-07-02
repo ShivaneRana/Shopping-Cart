@@ -168,9 +168,10 @@
 @media (max-width: 1024px) {
     .main {
         position: absolute;
-        left: -300px;
+        left: -350px;
         z-index: 1;
         background-color: white;
+        outline: 2px solid black; 
     }
 }
 
