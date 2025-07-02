@@ -98,8 +98,8 @@ function App() {
             toggleDisplayFavourite();
         }
 
-        if(location.pathname !== "/Shopping-Cart/Store"){
-            if(displaySideBar){
+        if (location.pathname !== "/Shopping-Cart/Store") {
+            if (displaySideBar) {
                 toggleSideBar();
             }
         }
@@ -107,7 +107,6 @@ function App() {
         if (location.pathname !== "/Shopping-Cart/Checkout" && displayCart) {
             toggleDisplayCart();
         }
-
     }, [location]);
 
     useEffect(() => {
