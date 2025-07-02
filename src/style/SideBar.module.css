@@ -1,9 +1,35 @@
 .main {
+    position: relative;
     min-width: 300px;
     max-width: 300px;
     padding: 0px 45px 0px 45px;
     margin-top: 20px;
 }
+
+.main > .closeButtonDiv{
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main > .closeButtonDiv > button > img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.main > .closeButtonDiv > button{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 
 .headingHolder {
     width: 100%;
