@@ -67,14 +67,16 @@ function ShoppingItem({ item }) {
     return (
         <div className={style.orderContainer} key={item.name}>
             {/* contains the product image */}
-            <ProductImage location={location} src={src}></ProductImage>
-            <div className={style.infoDiv}>
-                {/* contains the product detail */}
-                {/* name, family, quanitity */}
-                <ItemDetail item={item}></ItemDetail>
+            <div className={style.holderDiv}>
+                <ProductImage location={location} src={src}></ProductImage>
+                <div className={style.infoDiv}>
+                    {/* contains the product detail */}
+                    {/* name, family, quanitity */}
+                    <ItemDetail item={item}></ItemDetail>
 
-                {/* increase/ decrease product quantity */}
-                <QuantityController item={item}></QuantityController>
+                    {/* increase/ decrease product quantity */}
+                    <QuantityController item={item}></QuantityController>
+                </div>
             </div>
 
             {/*  display price and delete button */}
