@@ -95,7 +95,7 @@
 }
 
 @media (max-width: 1024px) {
-    .carousel{
+    .carousel {
         width: 200px;
     }
 
@@ -130,4 +130,3 @@
         height: 50px;
     }
 }
-
