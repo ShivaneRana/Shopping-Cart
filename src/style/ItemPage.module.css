@@ -18,11 +18,13 @@
 }
 
 .productImage {
-    min-width: 500px;
-    min-height: 500px;
+    width: 500px;
+    height: 500px;
+    aspect-ratio: 9/10;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-right: 40px;
 }
 
 .productImage > .imageHolder {
@@ -44,6 +46,7 @@
     width: 100%;
     display: flex;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .color,
@@ -60,12 +63,11 @@
 
 .productInfo {
     width: 70%;
-    height: 400px;
+    height: max-content;
     padding: 5px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-left: 40px;
+    gap: 20px;
 }
 
 /* heading */
@@ -161,4 +163,45 @@
 .buttonHolder > button:nth-child(2):hover {
     background-color: var(--color-darkGray);
     outline: none;
+}
+
+@media (max-width: 890px){
+    
+    .main{
+        padding: 0px 20px 0px 20px;
+    }
+
+    .productImage{
+        width: 400px;
+        height: 400px;
+    } 
+
+    .productImage > .imageHolder > img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width:800px){
+    .product{
+        flex-direction: column;
+    }
+
+    .productImage{
+        width: auto;
+        height: auto;
+        aspect-ratio: 1/1;
+        margin-right: 0px;
+    }
+
+    .productInfo{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .buttonHolder{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
 }
