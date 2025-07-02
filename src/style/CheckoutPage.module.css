@@ -284,17 +284,15 @@
 }
 
 @media (max-width: 1150px) {
-    
-    .checkoutContainer{
+    .checkoutContainer {
         flex-direction: column;
-    } 
+    }
 
-    .shoppingBag{
+    .shoppingBag {
         width: 100%;
     }
 
-
-    .orderSummary{
+    .orderSummary {
         margin-top: 50px;
         margin-bottom: 100px;
         width: 100%;
@@ -302,61 +300,59 @@
 }
 
 @media (max-width: 750px) {
-   
-    .orderContainer{
+    .orderContainer {
         min-width: min-content;
     }
 
-    .imageHolder{
+    .imageHolder {
         margin-right: 10px;
     }
 
-    .priceDetail{
+    .priceDetail {
         width: max-content;
         flex-direction: column;
     }
 }
 
 @media (max-width: 570px) {
-
-    .main{
+    .main {
         padding: 0px 5px;
     }
 
-    .orderContainer{
+    .orderContainer {
         height: 150px;
     }
 
-    .imageHolder{
+    .imageHolder {
         width: 120px;
         height: 150px;
         margin-right: 5px;
     }
 
-    .imageHolder > img{
+    .imageHolder > img {
         width: 35px;
         height: 35px;
     }
 
-    .orderContainer > .holderDiv >.infoDiv{
+    .orderContainer > .holderDiv > .infoDiv {
         margin-left: 0px;
         margin-right: 20px;
     }
 
-    .quantityController{
+    .quantityController {
         width: 100px;
     }
 
-    .quantityController > div{
+    .quantityController > div {
         margin-left: 5px;
     }
 
-    .quantityController > div > button{
+    .quantityController > div > button {
         width: 20px;
         height: 20px;
     }
 
-    .orderSummary{
+    .orderSummary {
         min-width: min-content;
     }
 }
