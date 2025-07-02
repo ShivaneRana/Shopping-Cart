@@ -2,17 +2,39 @@ import style from "../style/SideBar.module.css";
 import expandedIcon from "../assets/images/down.svg";
 import shrinkIcon from "../assets/images/top.svg";
 import checkIcon from "../assets/images/check.svg";
+import closeIcon from "../assets/images/close.svg";
 import { useState, useContext } from "react";
 import { mainContext } from "../App.jsx";
 
-function SideBar() {
+function SideBar({sty}) {
+    const {displaySideBar} = useContext(mainContext);
+
     return (
-        <div className={style.main}>
+        <div style={sty} className={style.main}>
+            {displaySideBar && <CloseButton></CloseButton>}
             <ColorSelector></ColorSelector>
             <FamilySelector></FamilySelector>
             <VitaminSelector></VitaminSelector>
         </div>
     );
+}
+
+function CloseButton(){
+    const {toggleSideBar} = useContext(mainContext)
+
+    return(
+        <div className={style.closeButtonDiv}>
+            <button
+            title="Close sidebar"
+            onClick={() => {
+                toggleSideBar();
+            }}>
+                <img alt="image of a close icon" src={closeIcon}>
+
+                </img>
+            </button>
+        </div>
+    )
 }
 
 // holds the entire colorSet
