@@ -29,7 +29,7 @@ function App() {
         filterFruit,
     } = useFilter();
 
-    const style = displaySideBar ? { left: "0px" } : { left: "-300px" };
+    const style = displaySideBar ? { left: "0px" } : { left: "-350px" };
 
     function toggleSideBar() {
         setDisplaySideBar((prev) => !prev);
