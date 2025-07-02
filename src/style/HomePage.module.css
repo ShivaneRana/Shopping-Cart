@@ -95,7 +95,8 @@
 }
 
 @media (max-width: 1024px) {
-    .main {
+    .carousel{
+        width: 200px;
     }
 
     .fruitCard {
@@ -130,5 +131,3 @@
     }
 }
 
-@media (max-width: 540px) {
-}
