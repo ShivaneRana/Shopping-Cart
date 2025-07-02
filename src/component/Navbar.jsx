@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { mainContext } from "../App.jsx";
 
+
 function Navbar() {
     const location = useLocation();
 
@@ -44,10 +45,14 @@ function Logo() {
     );
 }
 
-function Hamburger() {
+export function Hamburger() {
+    const {toggleSideBar} = useContext(mainContext);
+
     return (
-        <button>
-            <img alt="icon for hamburger menu" src={hamburgerIcon}></img>
+        <button onClick={toggleSideBar}>
+            <img
+            alt="icon for hamburger menu"
+            src={hamburgerIcon}></img>
         </button>
     );
 }
