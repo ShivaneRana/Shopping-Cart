@@ -40,6 +40,7 @@
 
 .productItem {
     width: clamp(250px, 100%, 100%);
+    max-width: 500px;
     position: relative;
     background-color: var(--color-gray);
     border-radius: var(--border-radius);
