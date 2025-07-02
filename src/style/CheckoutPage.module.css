@@ -59,7 +59,7 @@
     justify-content: space-between;
 }
 
-.orderContainer > .holderDiv{
+.orderContainer > .holderDiv {
     width: min-content;
     display: flex;
 }
