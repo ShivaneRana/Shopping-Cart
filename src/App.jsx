@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { useImmer } from "use-immer";
 import fruits from "./Fruits.jsx";
 import useFilter from "./Filter.jsx";
-import style from "./App.module.css";
 import Navbar from "./component/Navbar.jsx";
+import SideBar from "./component/SideBar.jsx";
 
 export let mainContext = createContext();
 
@@ -13,6 +13,8 @@ function App() {
     const [fruitList, updateFruitList] = useImmer(fruits);
     const [displayFavourite, setDisplayFavourite] = useState(false);
     const [displayCart, setDisplayCart] = useState(false);
+    const [displaySideBar,setDisplaySideBar] = useState(false);
+    const windowSize = useWindowSize();
     const location = useLocation();
     const {
         filter,
@@ -26,6 +28,13 @@ function App() {
         toggleFavourite,
         filterFruit,
     } = useFilter();
+
+
+    const style = displaySideBar ? {left:"0px"} : {left:"-300px"};
+
+    function toggleSideBar(){
+        setDisplaySideBar(prev => !prev);
+    }
 
     function addToCart(targetName) {
         updateFruitList((draft) => {
@@ -95,6 +104,10 @@ function App() {
         }
     }, [location]);
 
+    useEffect(() => {
+        setDisplaySideBar(false);
+    },[windowSize])
+
     let fruitArray;
     // ensure that filter on or off does not hinder product from showing in checkout page.
     if (location.pathname === "/Shopping-Cart/Checkout") {
@@ -111,6 +124,8 @@ function App() {
                     displayFavourite,
                     displayCart,
                     fruitArray,
+                    displaySideBar,
+                    toggleSideBar,
                     toggleDisplayCart,
                     changeName,
                     changeFamily,
@@ -127,6 +142,7 @@ function App() {
                     clearCart,
                 }}
             >
+                {displaySideBar && <SideBar sty={style}></SideBar>}
                 <Navbar></Navbar>
                 <Outlet></Outlet>
             </mainContext.Provider>
@@ -144,5 +160,29 @@ const tempFilter = {
     inCart: false,
     favourite: false,
 };
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowSize;
+}
+
 
 export default App;
