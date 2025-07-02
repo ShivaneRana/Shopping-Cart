@@ -6,8 +6,8 @@ import closeIcon from "../assets/images/close.svg";
 import { useState, useContext } from "react";
 import { mainContext } from "../App.jsx";
 
-function SideBar({sty}) {
-    const {displaySideBar} = useContext(mainContext);
+function SideBar({ sty }) {
+    const { displaySideBar } = useContext(mainContext);
 
     return (
         <div style={sty} className={style.main}>
@@ -19,22 +19,21 @@ function SideBar({sty}) {
     );
 }
 
-function CloseButton(){
-    const {toggleSideBar} = useContext(mainContext)
+function CloseButton() {
+    const { toggleSideBar } = useContext(mainContext);
 
-    return(
+    return (
         <div className={style.closeButtonDiv}>
             <button
-            title="Close sidebar"
-            onClick={() => {
-                toggleSideBar();
-            }}>
-                <img alt="image of a close icon" src={closeIcon}>
-
-                </img>
+                title="Close sidebar"
+                onClick={() => {
+                    toggleSideBar();
+                }}
+            >
+                <img alt="image of a close icon" src={closeIcon}></img>
             </button>
         </div>
-    )
+    );
 }
 
 // holds the entire colorSet

@@ -13,7 +13,7 @@ function App() {
     const [fruitList, updateFruitList] = useImmer(fruits);
     const [displayFavourite, setDisplayFavourite] = useState(false);
     const [displayCart, setDisplayCart] = useState(false);
-    const [displaySideBar,setDisplaySideBar] = useState(false);
+    const [displaySideBar, setDisplaySideBar] = useState(false);
     const windowSize = useWindowSize();
     const location = useLocation();
     const {
@@ -29,11 +29,10 @@ function App() {
         filterFruit,
     } = useFilter();
 
+    const style = displaySideBar ? { left: "0px" } : { left: "-300px" };
 
-    const style = displaySideBar ? {left:"0px"} : {left:"-300px"};
-
-    function toggleSideBar(){
-        setDisplaySideBar(prev => !prev);
+    function toggleSideBar() {
+        setDisplaySideBar((prev) => !prev);
     }
 
     function addToCart(targetName) {
@@ -106,7 +105,7 @@ function App() {
 
     useEffect(() => {
         setDisplaySideBar(false);
-    },[windowSize])
+    }, [windowSize]);
 
     let fruitArray;
     // ensure that filter on or off does not hinder product from showing in checkout page.
@@ -162,27 +161,26 @@ const tempFilter = {
 };
 
 function useWindowSize() {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
+    const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight,
-      });
-    }
+    });
 
-    window.addEventListener('resize', handleResize);
+    useEffect(() => {
+        function handleResize() {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
 
-    // Cleanup on unmount
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+        window.addEventListener("resize", handleResize);
 
-  return windowSize;
+        // Cleanup on unmount
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return windowSize;
 }
-
 
 export default App;
