@@ -27,7 +27,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(
-        auto-fit,
+        auto-fill,
         minmax(clamp(250px, 20vw, 500px), 1fr)
     );
     grid-template-rows: auto;
