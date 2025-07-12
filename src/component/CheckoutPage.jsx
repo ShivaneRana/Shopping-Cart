@@ -4,7 +4,7 @@ import minusIcon from "../assets/images/minus.svg";
 import plusIcon from "../assets/images/plus.svg";
 import deleteIcon from "../assets/images/delete.png";
 import stockIcon from "../assets/images/inStock.svg";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { mainContext } from "../App";
 import { useContext } from "react";
 
@@ -22,7 +22,7 @@ function CheckoutPage() {
 }
 
 export function BackButton() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <button onClick={() => navigate(-1)} className={style.backButton}>
             <img title="Go back" alt="back icon" src={backIcon}></img>
