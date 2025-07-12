@@ -24,11 +24,9 @@ function CheckoutPage() {
 export function BackButton() {
     const navigate = useNavigate()
     return (
-        <Link onClick={() => navigate(-1)}>
-            <button className={style.backButton}>
-                <img title="Go back" alt="back icon" src={backIcon}></img>
-            </button>
-        </Link>
+        <button onClick={() => navigate(-1)} className={style.backButton}>
+            <img title="Go back" alt="back icon" src={backIcon}></img>
+        </button>
     );
 }
 
