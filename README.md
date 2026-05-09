@@ -2,8 +2,6 @@
 
 A frontend fruit store built with React. Browse a catalog of 30 fruits, filter by name, family, color, or vitamin content, manage favourites, and check out with a live order summary.
 
-Live demo: https://shivanerana.github.io/Shopping-Cart/
-
 ![screenshot](screenshots/1.png)
 ![screenshot](screenshots/2.png)
 ![screenshot](screenshots/3.png)
