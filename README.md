@@ -2,9 +2,14 @@
 
 A frontend fruit store built with React. Browse a catalog of 30 fruits, filter by name, family, color, or vitamin content, manage favourites, and check out with a live order summary.
 
-![screenshot](screenshots/1.png)
+---
+
+## Screenshots
+
 ![screenshot](screenshots/2.png)
+
 ![screenshot](screenshots/3.png)
+
 ![screenshot](screenshots/4.png)
 
 ---
@@ -130,13 +135,3 @@ npm run deploy      # Build and deploy to GitHub Pages
 **Cart and favourites** are stored as fields directly on each fruit object in the `fruitList` Immer draft. This means no separate cart array — a fruit is in the cart if `item.inCart === true`. Quantities and `orderPrice` are also tracked per item.
 
 **Checkout** filters `fruitList` for `inCart === true` items and computes subtotal, GST, and total on the fly. Confirming the order clears all cart state and resets quantities to 1.
-
----
-
-## Screenshots
-
-![screenshot](screenshots/2.png)
-
-![screenshot](screenshots/3.png)
-
-![screenshot](screenshots/4.png)
